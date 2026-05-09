@@ -1,18 +1,24 @@
 // ECE 6370 - ADD
 // GameController
 // This module manages differnt game states to run the game itself
-module GameController(PlayerID, LogIn, LogOut, isGuest, Button0, Button1, Button2, Button3, Start_Round, Mol_Spi, Timer_Enable, Timer_Reconfig, clk, rst);
+module GameController(playerID, logIn, logOut, isGuest, button1, button2, button3, button4, moleOrSpikeLocation, moleOrSpike, timerEnable, timerReconfig, timerLength clk, rst);
 
-    input LogIn, Button0, Button1, Button2, Button3;
-    input [2:0] PlayerID, isGuest;
-    input [3:0] Mol_Spi; // bus to indicate whether moles or spike
-    output Timer_Enable, Timer_Reconfig, Start_Round, LogOut;
-    reg Timer_Enable, Timer_Reconfig, Start_Round, LogOut;
+	input logIn, isGuest, button1, button2, button3, button4;
+	input [3:0] playerID;
+	input clk, rst;
+	output logOut;
+	output [3:0] moleOrSpikeLocation;
+	output [3:0] moleOrSpike;
+	reg [3:0] moleOrSpikeLocation;
+	reg [3:0] moleOrSpike;
+	output timerEnable, timerReconfig;
+	output [3:0] timerLength;
+	reg [3:0] timerLength;
+	reg timerEnable, timerReconfig, timerLength, startRound, logOut;
 
-    // internal signals
-    reg [3:0] Hit; // bus to indicate which button was hit
+	// internal signals
+	reg [3:0] Hit; //used to determine what button was pressed or no button
 
-    // Z: UPDATE FROM HERE ON OUT...
 	parameter loggedOut = 0, preGame = 1, gameRun = 2, gameOver = 3;
 	reg [2:0] State;
 
@@ -69,7 +75,11 @@ module GameController(PlayerID, LogIn, LogOut, isGuest, Button0, Button1, Button
 				State <= loggedOut;
 			end
 		endcase
-		if (rst == 1'b0)
+		if (rst == 1'b1) begin
 			State <= loggedOut;
+		end
+		else begin
+			if (
+		end
 	end
 endmodule
