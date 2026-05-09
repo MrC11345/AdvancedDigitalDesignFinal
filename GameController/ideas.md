@@ -14,10 +14,13 @@ game over
 	will display score 
 
 game about to start
-	will wait for input to decede what level to play
+	will wait for input to decide what level to play
 
 level 1 game
 	get output from rng to display where the mole will be
 	once mole position determined start the timer and display it
 	if player presses the correct button before timer is over add point
 	otherwise go onto new mole
+
+going to control the level in a seperate module
+going to keep track of score in a seperate module as well
