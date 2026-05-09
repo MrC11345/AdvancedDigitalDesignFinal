@@ -14,7 +14,7 @@ module GameController(gameButton, loggedIn,LoadP1RegIn,RNGGenIn,LoadP1RegOut,RNG
 
 	always @(posedge clk) begin
 		case (State)
-            loggedOut : begin
+	            loggedOut : begin
 				LoadP1RegOut <= 1'b0;
 				RNGGenOut <= 1'b1;
 				timerReconfig <= 1'b0;
@@ -25,7 +25,7 @@ module GameController(gameButton, loggedIn,LoadP1RegIn,RNGGenIn,LoadP1RegOut,RNG
 					end
 				else 
 					State <= loggedOut;
-            end
+        	    end
 			preGame : begin
 				LoadP1RegOut <= 1'b0;
 				RNGGenOut <= 1'b1;
