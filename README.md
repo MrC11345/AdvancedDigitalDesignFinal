@@ -1,1 +1,1 @@
-This is Alex and Mason's section for the ADD final project 'Wack a Mole' this code will have the game controller and score tarkcing moduels.  All code was tested by Alex and a good chunck was probably writen by Mason - who knows really - oh well enjoy.  Also this software has no warrenty whatsoever use at your own risk.
+This is the github for the add final project Wack a mole - no warrenty blah blah blah, don't get a virus blah blah blah - don't brick your computer blah blah blah blah :)
