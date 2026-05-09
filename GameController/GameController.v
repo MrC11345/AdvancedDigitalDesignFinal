@@ -3,7 +3,7 @@
 // This module manages differnt game states to run the game itself
 module GameController(PlayerID, LogIn, LogOut, isGuest, Button0, Button1, Button2, Button3, Start_Round, Mol_Spi, Timer_Enable, Timer_Reconfig, clk, rst);
 
-	input LogIn, Button0, Button1, Button2, Button3;
+    input LogIn, Button0, Button1, Button2, Button3;
     input [2:0] PlayerID, isGuest;
     input [3:0] Mol_Spi; // bus to indicate whether moles or spike
     output Timer_Enable, Timer_Reconfig, Start_Round, LogOut;
