@@ -1,4 +1,4 @@
-module LFSR8_8E(clock, rng_out);
+module pseudoRNG(clock, rng_out);
   input clock;
   output [7:0] rng_out;
 
