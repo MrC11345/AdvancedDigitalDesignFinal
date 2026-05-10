@@ -1,7 +1,6 @@
 // ECE 6370 - ADD
 // Mason Sexton - 5780
 // GameController
-// This module manages differnt game states to run the game itself
 module GameController(playerID, logIn, logOut, button1, button2, button3, button4, timerEnable, timerReconfig, timerLength, score, displayBus2, displayBus3, displayBus4, displayBus5, clk, rst);
 
 	input logIn, button1, button2, button3, button4;
@@ -23,7 +22,7 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 	reg [3:0] buttonReg; //used to determine what button was pressed or no button
 	reg [1:0] gameLevel; //used to determine what game level should be selected
 	reg scoreUp, scoreDown, roundRunning;
-	reg [3:0] moleOrSpikeLocation, moleOrSpike;
+	reg [1:0] moleOrSpikeLocation, moleOrSpike;
 
 	parameter loggedOut = 0, preGame = 1, gameRun = 2, gameOver = 3;
 	reg [2:0] State;
@@ -60,8 +59,16 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 					end
 				else 
 					State <= loggedOut;
+				displayBus2 <= 6'b000000;
+				displayBus3 <= 6'b000000;
+				displayBus4 <= 6'b000000;
+				displayBus5 <= 6'b000000;
         	    end
 			preGame : begin
+				displayBus2 <= 6'b000000;
+				displayBus3 <= 6'b000000;
+				displayBus4 <= 6'b000000;
+				displayBus5 <= 6'b000000;
 				timerEnable <= 1'b0;
 				roundRunning <= 1'b0;
 				case(buttonReg)
@@ -95,6 +102,22 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 				timerEnable <= 1'b1;
 				timerReconfig <= 1'b0;
 				roundRunning <= 1'b1;
+				displayBus2 <= 6'b000000;
+				displayBus3 <= 6'b000000;
+				displayBus4 <= 6'b000000;
+				displayBus5 <= 6'b000000;
+				if(moleOrSpikeLocation==2'b00) begin
+					displayBus2[5:4] <= moleOrSpike;			
+				end
+				if(moleOrSpikeLocation==2'b01) begin
+					displayBus3[5:4] <= moleOrSpike;			
+				end
+				if(moleOrSpikeLocation==2'b10) begin
+					displayBus4[5:4] <= moleOrSpike;			
+				end
+				if(moleOrSpikeLocation==2'b11) begin
+					displayBus5[5:4] <= moleOrSpike;			
+				end
 				if (timerDone == 1'b1)
 					State <= gameOver; //the next state for stoping the game
 				else
@@ -104,6 +127,10 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 				timerEnable <= 1'b0;
 				timerReconfig <= 1'b0;
 				roundRunning <= 1'b0;
+				displayBus2 <= 6'b000000;
+				displayBus3 <= 6'b000000;
+				displayBus4 <= 6'b000000;
+				displayBus5 <= 6'b000000;
 				if (buttonReg == 3'b100) begin
 					State <= preGame; //the next state for reseting the game
 					timerReconfig <= 1'b1;
@@ -115,6 +142,10 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 				timerReconfig <= 1'b0;
 				roundRunning <= 1'b0;
 				State <= loggedOut;
+				displayBus2 <= 6'b000000;
+				displayBus3 <= 6'b000000;
+				displayBus4 <= 6'b000000;
+				displayBus5 <= 6'b000000;
 			end
 		endcase
 		if (rst == 1'b1) begin
