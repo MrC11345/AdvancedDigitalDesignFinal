@@ -2,15 +2,13 @@
 // Mason Sexton - 5780
 // GameController
 // This module manages differnt game states to run the game itself
-module GameController(playerID, logIn, logOut, button1, button2, button3, button4, moleOrSpikeLocation, moleOrSpike, timerEnable, timerReconfig, timerLength, score, displayBus0, displayBus1, displayBus2, displayBus3, displayBus4, displayBus5, clk, rst);
+module GameController(playerID, logIn, logOut, button1, button2, button3, button4, timerEnable, timerReconfig, timerLength, score, displayBus0, displayBus1, displayBus2, displayBus3, displayBus4, displayBus5, clk, rst);
 
 	input logIn, button1, button2, button3, button4;
 	input [3:0] playerID;
 	input clk, rst;
 	output logOut;
 	reg logOut;
-	output [3:0] moleOrSpikeLocation, moleOrSpike;
-	reg [3:0] moleOrSpikeLocation, moleOrSpike;
 	output timerEnable, timerReconfig;
 	reg timerEnbale, timerReconfig;
 	output [3:0] timerLength;
@@ -25,11 +23,12 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 	reg [3:0] buttonReg; //used to determine what button was pressed or no button
 	reg [1:0] gameLevel; //used to determine what game level should be selected
 	reg scoreUp, scoreDown, startRound;
+	reg [3:0] moleOrSpikeLocation, moleOrSpike;
 
 	parameter loggedOut = 0, preGame = 1, gameRun = 2, gameOver = 3;
 	reg [2:0] State;
 
-	Levels Levels1(gameLevel,buttonReg,rngOut,scoreUp,scoreDown,moleOrSpike,moleOrSpikeLocation,startRound,clk,rst);
+	Levels Levels1(gameLevel, buttonReg, scoreUp, scoreDown, moleOrSpike, moleOrSpikeLocation, startRound, clk, rst);
 
 	ScoreChecker ScoreChecker1(playerID, logIn, startRound, gameLevel, scoreUp, scoreDown, clk, rst);
 
