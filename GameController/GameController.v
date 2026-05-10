@@ -9,7 +9,7 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 	output logOut;
 	reg logOut;
 	output timerEnable, timerReconfig;
-	reg timerEnbale, timerReconfig;
+	reg timerEnable, timerReconfig;
 	output [3:0] timerLength;
 	reg [3:0] timerLength;
 	output [6:0] score;
