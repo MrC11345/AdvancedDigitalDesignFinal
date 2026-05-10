@@ -24,3 +24,9 @@ level 1 game
 
 going to control the level in a seperate module
 going to keep track of score in a seperate module as well
+
+
+displayDecoder
+	First 3 bits are which display
+	Next 2 bits are number, mole, spike, or nothing
+	final 3 bits are the number if there is one otherwise just 0

@@ -1,32 +1,37 @@
 // ECE 6370 - ADD
+// Mason Sexton - 5780
 // GameController
 // This module manages differnt game states to run the game itself
-module GameController(playerID, logIn, logOut, isGuest, button1, button2, button3, button4, moleOrSpikeLocation, moleOrSpike, timerEnable, timerReconfig, timerLength, clk, rst);
+module GameController(playerID, logIn, logOut, button1, button2, button3, button4, moleOrSpikeLocation, moleOrSpike, timerEnable, timerReconfig, timerLength, score, displayBus0, displayBus1, displayBus2, displayBus3, displayBus4, displayBus5, clk, rst);
 
-	input logIn, isGuest, button1, button2, button3, button4;
+	input logIn, button1, button2, button3, button4;
 	input [3:0] playerID;
 	input clk, rst;
 	output logOut;
-	output [3:0] moleOrSpikeLocation;
-	output [3:0] moleOrSpike;
-	reg [3:0] moleOrSpikeLocation;
-	reg [3:0] moleOrSpike;
+	reg logOut;
+	output [3:0] moleOrSpikeLocation, moleOrSpike;
+	reg [3:0] moleOrSpikeLocation, moleOrSpike;
 	output timerEnable, timerReconfig;
+	reg timerEnbale, timerReconfig;
 	output [3:0] timerLength;
 	reg [3:0] timerLength;
-	reg timerEnable, timerReconfig, startRound, logOut;
+	output [6:0] score;
+	reg [6:0] score;
+	output [5:0] displayBus0, displayBus1, displayBus2, displayBus3, displayBus4, displayBus5;//output to the displays 2 bits for what to display 4 bits for number
+	reg [5:0] displayBus0, displayBus1, displayBus2, displayBus3, displayBus4, displayBus5;
+
 
 	// internal signals
 	reg [3:0] buttonReg; //used to determine what button was pressed or no button
-	reg [2:0] gameLevel; //used to determine what game level should be selected
-	reg scoreUp,scoreDown;
+	reg [1:0] gameLevel; //used to determine what game level should be selected
+	reg scoreUp, scoreDown, startRound;
 
 	parameter loggedOut = 0, preGame = 1, gameRun = 2, gameOver = 3;
 	reg [2:0] State;
 
 	Levels Levels1(gameLevel,buttonReg,rngOut,scoreUp,scoreDown,moleOrSpike,moleOrSpikeLocation,startRound,clk,rst);
 
-	ScoreTracker ScoreTracker1(playerID, isGuest, logIn, startRound, gameLevel, scoreUp, scoreDown, clk, rst);
+	ScoreChecker ScoreChecker1(playerID, logIn, startRound, gameLevel, scoreUp, scoreDown, clk, rst);
 
 	always @(posedge clk) begin
 		if(button1==1'b1) begin
