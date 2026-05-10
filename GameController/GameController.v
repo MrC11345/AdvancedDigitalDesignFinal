@@ -18,7 +18,7 @@ module GameController(playerID, logIn, logOut, isGuest, button1, button2, button
 
 	// internal signals
 	reg [3:0] buttonReg; //used to determine what button was pressed or no button
-	reg [3:0] gameLevel; //used to determine what game level should be selected
+	reg [2:0] gameLevel; //used to determine what game level should be selected
 	reg scoreUp,scoreDown;
 
 	parameter loggedOut = 0, preGame = 1, gameRun = 2, gameOver = 3;
