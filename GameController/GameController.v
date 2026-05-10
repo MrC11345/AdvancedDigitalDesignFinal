@@ -1,9 +1,9 @@
 // ECE 6370 - ADD
 // Mason Sexton - 5780
 // GameController
-module GameController(playerID, logIn, logOut, button1, button2, button3, button4, timerEnable, timerReconfig, timerLength, score, displayBus2, displayBus3, displayBus4, displayBus5, clk, rst);
+module GameController(playerID, logIn, logOut, button1, button2, button3, button4, timerEnable, timerReconfig, timerLength, timerDone, score, displayBus2, displayBus3, displayBus4, displayBus5, clk, rst);
 
-	input logIn, button1, button2, button3, button4;
+	input logIn, button1, button2, button3, button4, timerDone;
 	input [3:0] playerID;
 	input clk, rst;
 	output logOut;
