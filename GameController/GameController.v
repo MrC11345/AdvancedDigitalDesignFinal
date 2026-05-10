@@ -26,6 +26,8 @@ module GameController(playerID, logIn, logOut, isGuest, button1, button2, button
 
 	Levels Levels1(gameLevel,buttonReg,rngOut,scoreUp,scoreDown,moleOrSpike,moleOrSpikeLocation,startRound,clk,rst);
 
+	ScoreTracker ScoreTracker1(playerID, isGuest, logIn, startRound, gameLevel, scoreUp, scoreDown, clk, rst);
+
 	always @(posedge clk) begin
 		if(button1==1'b1) begin
 			buttonReg <= 3'b001;
