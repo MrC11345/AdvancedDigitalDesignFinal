@@ -55,6 +55,7 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, o
             obj_type_out <= 4'b0000;
             objLoc_r <= 4'b0000;
             objType_r <= 4'b0000;
+            seconds_counter <= 3'b000;
         end 
 
         else begin 
