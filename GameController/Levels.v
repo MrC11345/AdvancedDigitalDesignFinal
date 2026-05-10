@@ -30,7 +30,7 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, o
 
     // timer for object spawn duration
     wire tick;
-    OneSecond_Timer timer(.clk(clk), .rst(rst), .Enable(roundActive), .Timeout(tick));
+    OneSecond_Timer timer(clk, rst, roundActive, tick);
 
     reg [2:0] seconds_counter; // counts seconds for object duration
     
@@ -85,7 +85,10 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, o
                     else begin
                         // moles only
                         if (tick) begin
-                            if (seconds_counter <= spawn_duration - 1) begin
+                            if (seconds_counter < spawn_duration - 1) begin
+                                seconds_counter <= seconds_counter + 1;
+                            end
+                            else begin 
                                 objLoc_r[0] <= obj_present[0];
                                 objType_r[0] <= 1'b0; // all moles
                                 objLoc_r[1] <= obj_present[1];
@@ -94,9 +97,7 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, o
                                 objType_r[2] <= 1'b0;
                                 objLoc_r[3] <= obj_present[3];
                                 objType_r[3] <= 1'b0;
-                            end
-                            else begin 
-                                seconds_counter <= seconds_counter + 1;
+                                seconds_counter <= 3'b000;
                             end 
                         end
 
@@ -133,8 +134,11 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, o
                     end
                     else begin
                         if (tick) begin
-                            if (seconds_counter <= spawn_duration - 1) begin
-                                                        // moles and spikes (only one type per location)
+                            if (seconds_counter < spawn_duration - 1) begin
+                                seconds_counter <= seconds_counter + 1;
+                            end
+                            else begin 
+                                // moles and spikes (only one type per location)
                                 objLoc_r[0] <= obj_present[0];
                                 objType_r[0] <= obj_present[0] ? obj_type[0] : 1'b0; // type only set if present
                                 objLoc_r[1] <= obj_present[1];
@@ -143,9 +147,7 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, o
                                 objType_r[2] <= obj_present[2] ? obj_type[2] : 1'b0; // type only set if present
                                 objLoc_r[3] <= obj_present[3];
                                 objType_r[3] <= obj_present[3] ? obj_type[3] : 1'b0; // type only set if present
-                            end 
-                            else begin 
-                                seconds_counter <= seconds_counter + 1;
+                                seconds_counter <= 3'b000;
                             end
                         end
                         
@@ -157,29 +159,29 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, o
                             if (~objType_r[0]) 
                                  score_increase <= 1'b1; 
                             else               
-                                score_decrease <= 1'b1; 
-                                objLoc_r[0] <= 1'b0;
+                                score_decrease <= 1'b1;
+                            objLoc_r[0] <= 1'b0;
                         end
                         if (button_inputs[1] & objLoc_r[1]) begin
                             if (~objType_r[1]) 
                                 score_increase <= 1'b1; 
                             else               
-                                score_decrease <= 1'b1; 
-                                objLoc_r[1] <= 1'b0;
+                                score_decrease <= 1'b1;
+                            objLoc_r[1] <= 1'b0;
                         end
                         if (button_inputs[2] & objLoc_r[2]) begin
                             if (~objType_r[2]) 
                                  score_increase <= 1'b1;
                             else               
                                 score_decrease <= 1'b1;
-                                objLoc_r[2] <= 1'b0;
+                            objLoc_r[2] <= 1'b0;
                         end
                         if (button_inputs[3] & objLoc_r[3]) begin
                             if (~objType_r[3]) 
                                 score_increase <= 1'b1; 
                             else               
-                                score_decrease <= 1'b1; 
-                                objLoc_r[3] <= 1'b0;
+                                score_decrease <= 1'b1;
+                            objLoc_r[3] <= 1'b0;
                         end
                     end
                 end
@@ -194,7 +196,10 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, o
                     end
                     else begin
                         if (tick) begin
-                            if (seconds_counter <= spawn_duration - 1) begin
+                            if (seconds_counter < spawn_duration - 1) begin
+                                seconds_counter <= seconds_counter + 1;
+                            end
+                            else begin 
                                 // moles and spikes (only one type per location)
                                 objLoc_r[0] <= obj_present[0];
                                 objType_r[0] <= obj_present[0] ? obj_type[0] : 1'b0; // type only set if present
@@ -204,9 +209,7 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, o
                                 objType_r[2] <= obj_present[2] ? obj_type[2] : 1'b0; // type only set if present
                                 objLoc_r[3] <= obj_present[3];
                                 objType_r[3] <= obj_present[3] ? obj_type[3] : 1'b0; // type only set if present
-                            end 
-                            else begin 
-                                seconds_counter <= seconds_counter + 1;
+                                seconds_counter <= 3'b000;
                             end
                         end
 
@@ -218,29 +221,29 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, o
                             if (~objType_r[0]) 
                                  score_increase <= 1'b1; 
                             else               
-                                score_decrease <= 1'b1; 
-                                objLoc_r[0] <= 1'b0;
+                                score_decrease <= 1'b1;
+                            objLoc_r[0] <= 1'b0;
                         end
                         if (button_inputs[1] & objLoc_r[1]) begin
                             if (~objType_r[1]) 
                                 score_increase <= 1'b1; 
                             else               
-                                score_decrease <= 1'b1; 
-                                objLoc_r[1] <= 1'b0;
+                                score_decrease <= 1'b1;
+                            objLoc_r[1] <= 1'b0;
                         end
                         if (button_inputs[2] & objLoc_r[2]) begin
                             if (~objType_r[2]) 
                                  score_increase <= 1'b1;
                             else               
                                 score_decrease <= 1'b1;
-                                objLoc_r[2] <= 1'b0;
+                            objLoc_r[2] <= 1'b0;
                         end
                         if (button_inputs[3] & objLoc_r[3]) begin
                             if (~objType_r[3]) 
                                 score_increase <= 1'b1; 
                             else               
-                                score_decrease <= 1'b1; 
-                                objLoc_r[3] <= 1'b0;
+                                score_decrease <= 1'b1;
+                            objLoc_r[3] <= 1'b0;
                         end
                     end
                 end
