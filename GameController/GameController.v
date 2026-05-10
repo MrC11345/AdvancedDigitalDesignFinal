@@ -23,11 +23,14 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 	reg [1:0] gameLevel; //used to determine what game level should be selected
 	reg scoreUp, scoreDown, roundRunning;
 	reg [1:0] moleOrSpikeLocation, moleOrSpike;
+	reg [7:0] rngOut;
 
 	parameter loggedOut = 0, preGame = 1, gameRun = 2, gameOver = 3;
 	reg [2:0] State;
 
-	Levels Levels1(gameLevel, buttonReg, scoreUp, scoreDown, moleOrSpike, moleOrSpikeLocation, roundRunning, clk, rst);
+	pseudoRNG pseudoRNG1(clk, rngOut);	
+
+	Levels Levels1(gameLevel, buttonReg, rngOut,scoreUp, scoreDown, moleOrSpike, moleOrSpikeLocation, roundRunning, clk, rst);
 
 	ScoreChecker ScoreChecker1(playerID, logIn, roundRunning, gameLevel, scoreUp, scoreDown, clk, rst);
 
