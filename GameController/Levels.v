@@ -1,8 +1,8 @@
-module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, obj_type_out, obj_location, timer, clk, rst);
+module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, obj_type_out, obj_location, roundActive, clk, rst);
     input [1:0] levelNum; 
     input [3:0] button_inputs;
     input [7:0] rng_in;
-    input timer, clk, rst;
+    input roundActive, clk, rst;
     output reg score_increase, score_decrease;
     output reg [3:0] obj_location; 
     output reg [3:0] obj_type_out;
@@ -55,140 +55,150 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, o
                     endcase
                 end 
                 LEVEL1: begin
-                    // moles only 
-                    objLoc_r[0] <= object_present[0];
-                    objLoc_r[1] <= object_present[1];
-                    objLoc_r[2] <= object_present[2];
-                    objLoc_r[3] <= object_present[3];
-                    objType_r[0] <= 1'b0; // all moles
-                    objType_r[1] <= 1'b0;
-                    objType_r[2] <= 1'b0;
-                    objType_r[3] <= 1'b0;
-
-                    obj_location <= objLoc_r;
-                    obj_type_out <= objType_r;
-
-                    // hit detection for moles
-                    if (button_inputs[0] & objLoc_r[0] & ~objType_r[0]) begin
-                        score_increase <= 1'b1;
-                        objLoc_r[0]   <= 1'b0;
-                    end
-                    if (button_inputs[1] & objLoc_r[1] & ~objType_r[1]) begin
-                        score_increase <= 1'b1;
-                        objLoc_r[1] <= 1'b0;
-                    end
-                    if (button_inputs[2] & objLoc_r[2] & ~objType_r[2]) begin
-                        score_increase <= 1'b1;
-                        objLoc_r[2] <= 1'b0;
-                    end
-                    if (button_inputs[3] & objLoc_r[3] & ~objType_r[3]) begin
-                        score_increase <= 1'b1;
-                        objLoc_r[3] <= 1'b0;
-                    end
-                    
-                    if (timer) begin
+                    if (~roundActive) begin
                         obj_location <= 4'b0000;
                         obj_type_out <= 4'b0000;
                         objLoc_r <= 4'b0000;
                         objType_r <= 4'b0000;
                         state <= IDLE; 
                     end
+                    else begin
+                        // moles only
+                        objLoc_r[0] <= obj_present[0];
+                        objType_r[0] <= 1'b0; // all moles
+                        objLoc_r[1] <= obj_present[1];
+                        objType_r[1] <= 1'b0;
+                        objLoc_r[2] <= obj_present[2];
+                        objType_r[2] <= 1'b0;
+                        objLoc_r[3] <= obj_present[3];
+                        objType_r[3] <= 1'b0;
 
-                end
-                LEVEL2: begin
-                    // moles and spikes (only one type per location)
-                    objLoc_r[0] <= obj_present[0];
-                    objLoc_r[1] <= obj_present[1];
-                    objLoc_r[2] <= obj_present[2];
-                    objLoc_r[3] <= obj_present[3];
-                    objType_r[0] <= obj_present[0] ? obj_type[0] : 1'b0; // type only set if present
-                    objType_r[1] <= obj_present[1] ? obj_type[1] : 1'b0;
-                    objType_r[2] <= obj_present[2] ? obj_type[2] : 1'b0;
-                    objType_r[3] <= obj_present[3] ? obj_type[3] : 1'b0;
-                    
-                    obj_location <= objLoc_r;
-                    obj_type_out <= objType_r;
+                        obj_location <= objLoc_r;
+                        obj_type_out <= objType_r;
 
-                    // hit detection for moles and spikes
-                    if (button_inputs[0] & objLoc_r[0]) begin
-                        if (~objType_r[0]) 
-                            begin score_increase <= 1'b1; end
-                        else               
-                            begin score_decrease <= 1'b1; end
-                            objLoc_r[0] <= 1'b0;
-                    end
-                    if (button_inputs[1] & objLoc_r[1]) begin
-                        if (~objType_r[1]) 
-                            begin score_increase <= 1'b1; end
-                        else               
-                            begin score_decrease <= 1'b1; end
+                        // hit detection for moles
+                        if (button_inputs[0] & objLoc_r[0] & ~objType_r[0]) begin
+                            score_increase <= 1'b1;
+                            objLoc_r[0]   <= 1'b0;
+                        end
+                        if (button_inputs[1] & objLoc_r[1] & ~objType_r[1]) begin
+                            score_increase <= 1'b1;
                             objLoc_r[1] <= 1'b0;
-                    end
-                    if (button_inputs[2] & objLoc_r[2]) begin
-                        if (~objType_r[2]) 
-                            begin score_increase <= 1'b1; end
-                        else               
-                            begin score_decrease <= 1'b1; end
+                        end
+                        if (button_inputs[2] & objLoc_r[2] & ~objType_r[2]) begin
+                            score_increase <= 1'b1;
                             objLoc_r[2] <= 1'b0;
-                    end
-                    if (button_inputs[3] & objLoc_r[3]) begin
-                        if (~objType_r[3]) 
-                            begin score_increase <= 1'b1; end
-                        else               
-                            begin score_decrease <= 1'b1; end
+                        end
+                        if (button_inputs[3] & objLoc_r[3] & ~objType_r[3]) begin
+                            score_increase <= 1'b1;
                             objLoc_r[3] <= 1'b0;
+                        end
                     end
-
-                    if (timer) begin
-                        obj_location <= 4'b0000;
-                        obj_type_out <= 4'b0000;        
-                        objLoc_r <= 4'b0000;
-                        objType_r <= 4'b0000;
-                        state <= IDLE;
-                    end
-                end
-                LEVEL3: begin
-
-                    objLoc_r[0] <= obj_present[0];
-                    objLoc_r[1] <= obj_present[1];
-                    objLoc_r[2] <= obj_present[2];
-                    objLoc_r[3] <= obj_present[3];
-                    objType_r[0] <= obj_present[0] ? obj_type[0] : 1'b0; // type only set if present
-                    objType_r[1] <= obj_present[1] ? obj_type[1] : 1'b0;
-                    objType_r[2] <= obj_present[2] ? obj_type[2] : 1'b0;
-                    objType_r[3] <= obj_present[3] ? obj_type[3] : 1'b0;
-
-                    obj_type_out <= objType_r;
-                    obj_location <= objLoc_r;
-
-                    // hit detection for moles and spikes
-                    if (button_inputs[0] & objLoc_r[0]) begin
-                        if (~objType_r[0]) begin score_increase <= 1'b1; end
-                        else               begin score_decrease <= 1'b1; end
-                        objLoc_r[0] <= 1'b0;
-                    end
-                    if (button_inputs[1] & objLoc_r[1]) begin
-                        if (~objType_r[1]) begin score_increase <= 1'b1; end
-                        else               begin score_decrease <= 1'b1; end
-                        objLoc_r[1] <= 1'b0;
-                    end
-                    if (button_inputs[2] & objLoc_r[2]) begin
-                        if (~objType_r[2]) begin score_increase <= 1'b1; end
-                        else               begin score_decrease <= 1'b1; end
-                        objLoc_r[2] <= 1'b0;
-                    end
-                    if (button_inputs[3] & objLoc_r[3]) begin
-                        if (~objType_r[3]) begin score_increase <= 1'b1; end
-                        else               begin score_decrease <= 1'b1; end
-                        objLoc_r[3] <= 1'b0;
-                    end
-
-                    if (timer) begin
+                end 
+                LEVEL2: begin
+                    if (~roundActive) begin
                         obj_location <= 4'b0000;
                         obj_type_out <= 4'b0000;
                         objLoc_r <= 4'b0000;
                         objType_r <= 4'b0000;
-                        state <= IDLE;
+                        state <= IDLE; 
+                    end
+                    else begin
+                        // moles and spikes (only one type per location)
+                        objLoc_r[0] <= obj_present[0];
+                        objType_r[0] <= obj_present[0] ? obj_type[0] : 1'b0; // type only set if present
+                        objLoc_r[1] <= obj_present[1];
+                        objType_r[1] <= obj_present[1] ? obj_type[1] : 1'b0; // type only set if present
+                        objLoc_r[2] <= obj_present[2];
+                        objType_r[2] <= obj_present[2] ? obj_type[2] : 1'b0; // type only set if present
+                        objLoc_r[3] <= obj_present[3];
+                        objType_r[3] <= obj_present[3] ? obj_type[3] : 1'b0; // type only set if present
+                        
+                        obj_location <= objLoc_r;
+                        obj_type_out <= objType_r;
+
+                        // hit detection for moles and spikes
+                        if (button_inputs[0] & objLoc_r[0]) begin
+                            if (~objType_r[0]) 
+                                 score_increase <= 1'b1; 
+                            else               
+                                score_decrease <= 1'b1; 
+                                objLoc_r[0] <= 1'b0;
+                        end
+                        if (button_inputs[1] & objLoc_r[1]) begin
+                            if (~objType_r[1]) 
+                                score_increase <= 1'b1; 
+                            else               
+                                score_decrease <= 1'b1; 
+                                objLoc_r[1] <= 1'b0;
+                        end
+                        if (button_inputs[2] & objLoc_r[2]) begin
+                            if (~objType_r[2]) 
+                                 score_increase <= 1'b1;
+                            else               
+                                score_decrease <= 1'b1;
+                                objLoc_r[2] <= 1'b0;
+                        end
+                        if (button_inputs[3] & objLoc_r[3]) begin
+                            if (~objType_r[3]) 
+                                score_increase <= 1'b1; 
+                            else               
+                                score_decrease <= 1'b1; 
+                                objLoc_r[3] <= 1'b0;
+                        end
+                    end
+                end
+                LEVEL3: begin
+                    if (~roundActive) begin
+                        obj_location <= 4'b0000;
+                        obj_type_out <= 4'b0000;
+                        objLoc_r <= 4'b0000;
+                        objType_r <= 4'b0000;
+                        state <= IDLE; 
+                    end
+                    else begin
+                        // moles and spikes (only one type per location)
+                        objLoc_r[0] <= obj_present[0];
+                        objType_r[0] <= obj_present[0] ? obj_type[0] : 1'b0; // type only set if present
+                        objLoc_r[1] <= obj_present[1];
+                        objType_r[1] <= obj_present[1] ? obj_type[1] : 1'b0; // type only set if present
+                        objLoc_r[2] <= obj_present[2];
+                        objType_r[2] <= obj_present[2] ? obj_type[2] : 1'b0; // type only set if present
+                        objLoc_r[3] <= obj_present[3];
+                        objType_r[3] <= obj_present[3] ? obj_type[3] : 1'b0; // type only set if present
+
+                        obj_type_out <= objType_r;
+                        obj_location <= objLoc_r;
+
+                        // hit detection for moles and spikes
+                        if (button_inputs[0] & objLoc_r[0]) begin
+                            if (~objType_r[0]) 
+                                 score_increase <= 1'b1; 
+                            else               
+                                score_decrease <= 1'b1; 
+                                objLoc_r[0] <= 1'b0;
+                        end
+                        if (button_inputs[1] & objLoc_r[1]) begin
+                            if (~objType_r[1]) 
+                                score_increase <= 1'b1; 
+                            else               
+                                score_decrease <= 1'b1; 
+                                objLoc_r[1] <= 1'b0;
+                        end
+                        if (button_inputs[2] & objLoc_r[2]) begin
+                            if (~objType_r[2]) 
+                                 score_increase <= 1'b1;
+                            else               
+                                score_decrease <= 1'b1;
+                                objLoc_r[2] <= 1'b0;
+                        end
+                        if (button_inputs[3] & objLoc_r[3]) begin
+                            if (~objType_r[3]) 
+                                score_increase <= 1'b1; 
+                            else               
+                                score_decrease <= 1'b1; 
+                                objLoc_r[3] <= 1'b0;
+                        end
                     end
                 end
                 default: begin
@@ -202,4 +212,4 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, o
         end
     end 
 
-endmodule;
+endmodule
