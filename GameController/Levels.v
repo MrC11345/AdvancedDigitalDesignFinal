@@ -113,7 +113,7 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, m
                     moleLoc_r[3] <= (obj_present[3] & ~obj_type[3]);
                     spikeLoc_r[0] <= (obj_present[0] & obj_type[0]); // if present and type is 1 then spike
                     spikeLoc_r[1] <= (obj_present[1] & obj_type[1]);
-                    spikeLoc_r[2] <= (obj_present[2] & obj_type[2
+                    spikeLoc_r[2] <= (obj_present[2] & obj_type[2]);
                     spikeLoc_r[3] <= (obj_present[3] & obj_type[3]);
 
                     mole_location <= moleLoc_r;
