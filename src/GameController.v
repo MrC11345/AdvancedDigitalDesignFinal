@@ -1,57 +1,172 @@
 // ECE 6370 - ADD
 // Mason Sexton - 5780
 // GameController
-// This module manages differnt game states to run the game itself
-module GameController(gameButton, loggedIn,LoadP1RegIn,RNGGenIn,LoadP1RegOut,RNGGenOut,timerDone,timerEnable,timerReconfig,clk,rst);
+module GameController(playerID, logIn, logOut, button1, button2, button3, button4, timerEnable, timerReconfig, timerLength, timerDone, score, displayBus2, displayBus3, displayBus4, displayBus5, clk, rst);
 
-	input gameButton, loggedIn, clk, rst;
-	input LoadP1RegIn, RNGGenIn, timerDone;
-	output LoadP1RegOut, RNGGenOut, timerEnable,timerReconfig;
-	reg LoadP1RegOut, RNGGenOut, timerReconfig, timerEnable;
+	input logIn, button1, button2, button3, button4, timerDone;
+	input [3:0] playerID;
+	input clk, rst;
+	output logOut;
+	reg logOut;
+	output timerEnable, timerReconfig;
+	reg timerEnable, timerReconfig;
+	output [3:0] timerLength;
+	reg [3:0] timerLength;
+	output [6:0] score;
+	reg [6:0] score;
+	output [5:0] displayBus2, displayBus3, displayBus4, displayBus5;//output to the displays 2 bits for what to display 4 bits for number
+	reg [5:0] displayBus2, displayBus3, displayBus4, displayBus5;
+
+
+	// internal signals
+	reg [3:0] buttonReg; //used to determine what button was pressed or no button
+	reg [1:0] gameLevel; //used to determine what game level should be selected
+	wire scoreUp, scoreDown;
+	reg roundRunning;
+	wire [3:0] moleOrSpikeLocation, moleOrSpike;
+	wire [7:0] rngOut;
 
 	parameter loggedOut = 0, preGame = 1, gameRun = 2, gameOver = 3;
 	reg [2:0] State;
 
+	pseudoRNG pseudoRNG1(clk, rngOut);	
+
+	Levels Levels1(gameLevel, buttonReg, rngOut,scoreUp, scoreDown, moleOrSpike, moleOrSpikeLocation, roundRunning, clk, rst);
+
+	ScoreCounter ScoreCounter1(playerID, logIn, roundRunning, gameLevel, scoreUp, scoreDown, clk, rst);
+
 	always @(posedge clk) begin
+		if(button1==1'b1) begin
+			buttonReg <= 3'b001;
+			end
+		else if(button2==1'b1) begin
+			buttonReg <= 3'b010;
+			end
+		else if(button3==1'b1) begin
+			buttonReg <= 3'b011;
+			end
+		else if(button4==1'b1) begin
+			buttonReg <= 3'b100;
+			end
+		else begin
+			buttonReg <= 3'b000;
+			end
 		case (State)
 	            loggedOut : begin
-				LoadP1RegOut <= 1'b0;
-				RNGGenOut <= 1'b1;
+				logOut <= 1'b0;
 				timerReconfig <= 1'b0;
 				timerEnable <= 1'b0;
-				if(loggedIn == 1'b1) begin // if authentication is logged in then activate game
+				timerLength <= 3'b000;
+				roundRunning <= 1'b0;
+				if(logIn == 1'b1) begin // if authentication is logged in then activate game
 					State <= preGame;
 					timerReconfig <= 1'b1;
 					end
 				else 
 					State <= loggedOut;
+				displayBus2 <= 6'b000000;
+				displayBus3 <= 6'b000000;
+				displayBus4 <= 6'b000000;
+				displayBus5 <= 6'b000000;
         	    end
 			preGame : begin
-				LoadP1RegOut <= 1'b0;
-				RNGGenOut <= 1'b1;
-				timerReconfig <= 1'b0;
+				logOut <= 1'b0;
+				displayBus2 <= 6'b000000;
+				displayBus3 <= 6'b000000;
+				displayBus4 <= 6'b000000;
+				displayBus5 <= 6'b000000;
 				timerEnable <= 1'b0;
-				if(gameButton == 1'b1) // if pushing the load button will start the game 
+				roundRunning <= 1'b0;
+				if(buttonReg==3'b001) begin
+					if(gameLevel==3'b010) begin
+						timerLength <= 3'b011;//will set level 1 timer length to 33 seconds
+						gameLevel <= 3'b001; //sets game level to 1
+						timerReconfig <= 1'b1;
+					end
+					else if(gameLevel==3'b011) begin
+						timerLength <= 3'b010; //set timel length to 22 seconds
+						gameLevel <= 3'b010; //sets game level to 2
+						timerReconfig <= 1'b1;
+					end
+				end
+				else if(buttonReg==3'b010) begin
+					if(gameLevel==3'b001) begin
+						timerLength <= 3'b010;//will set level 2 timer length to 22 seconds
+						gameLevel <= 3'b010; //sets game level to 2
+						timerReconfig <= 1'b1;
+					end
+					else if(gameLevel==3'b010) begin
+						timerLength <= 3'b001; //set timel length to 11 seconds
+						gameLevel <= 3'b011; //sets game level to 3
+						timerReconfig <= 1'b1;
+					end
+				end
+				else begin
+					timerReconfig <= 1'b0;
+				end
+				if(buttonReg == 3'b100) begin
+					logOut <= 1'b1;
+					State <= loggedOut;
+				end
+				if(buttonReg == 3'b011) // if pushing the load button will start the game 
 					State <= gameRun;
 				else 
 					State <= preGame;
 			end
 			gameRun : begin
+				logOut <= 1'b0;
 				timerEnable <= 1'b1;
 				timerReconfig <= 1'b0;
-				LoadP1RegOut <= LoadP1RegIn;
-				RNGGenOut <= RNGGenIn;
+				roundRunning <= 1'b1;
+				displayBus2 <= 6'b000000;
+				displayBus3 <= 6'b000000;
+				displayBus4 <= 6'b000000;
+				displayBus5 <= 6'b000000;
+
+				//sending the moleOrSpike data to the displays
+				if(moleOrSpikeLocation[0]==1'b1) begin
+					displayBus2[4] <= moleOrSpike[0];			
+					displayBus2[5] <= 1'b1;
+				end
+				else
+					displayBus2[5:4] <= 2'b00;
+				if(moleOrSpikeLocation[1]==1'b1) begin
+					displayBus3[4] <= moleOrSpike[1];			
+					displayBus3[5] <= 1'b1;
+				end
+				else
+					displayBus3[5:4] <= 2'b00;
+				if(moleOrSpikeLocation[2]==1'b1) begin
+					displayBus4[4] <= moleOrSpike[2];			
+					displayBus4[5] <= 1'b1;
+				end
+				else
+					displayBus4[5:4] <= 2'b00;
+				if(moleOrSpikeLocation[3]==1'b1) begin
+					displayBus5[4] <= moleOrSpike[3];			
+					displayBus5[5] <= 1'b1;
+				end
+				else
+					displayBus5[5:4] <= 2'b00;
 				if (timerDone == 1'b1)
 					State <= gameOver; //the next state for stoping the game
 				else
 					State <= gameRun; //the current state to keep clk from reseting it
 			end
 			gameOver : begin
+				logOut <= 1'b0;
 				timerEnable <= 1'b0;
 				timerReconfig <= 1'b0;
-				LoadP1RegOut <= 1'b0;
-				RNGGenOut <= 1'b1; //this one is active low so change it
-				if (gameButton == 1'b1) begin
+				roundRunning <= 1'b0;
+				displayBus2 <= 6'b000000;
+				displayBus3 <= 6'b000000;
+				displayBus4 <= 6'b000000;
+				displayBus5 <= 6'b000000;
+				if(buttonReg == 3'b100) begin
+					logOut <= 1'b1;
+					State <= loggedOut;
+				end
+				if (buttonReg == 3'b011) begin
 					State <= preGame; //the next state for reseting the game
 					timerReconfig <= 1'b1;
 				end
@@ -59,13 +174,17 @@ module GameController(gameButton, loggedIn,LoadP1RegIn,RNGGenIn,LoadP1RegOut,RNG
 					State <= gameOver; //the current state to keep clk from reseting it
 			end
 			default : begin
-				LoadP1RegOut <= 1'b0;
-				RNGGenOut <= 1'b1;
 				timerReconfig <= 1'b0;
+				roundRunning <= 1'b0;
 				State <= loggedOut;
+				displayBus2 <= 6'b000000;
+				displayBus3 <= 6'b000000;
+				displayBus4 <= 6'b000000;
+				displayBus5 <= 6'b000000;
 			end
 		endcase
-		if (rst == 1'b0)
+		if (rst == 1'b1) begin
 			State <= loggedOut;
+		end
 	end
 endmodule
