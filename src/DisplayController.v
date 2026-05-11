@@ -3,6 +3,8 @@
 module DisplayController(
     input [2:0] gameState,          // from GameController: 0=loggedOut, 1=preGame, 2=gameRun, 3=gameOver
     input [6:0] score,              // current score (0-99)
+    input [3:0] timerTensDigit,     // timer tens digit from digitTimer
+    input [3:0] timerOnesDigit,     // timer ones digit from digitTimer
     input [6:0] personalBest,       // personal best score (0-99)
     input [2:0] globalWinner,       // player ID of global winner (0-7)
     input [5:0] displayBus2, displayBus3, displayBus4, displayBus5,  // mole/spike from GameController
@@ -12,6 +14,7 @@ module DisplayController(
 
     // Display content codes
     wire [6:0] scoreOnesCode, scoreTensCode;
+    wire [6:0] timerOnesCode, timerTensCode;
     wire [6:0] bestOnesCode, bestTensCode;
     wire [6:0] playP, playL, playA, playY;
     wire [4:0] winnerLetterCode;
@@ -34,6 +37,8 @@ module DisplayController(
     
     // Helper modules: Score display
     ScoreDisplay scoreDisplay(.ScoreIn(score), .TensDigitCode(scoreTensCode), .OnesDigitCode(scoreOnesCode));
+    NumberDecoder timerTensDecoder(.DecoderIn(timerTensDigit), .DecoderOut(timerTensCode));
+    NumberDecoder timerOnesDecoder(.DecoderIn(timerOnesDigit), .DecoderOut(timerOnesCode));
     ScoreDisplay bestDisplay(.ScoreIn(personalBest), .TensDigitCode(bestTensCode), .OnesDigitCode(bestOnesCode));
     
     // Helper modules: Player display (winner)
@@ -120,9 +125,9 @@ module DisplayController(
             end
             
             GAMING: begin
-                // Display0-1 off, Display2-5 show mole/spike
-                Display0 = 7'b1111111;  // off
-                Display1 = 7'b1111111;  // off
+                // Display timer digits on the first two displays; mole/spike stays on the rest.
+                Display0 = timerTensCode;
+                Display1 = timerOnesCode;
                 Display2 = display2_mole;
                 Display3 = display3_mole;
                 Display4 = display4_mole;

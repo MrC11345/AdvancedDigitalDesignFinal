@@ -1,5 +1,5 @@
 Timing Analyzer report for WhackAMole
-Mon May 11 13:50:34 2026
+Mon May 11 17:46:12 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -100,14 +100,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.39        ;
+; Average used               ; 1.28        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  13.1%      ;
-;     Processor 3            ;  13.0%      ;
-;     Processor 4            ;  12.9%      ;
+;     Processor 2            ;   9.4%      ;
+;     Processor 3            ;   9.3%      ;
+;     Processor 4            ;   9.2%      ;
 +----------------------------+-------------+
 
 
@@ -126,7 +126,7 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 163.45 MHz ; 163.45 MHz      ; clk        ;      ;
+; 168.89 MHz ; 168.89 MHz      ; clk        ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -142,8 +142,8 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------+--------+---------------+
 ; Clock                                              ; Slack  ; End Point TNS ;
 +----------------------------------------------------+--------+---------------+
-; clk                                                ; -5.118 ; -516.523      ;
-; GameController:game_inst|Levels:Levels1|state.IDLE ; -4.262 ; -8.254        ;
+; clk                                                ; -4.921 ; -533.777      ;
+; GameController:game_inst|Levels:Levels1|state.IDLE ; -4.347 ; -8.581        ;
 +----------------------------------------------------+--------+---------------+
 
 
@@ -152,8 +152,8 @@ HTML report is unavailable in plain text report export.
 +----------------------------------------------------+-------+---------------+
 ; Clock                                              ; Slack ; End Point TNS ;
 +----------------------------------------------------+-------+---------------+
-; clk                                                ; 0.371 ; 0.000         ;
-; GameController:game_inst|Levels:Levels1|state.IDLE ; 3.029 ; 0.000         ;
+; clk                                                ; 0.357 ; 0.000         ;
+; GameController:game_inst|Levels:Levels1|state.IDLE ; 3.389 ; 0.000         ;
 +----------------------------------------------------+-------+---------------+
 
 
@@ -174,8 +174,8 @@ No paths to report.
 +----------------------------------------------------+--------+---------------+
 ; Clock                                              ; Slack  ; End Point TNS ;
 +----------------------------------------------------+--------+---------------+
-; clk                                                ; -2.636 ; -390.041      ;
-; GameController:game_inst|Levels:Levels1|state.IDLE ; 0.354  ; 0.000         ;
+; clk                                                ; -2.636 ; -395.329      ;
+; GameController:game_inst|Levels:Levels1|state.IDLE ; 0.459  ; 0.000         ;
 +----------------------------------------------------+--------+---------------+
 
 
@@ -191,7 +191,7 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 159.18 MHz ; 159.18 MHz      ; clk        ;      ;
+; 160.08 MHz ; 160.08 MHz      ; clk        ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -201,8 +201,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------+--------+---------------+
 ; Clock                                              ; Slack  ; End Point TNS ;
 +----------------------------------------------------+--------+---------------+
-; clk                                                ; -5.282 ; -500.160      ;
-; GameController:game_inst|Levels:Levels1|state.IDLE ; -4.305 ; -8.413        ;
+; clk                                                ; -5.247 ; -516.616      ;
+; GameController:game_inst|Levels:Levels1|state.IDLE ; -4.376 ; -8.665        ;
 +----------------------------------------------------+--------+---------------+
 
 
@@ -211,8 +211,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------------------------------+-------+---------------+
 ; Clock                                              ; Slack ; End Point TNS ;
 +----------------------------------------------------+-------+---------------+
-; clk                                                ; 0.133 ; 0.000         ;
-; GameController:game_inst|Levels:Levels1|state.IDLE ; 3.065 ; 0.000         ;
+; clk                                                ; 0.265 ; 0.000         ;
+; GameController:game_inst|Levels:Levels1|state.IDLE ; 3.402 ; 0.000         ;
 +----------------------------------------------------+-------+---------------+
 
 
@@ -233,8 +233,8 @@ No paths to report.
 +----------------------------------------------------+--------+---------------+
 ; Clock                                              ; Slack  ; End Point TNS ;
 +----------------------------------------------------+--------+---------------+
-; clk                                                ; -2.636 ; -394.268      ;
-; GameController:game_inst|Levels:Levels1|state.IDLE ; 0.384  ; 0.000         ;
+; clk                                                ; -2.636 ; -397.933      ;
+; GameController:game_inst|Levels:Levels1|state.IDLE ; 0.447  ; 0.000         ;
 +----------------------------------------------------+--------+---------------+
 
 
@@ -250,8 +250,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------------------------+--------+---------------+
 ; Clock                                              ; Slack  ; End Point TNS ;
 +----------------------------------------------------+--------+---------------+
-; clk                                                ; -1.939 ; -137.142      ;
-; GameController:game_inst|Levels:Levels1|state.IDLE ; -1.903 ; -3.629        ;
+; clk                                                ; -2.156 ; -144.020      ;
+; GameController:game_inst|Levels:Levels1|state.IDLE ; -1.960 ; -3.852        ;
 +----------------------------------------------------+--------+---------------+
 
 
@@ -260,8 +260,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------------------------+-------+---------------+
 ; Clock                                              ; Slack ; End Point TNS ;
 +----------------------------------------------------+-------+---------------+
-; clk                                                ; 0.178 ; 0.000         ;
-; GameController:game_inst|Levels:Levels1|state.IDLE ; 1.883 ; 0.000         ;
+; clk                                                ; 0.179 ; 0.000         ;
+; GameController:game_inst|Levels:Levels1|state.IDLE ; 2.096 ; 0.000         ;
 +----------------------------------------------------+-------+---------------+
 
 
@@ -282,8 +282,8 @@ No paths to report.
 +----------------------------------------------------+--------+---------------+
 ; Clock                                              ; Slack  ; End Point TNS ;
 +----------------------------------------------------+--------+---------------+
-; clk                                                ; -2.174 ; -177.760      ;
-; GameController:game_inst|Levels:Levels1|state.IDLE ; 0.417  ; 0.000         ;
+; clk                                                ; -2.174 ; -179.273      ;
+; GameController:game_inst|Levels:Levels1|state.IDLE ; 0.472  ; 0.000         ;
 +----------------------------------------------------+--------+---------------+
 
 
@@ -299,8 +299,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------------------------+--------+---------------+
 ; Clock                                              ; Slack  ; End Point TNS ;
 +----------------------------------------------------+--------+---------------+
-; GameController:game_inst|Levels:Levels1|state.IDLE ; -1.817 ; -3.507        ;
-; clk                                                ; -1.599 ; -103.379      ;
+; GameController:game_inst|Levels:Levels1|state.IDLE ; -1.873 ; -3.682        ;
+; clk                                                ; -1.812 ; -109.411      ;
 +----------------------------------------------------+--------+---------------+
 
 
@@ -309,8 +309,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------------------------------+-------+---------------+
 ; Clock                                              ; Slack ; End Point TNS ;
 +----------------------------------------------------+-------+---------------+
-; clk                                                ; 0.167 ; 0.000         ;
-; GameController:game_inst|Levels:Levels1|state.IDLE ; 1.859 ; 0.000         ;
+; clk                                                ; 0.162 ; 0.000         ;
+; GameController:game_inst|Levels:Levels1|state.IDLE ; 2.047 ; 0.000         ;
 +----------------------------------------------------+-------+---------------+
 
 
@@ -331,8 +331,8 @@ No paths to report.
 +----------------------------------------------------+--------+---------------+
 ; Clock                                              ; Slack  ; End Point TNS ;
 +----------------------------------------------------+--------+---------------+
-; clk                                                ; -2.174 ; -178.339      ;
-; GameController:game_inst|Levels:Levels1|state.IDLE ; 0.429  ; 0.000         ;
+; clk                                                ; -2.174 ; -179.451      ;
+; GameController:game_inst|Levels:Levels1|state.IDLE ; 0.478  ; 0.000         ;
 +----------------------------------------------------+--------+---------------+
 
 
@@ -343,7 +343,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 6
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 0.096 ns
+Worst Case Available Settling Time: 0.065 ns
 
 
 
@@ -353,12 +353,12 @@ Worst Case Available Settling Time: 0.096 ns
 +-----------------------------------------------------+----------+-------+----------+---------+---------------------+
 ; Clock                                               ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +-----------------------------------------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack                                    ; -5.282   ; 0.133 ; N/A      ; N/A     ; -2.636              ;
-;  GameController:game_inst|Levels:Levels1|state.IDLE ; -4.305   ; 1.859 ; N/A      ; N/A     ; 0.354               ;
-;  clk                                                ; -5.282   ; 0.133 ; N/A      ; N/A     ; -2.636              ;
-; Design-wide TNS                                     ; -524.777 ; 0.0   ; 0.0      ; 0.0     ; -394.268            ;
-;  GameController:game_inst|Levels:Levels1|state.IDLE ; -8.413   ; 0.000 ; N/A      ; N/A     ; 0.000               ;
-;  clk                                                ; -516.523 ; 0.000 ; N/A      ; N/A     ; -394.268            ;
+; Worst-case Slack                                    ; -5.247   ; 0.162 ; N/A      ; N/A     ; -2.636              ;
+;  GameController:game_inst|Levels:Levels1|state.IDLE ; -4.376   ; 2.047 ; N/A      ; N/A     ; 0.447               ;
+;  clk                                                ; -5.247   ; 0.162 ; N/A      ; N/A     ; -2.636              ;
+; Design-wide TNS                                     ; -542.358 ; 0.0   ; 0.0      ; 0.0     ; -397.933            ;
+;  GameController:game_inst|Levels:Levels1|state.IDLE ; -8.665   ; 0.000 ; N/A      ; N/A     ; 0.000               ;
+;  clk                                                ; -533.777 ; 0.000 ; N/A      ; N/A     ; -397.933            ;
 +-----------------------------------------------------+----------+-------+----------+---------+---------------------+
 
 
@@ -645,7 +645,7 @@ Worst Case Available Settling Time: 0.096 ns
 +----------------------------------------------------+----------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                         ; To Clock                                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------------------+----------------------------------------------------+----------+----------+----------+----------+
-; clk                                                ; clk                                                ; 4342     ; 0        ; 0        ; 0        ;
+; clk                                                ; clk                                                ; 4403     ; 0        ; 0        ; 0        ;
 ; GameController:game_inst|Levels:Levels1|state.IDLE ; clk                                                ; 17       ; 39       ; 0        ; 0        ;
 ; clk                                                ; GameController:game_inst|Levels:Levels1|state.IDLE ; 0        ; 0        ; 2        ; 0        ;
 +----------------------------------------------------+----------------------------------------------------+----------+----------+----------+----------+
@@ -657,7 +657,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +----------------------------------------------------+----------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                         ; To Clock                                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +----------------------------------------------------+----------------------------------------------------+----------+----------+----------+----------+
-; clk                                                ; clk                                                ; 4342     ; 0        ; 0        ; 0        ;
+; clk                                                ; clk                                                ; 4403     ; 0        ; 0        ; 0        ;
 ; GameController:game_inst|Levels:Levels1|state.IDLE ; clk                                                ; 17       ; 39       ; 0        ; 0        ;
 ; clk                                                ; GameController:game_inst|Levels:Levels1|state.IDLE ; 0        ; 0        ; 2        ; 0        ;
 +----------------------------------------------------+----------------------------------------------------+----------+----------+----------+----------+
@@ -684,9 +684,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 9     ; 9    ;
-; Unconstrained Input Port Paths  ; 280   ; 280  ;
+; Unconstrained Input Port Paths  ; 281   ; 281  ;
 ; Unconstrained Output Ports      ; 43    ; 43   ;
-; Unconstrained Output Port Paths ; 1105  ; 1105 ;
+; Unconstrained Output Port Paths ; 1110  ; 1110 ;
 +---------------------------------+-------+------+
 
 
@@ -842,7 +842,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon May 11 13:50:27 2026
+    Info: Processing started: Mon May 11 17:46:01 2026
 Info: Command: quartus_sta WhackAMole -c WhackAMole
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -861,23 +861,23 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.118
+Info (332146): Worst-case setup slack is -4.921
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.118            -516.523 clk 
-    Info (332119):    -4.262              -8.254 GameController:game_inst|Levels:Levels1|state.IDLE 
-Info (332146): Worst-case hold slack is 0.371
+    Info (332119):    -4.921            -533.777 clk 
+    Info (332119):    -4.347              -8.581 GameController:game_inst|Levels:Levels1|state.IDLE 
+Info (332146): Worst-case hold slack is 0.357
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.371               0.000 clk 
-    Info (332119):     3.029               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
+    Info (332119):     0.357               0.000 clk 
+    Info (332119):     3.389               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -390.041 clk 
-    Info (332119):     0.354               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
+    Info (332119):    -2.636            -395.329 clk 
+    Info (332119):     0.459               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
 Info (332114): Report Metastability: Found 6 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
@@ -886,23 +886,23 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.282
+Info (332146): Worst-case setup slack is -5.247
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.282            -500.160 clk 
-    Info (332119):    -4.305              -8.413 GameController:game_inst|Levels:Levels1|state.IDLE 
-Info (332146): Worst-case hold slack is 0.133
+    Info (332119):    -5.247            -516.616 clk 
+    Info (332119):    -4.376              -8.665 GameController:game_inst|Levels:Levels1|state.IDLE 
+Info (332146): Worst-case hold slack is 0.265
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.133               0.000 clk 
-    Info (332119):     3.065               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
+    Info (332119):     0.265               0.000 clk 
+    Info (332119):     3.402               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636            -394.268 clk 
-    Info (332119):     0.384               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
+    Info (332119):    -2.636            -397.933 clk 
+    Info (332119):     0.447               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
 Info (332114): Report Metastability: Found 6 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
@@ -911,59 +911,59 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.939
+Info (332146): Worst-case setup slack is -2.156
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.939            -137.142 clk 
-    Info (332119):    -1.903              -3.629 GameController:game_inst|Levels:Levels1|state.IDLE 
-Info (332146): Worst-case hold slack is 0.178
+    Info (332119):    -2.156            -144.020 clk 
+    Info (332119):    -1.960              -3.852 GameController:game_inst|Levels:Levels1|state.IDLE 
+Info (332146): Worst-case hold slack is 0.179
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.178               0.000 clk 
-    Info (332119):     1.883               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
+    Info (332119):     0.179               0.000 clk 
+    Info (332119):     2.096               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174            -177.760 clk 
-    Info (332119):     0.417               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
+    Info (332119):    -2.174            -179.273 clk 
+    Info (332119):     0.472               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
 Info (332114): Report Metastability: Found 6 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.817
+Info (332146): Worst-case setup slack is -1.873
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.817              -3.507 GameController:game_inst|Levels:Levels1|state.IDLE 
-    Info (332119):    -1.599            -103.379 clk 
-Info (332146): Worst-case hold slack is 0.167
+    Info (332119):    -1.873              -3.682 GameController:game_inst|Levels:Levels1|state.IDLE 
+    Info (332119):    -1.812            -109.411 clk 
+Info (332146): Worst-case hold slack is 0.162
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.167               0.000 clk 
-    Info (332119):     1.859               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
+    Info (332119):     0.162               0.000 clk 
+    Info (332119):     2.047               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174            -178.339 clk 
-    Info (332119):     0.429               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
+    Info (332119):    -2.174            -179.451 clk 
+    Info (332119):     0.478               0.000 GameController:game_inst|Levels:Levels1|state.IDLE 
 Info (332114): Report Metastability: Found 6 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 6
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 0.096 ns
+    Info (332114): Worst Case Available Settling Time: 0.065 ns
     Info (332114): 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5122 megabytes
-    Info: Processing ended: Mon May 11 13:50:34 2026
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 5119 megabytes
+    Info: Processing ended: Mon May 11 17:46:12 2026
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:12
 
 

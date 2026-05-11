@@ -1,5 +1,5 @@
 Analysis & Synthesis report for WhackAMole
-Mon May 11 13:49:56 2026
+Mon May 11 17:45:13 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -49,9 +49,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  41. Parameter Settings for User Entity Instance: GameController:game_inst|ScoreTracker:ScoreTracker1
  42. Parameter Settings for User Entity Instance: GameController:game_inst|ScoreTracker:ScoreTracker1|RAM_Score:ScoreRAM|altsyncram:altsyncram_component
  43. Parameter Settings for User Entity Instance: DisplayController:display_inst
- 44. Parameter Settings for Inferred Entity Instance: DisplayController:display_inst|lpm_divide:Div0
- 45. Parameter Settings for Inferred Entity Instance: DisplayController:display_inst|ScoreDisplay:scoreDisplay|lpm_divide:Div0
- 46. Parameter Settings for Inferred Entity Instance: DisplayController:display_inst|ScoreDisplay:scoreDisplay|lpm_divide:Mod0
+ 44. Parameter Settings for Inferred Entity Instance: DisplayController:display_inst|ScoreDisplay:scoreDisplay|lpm_divide:Div0
+ 45. Parameter Settings for Inferred Entity Instance: DisplayController:display_inst|ScoreDisplay:scoreDisplay|lpm_divide:Mod0
+ 46. Parameter Settings for Inferred Entity Instance: DisplayController:display_inst|lpm_divide:Div0
  47. Parameter Settings for Inferred Entity Instance: DisplayController:display_inst|ScoreDisplay:scoreDisplay|lpm_divide:Mod1
  48. Parameter Settings for Inferred Entity Instance: DisplayController:display_inst|ScoreDisplay:bestDisplay|lpm_divide:Div0
  49. Parameter Settings for Inferred Entity Instance: DisplayController:display_inst|ScoreDisplay:bestDisplay|lpm_divide:Mod0
@@ -67,12 +67,13 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  59. Port Connectivity Checks: "DisplayController:display_inst|DisplayManager:dm|LetterDecoder:LD2"
  60. Port Connectivity Checks: "GameController:game_inst|ScoreTracker:ScoreTracker1"
  61. Port Connectivity Checks: "GameController:game_inst"
- 62. Port Connectivity Checks: "TimerController:timer_inst|OneSecTimer:ost|countTo10:CountTo10_1"
- 63. Port Connectivity Checks: "Authentication:auth_inst"
- 64. Post-Synthesis Netlist Statistics for Top Partition
- 65. Elapsed Time Per Partition
- 66. Analysis & Synthesis Messages
- 67. Analysis & Synthesis Suppressed Messages
+ 62. Port Connectivity Checks: "digitTimer:tens_timer"
+ 63. Port Connectivity Checks: "OneSecTimer:timer_tick|countTo10:CountTo10_1"
+ 64. Port Connectivity Checks: "Authentication:auth_inst"
+ 65. Post-Synthesis Netlist Statistics for Top Partition
+ 66. Elapsed Time Per Partition
+ 67. Analysis & Synthesis Messages
+ 68. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -99,13 +100,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 11 13:49:55 2026       ;
+; Analysis & Synthesis Status     ; Successful - Mon May 11 17:45:13 2026       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; WhackAMole                                  ;
 ; Top-level Entity Name           ; WhackAMole                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 254                                         ;
+; Total registers                 ; 257                                         ;
 ; Total pins                      ; 54                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 320                                         ;
@@ -233,7 +234,6 @@ https://fpgasoftware.intel.com/eula.
 ; ../src/One_ms_counter.v          ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/One_ms_counter.v                       ;         ;
 ; ../src/ButtonShaper.v            ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/ButtonShaper.v                         ;         ;
 ; ../src/WhackAMole.v              ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/WhackAMole.v                           ;         ;
-; ../src/TimerController.v         ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/TimerController.v                      ;         ;
 ; ../src/ScoreTracker.v            ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/ScoreTracker.v                         ;         ;
 ; ../src/ScoreDisplay.v            ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/ScoreDisplay.v                         ;         ;
 ; ../src/ScoreCounter.v            ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/ScoreCounter.v                         ;         ;
@@ -252,6 +252,7 @@ https://fpgasoftware.intel.com/eula.
 ; ../src/GameController.v          ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/GameController.v                       ;         ;
 ; ../src/DisplayManager.v          ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/DisplayManager.v                       ;         ;
 ; ../src/DisplayController.v       ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v                    ;         ;
+; ../src/digitTimer.v              ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/digitTimer.v                           ;         ;
 ; ../src/countTo100.v              ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/countTo100.v                           ;         ;
 ; ../src/countTo10.v               ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/countTo10.v                            ;         ;
 ; ../src/Authentication.v          ; yes             ; User Verilog HDL File                 ; C:/ADD/AdvancedDigitalDesignFinal/src/Authentication.v                       ;         ;
@@ -275,13 +276,13 @@ https://fpgasoftware.intel.com/eula.
 ; lpm_divide.tdf                   ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                          ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_5dm.tdf            ; yes             ; Auto-Generated Megafunction           ; C:/ADD/AdvancedDigitalDesignFinal/syn/db/lpm_divide_5dm.tdf                  ;         ;
-; db/sign_div_unsign_bnh.tdf       ; yes             ; Auto-Generated Megafunction           ; C:/ADD/AdvancedDigitalDesignFinal/syn/db/sign_div_unsign_bnh.tdf             ;         ;
-; db/alt_u_div_s2f.tdf             ; yes             ; Auto-Generated Megafunction           ; C:/ADD/AdvancedDigitalDesignFinal/syn/db/alt_u_div_s2f.tdf                   ;         ;
 ; db/lpm_divide_4am.tdf            ; yes             ; Auto-Generated Megafunction           ; C:/ADD/AdvancedDigitalDesignFinal/syn/db/lpm_divide_4am.tdf                  ;         ;
 ; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction           ; C:/ADD/AdvancedDigitalDesignFinal/syn/db/sign_div_unsign_akh.tdf             ;         ;
 ; db/alt_u_div_qse.tdf             ; yes             ; Auto-Generated Megafunction           ; C:/ADD/AdvancedDigitalDesignFinal/syn/db/alt_u_div_qse.tdf                   ;         ;
 ; db/lpm_divide_72m.tdf            ; yes             ; Auto-Generated Megafunction           ; C:/ADD/AdvancedDigitalDesignFinal/syn/db/lpm_divide_72m.tdf                  ;         ;
+; db/lpm_divide_5dm.tdf            ; yes             ; Auto-Generated Megafunction           ; C:/ADD/AdvancedDigitalDesignFinal/syn/db/lpm_divide_5dm.tdf                  ;         ;
+; db/sign_div_unsign_bnh.tdf       ; yes             ; Auto-Generated Megafunction           ; C:/ADD/AdvancedDigitalDesignFinal/syn/db/sign_div_unsign_bnh.tdf             ;         ;
+; db/alt_u_div_s2f.tdf             ; yes             ; Auto-Generated Megafunction           ; C:/ADD/AdvancedDigitalDesignFinal/syn/db/alt_u_div_s2f.tdf                   ;         ;
 +----------------------------------+-----------------+---------------------------------------+------------------------------------------------------------------------------+---------+
 
 
@@ -290,16 +291,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 540       ;
+; Estimate of Logic utilization (ALMs needed) ; 545       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 1000      ;
-;     -- 7 input functions                    ; 1         ;
-;     -- 6 input functions                    ; 68        ;
-;     -- 5 input functions                    ; 59        ;
-;     -- 4 input functions                    ; 173       ;
-;     -- <=3 input functions                  ; 699       ;
+; Combinational ALUT usage for logic          ; 1014      ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 65        ;
+;     -- 5 input functions                    ; 56        ;
+;     -- 4 input functions                    ; 192       ;
+;     -- <=3 input functions                  ; 701       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 254       ;
+; Dedicated logic registers                   ; 257       ;
 ;                                             ;           ;
 ; I/O pins                                    ; 54        ;
 ; Total MLAB memory bits                      ; 0         ;
@@ -308,8 +309,8 @@ https://fpgasoftware.intel.com/eula.
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 294       ;
-; Total fan-out                               ; 4163      ;
+; Maximum fan-out                             ; 297       ;
+; Total fan-out                               ; 4212      ;
 ; Average fan-out                             ; 2.97      ;
 +---------------------------------------------+-----------+
 
@@ -319,8 +320,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                  ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |WhackAMole                                  ; 1000 (0)            ; 254 (0)                   ; 320               ; 0          ; 54   ; 0            ; |WhackAMole                                                                                                                                                          ; WhackAMole          ; work         ;
-;    |Authentication:auth_inst|                ; 86 (0)              ; 119 (0)                   ; 320               ; 0          ; 0    ; 0            ; |WhackAMole|Authentication:auth_inst                                                                                                                                 ; Authentication      ; work         ;
+; |WhackAMole                                  ; 1014 (0)            ; 257 (0)                   ; 320               ; 0          ; 54   ; 0            ; |WhackAMole                                                                                                                                                          ; WhackAMole          ; work         ;
+;    |Authentication:auth_inst|                ; 88 (0)              ; 119 (0)                   ; 320               ; 0          ; 0    ; 0            ; |WhackAMole|Authentication:auth_inst                                                                                                                                 ; Authentication      ; work         ;
 ;       |PLAYER_ID_ROM:pid_ROM|                ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |WhackAMole|Authentication:auth_inst|PLAYER_ID_ROM:pid_ROM                                                                                                           ; PLAYER_ID_ROM       ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |WhackAMole|Authentication:auth_inst|PLAYER_ID_ROM:pid_ROM|altsyncram:altsyncram_component                                                                           ; altsyncram          ; work         ;
 ;             |altsyncram_j5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |WhackAMole|Authentication:auth_inst|PLAYER_ID_ROM:pid_ROM|altsyncram:altsyncram_component|altsyncram_j5g1:auto_generated                                            ; altsyncram_j5g1     ; work         ;
@@ -328,12 +329,12 @@ https://fpgasoftware.intel.com/eula.
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |WhackAMole|Authentication:auth_inst|ROM_PSWD:pswd_ROM|altsyncram:altsyncram_component                                                                               ; altsyncram          ; work         ;
 ;             |altsyncram_nlf1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 192               ; 0          ; 0    ; 0            ; |WhackAMole|Authentication:auth_inst|ROM_PSWD:pswd_ROM|altsyncram:altsyncram_component|altsyncram_nlf1:auto_generated                                                ; altsyncram_nlf1     ; work         ;
 ;       |id_verification:id_verify|            ; 44 (44)             ; 50 (50)                   ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify                                                                                                       ; id_verification     ; work         ;
-;       |pswd_verification:pw_verify|          ; 42 (42)             ; 69 (69)                   ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify                                                                                                     ; pswd_verification   ; work         ;
+;       |pswd_verification:pw_verify|          ; 44 (44)             ; 69 (69)                   ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify                                                                                                     ; pswd_verification   ; work         ;
 ;    |ButtonShaper:bs0|                        ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|ButtonShaper:bs0                                                                                                                                         ; ButtonShaper        ; work         ;
 ;    |ButtonShaper:bs1|                        ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|ButtonShaper:bs1                                                                                                                                         ; ButtonShaper        ; work         ;
 ;    |ButtonShaper:bs2|                        ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|ButtonShaper:bs2                                                                                                                                         ; ButtonShaper        ; work         ;
 ;    |ButtonShaper:bs3|                        ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|ButtonShaper:bs3                                                                                                                                         ; ButtonShaper        ; work         ;
-;    |DisplayController:display_inst|          ; 763 (78)            ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst                                                                                                                           ; DisplayController   ; work         ;
+;    |DisplayController:display_inst|          ; 769 (78)            ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst                                                                                                                           ; DisplayController   ; work         ;
 ;       |ScoreDisplay:bestDisplay|             ; 110 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:bestDisplay                                                                                                  ; ScoreDisplay        ; work         ;
 ;          |NumberDecoder:OnesDecoder|         ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:bestDisplay|NumberDecoder:OnesDecoder                                                                        ; NumberDecoder       ; work         ;
 ;          |NumberDecoder:TensDecoder|         ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:bestDisplay|NumberDecoder:TensDecoder                                                                        ; NumberDecoder       ; work         ;
@@ -349,9 +350,9 @@ https://fpgasoftware.intel.com/eula.
 ;             |lpm_divide_72m:auto_generated|  ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:bestDisplay|lpm_divide:Mod1|lpm_divide_72m:auto_generated                                                    ; lpm_divide_72m      ; work         ;
 ;                |sign_div_unsign_akh:divider| ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:bestDisplay|lpm_divide:Mod1|lpm_divide_72m:auto_generated|sign_div_unsign_akh:divider                        ; sign_div_unsign_akh ; work         ;
 ;                   |alt_u_div_qse:divider|    ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:bestDisplay|lpm_divide:Mod1|lpm_divide_72m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_qse:divider  ; alt_u_div_qse       ; work         ;
-;       |ScoreDisplay:scoreDisplay|            ; 115 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:scoreDisplay                                                                                                 ; ScoreDisplay        ; work         ;
-;          |NumberDecoder:OnesDecoder|         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:scoreDisplay|NumberDecoder:OnesDecoder                                                                       ; NumberDecoder       ; work         ;
-;          |NumberDecoder:TensDecoder|         ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:scoreDisplay|NumberDecoder:TensDecoder                                                                       ; NumberDecoder       ; work         ;
+;       |ScoreDisplay:scoreDisplay|            ; 121 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:scoreDisplay                                                                                                 ; ScoreDisplay        ; work         ;
+;          |NumberDecoder:OnesDecoder|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:scoreDisplay|NumberDecoder:OnesDecoder                                                                       ; NumberDecoder       ; work         ;
+;          |NumberDecoder:TensDecoder|         ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:scoreDisplay|NumberDecoder:TensDecoder                                                                       ; NumberDecoder       ; work         ;
 ;          |lpm_divide:Div0|                   ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:scoreDisplay|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
 ;             |lpm_divide_4am:auto_generated|  ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:scoreDisplay|lpm_divide:Div0|lpm_divide_4am:auto_generated                                                   ; lpm_divide_4am      ; work         ;
 ;                |sign_div_unsign_akh:divider| ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|ScoreDisplay:scoreDisplay|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider                       ; sign_div_unsign_akh ; work         ;
@@ -368,7 +369,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |lpm_divide_5dm:auto_generated|     ; 460 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|lpm_divide:Div0|lpm_divide_5dm:auto_generated                                                                             ; lpm_divide_5dm      ; work         ;
 ;             |sign_div_unsign_bnh:divider|    ; 460 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|lpm_divide:Div0|lpm_divide_5dm:auto_generated|sign_div_unsign_bnh:divider                                                 ; sign_div_unsign_bnh ; work         ;
 ;                |alt_u_div_s2f:divider|       ; 460 (460)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|DisplayController:display_inst|lpm_divide:Div0|lpm_divide_5dm:auto_generated|sign_div_unsign_bnh:divider|alt_u_div_s2f:divider                           ; alt_u_div_s2f       ; work         ;
-;    |GameController:game_inst|                ; 143 (18)            ; 89 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|GameController:game_inst                                                                                                                                 ; GameController      ; work         ;
+;    |GameController:game_inst|                ; 148 (23)            ; 91 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|GameController:game_inst                                                                                                                                 ; GameController      ; work         ;
 ;       |Levels:Levels1|                       ; 79 (42)             ; 55 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|GameController:game_inst|Levels:Levels1                                                                                                                  ; Levels              ; work         ;
 ;          |OneSecond_Timer:timer|             ; 37 (0)              ; 30 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|GameController:game_inst|Levels:Levels1|OneSecond_Timer:timer                                                                                            ; OneSecond_Timer     ; work         ;
 ;             |countTo10:u_10|                 ; 37 (6)              ; 30 (5)                    ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|GameController:game_inst|Levels:Levels1|OneSecond_Timer:timer|countTo10:u_10                                                                             ; countTo10           ; work         ;
@@ -376,6 +377,7 @@ https://fpgasoftware.intel.com/eula.
 ;                   |One_ms_counter:u_ms|      ; 21 (21)             ; 17 (17)                   ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|GameController:game_inst|Levels:Levels1|OneSecond_Timer:timer|countTo10:u_10|countTo100:u_100|One_ms_counter:u_ms                                        ; One_ms_counter      ; work         ;
 ;       |ScoreCounter:ScoreCounter1|           ; 39 (39)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|GameController:game_inst|ScoreCounter:ScoreCounter1                                                                                                      ; ScoreCounter        ; work         ;
 ;       |pseudoRNG:pseudoRNG1|                 ; 7 (7)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|GameController:game_inst|pseudoRNG:pseudoRNG1                                                                                                            ; pseudoRNG           ; work         ;
+;    |digitTimer:ones_timer|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |WhackAMole|digitTimer:ones_timer                                                                                                                                    ; digitTimer          ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -575,15 +577,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
 ; GameController:game_inst|gameState[2]                                        ; Stuck at GND due to stuck port data_in                                             ;
 ; GameController:game_inst|buttonReg[3]                                        ; Stuck at GND due to stuck port data_in                                             ;
-; GameController:game_inst|timerEnable                                         ; Lost fanout                                                                        ;
+; digitTimer:ones_timer|BorrowUp                                               ; Stuck at GND due to stuck port data_in                                             ;
+; digitTimer:ones_timer|NoBorrowDown                                           ; Stuck at GND due to stuck port data_in                                             ;
 ; DisplayController:display_inst|prevGameState[2]                              ; Stuck at GND due to stuck port data_in                                             ;
-; GameController:game_inst|timerLength[0..3]                                   ; Lost fanout                                                                        ;
-; TimerController:timer_inst|secondsRemaining[0..11]                           ; Lost fanout                                                                        ;
 ; GameController:game_inst|ScoreTracker:ScoreTracker1|RAMAddress[3..5]         ; Stuck at GND due to stuck port data_in                                             ;
 ; Authentication:auth_inst|pswd_verification:pw_verify|addr_to_mem[3,4]        ; Stuck at GND due to stuck port data_in                                             ;
 ; Authentication:auth_inst|id_verification:id_verify|idAddr[3,4]               ; Stuck at GND due to stuck port data_in                                             ;
-; TimerController:timer_inst|timerDone                                         ; Stuck at GND due to stuck port data_in                                             ;
-; GameController:game_inst|timerReconfig                                       ; Lost fanout                                                                        ;
+; digitTimer:ones_timer|Num[3]                                                 ; Merged with digitTimer:ones_timer|Num[0]                                           ;
+; digitTimer:tens_timer|Num[0,3]                                               ; Merged with digitTimer:ones_timer|Num[0]                                           ;
+; digitTimer:ones_timer|Num[2]                                                 ; Merged with digitTimer:ones_timer|Num[1]                                           ;
+; digitTimer:tens_timer|Num[1,2]                                               ; Merged with digitTimer:ones_timer|Num[1]                                           ;
+; digitTimer:ones_timer|Num[1]                                                 ; Stuck at GND due to stuck port data_in                                             ;
 ; DisplayController:display_inst|displayState~2                                ; Lost fanout                                                                        ;
 ; DisplayController:display_inst|displayState~3                                ; Lost fanout                                                                        ;
 ; DisplayController:display_inst|displayState~4                                ; Lost fanout                                                                        ;
@@ -649,7 +653,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; GameController:game_inst|ScoreTracker:ScoreTracker1|State.RAM_INIT           ; Lost fanout                                                                        ;
 ; GameController:game_inst|ScoreTracker:ScoreTracker1|GlobalWinner[0..2]       ; Stuck at GND due to stuck port data_in                                             ;
 ; GameController:game_inst|ScoreTracker:ScoreTracker1|PersonalBest[0..6]       ; Stuck at GND due to stuck port data_in                                             ;
-; Total Number of Removed Registers = 135                                      ;                                                                                    ;
+; Total Number of Removed Registers = 125                                      ;                                                                                    ;
 +------------------------------------------------------------------------------+------------------------------------------------------------------------------------+
 
 
@@ -689,7 +693,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;                                                                       ;                           ; Authentication:auth_inst|pswd_verification:pw_verify|pswd_to_RAM[1],       ;
 ;                                                                       ;                           ; Authentication:auth_inst|pswd_verification:pw_verify|pswd_to_RAM[0],       ;
 ;                                                                       ;                           ; Authentication:auth_inst|pswd_verification:pw_verify|RW                    ;
-; GameController:game_inst|State.gameOver                               ; Stuck at GND              ; GameController:game_inst|scoreRequest,                                     ;
+; digitTimer:ones_timer|NoBorrowDown                                    ; Stuck at GND              ; GameController:game_inst|scoreRequest,                                     ;
 ;                                                                       ; due to stuck port data_in ; GameController:game_inst|ScoreTracker:ScoreTracker1|State.FETCH_RAM,       ;
 ;                                                                       ;                           ; GameController:game_inst|ScoreTracker:ScoreTracker1|State.RAM_CYCLE1,      ;
 ;                                                                       ;                           ; GameController:game_inst|ScoreTracker:ScoreTracker1|State.RAM_CYCLE2,      ;
@@ -730,7 +734,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;                                                                       ;                           ; Authentication:auth_inst|pswd_verification:pw_verify|pswd_reset_status[0]  ;
 ; GameController:game_inst|gameState[2]                                 ; Stuck at GND              ; DisplayController:display_inst|prevGameState[2]                            ;
 ;                                                                       ; due to stuck port data_in ;                                                                            ;
-; TimerController:timer_inst|secondsRemaining[4]                        ; Lost Fanouts              ; GameController:game_inst|timerReconfig                                     ;
 ; GameController:game_inst|ScoreTracker:ScoreTracker1|State~2           ; Lost Fanouts              ; Authentication:auth_inst|pswd_verification:pw_verify|isGuest_to_GC         ;
 +-----------------------------------------------------------------------+---------------------------+----------------------------------------------------------------------------+
 
@@ -740,12 +743,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 254   ;
-; Number of registers using Synchronous Clear  ; 134   ;
-; Number of registers using Synchronous Load   ; 2     ;
+; Total registers                              ; 257   ;
+; Number of registers using Synchronous Clear  ; 137   ;
+; Number of registers using Synchronous Load   ; 3     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 127   ;
+; Number of registers using Clock Enable       ; 126   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -768,36 +771,38 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |WhackAMole|GameController:game_inst|ScoreTracker:ScoreTracker1|PersonalBest[6]                                                        ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_to_RAM[12]                                                       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |WhackAMole|GameController:game_inst|ScoreTracker:ScoreTracker1|GlobalWinner[1]                                                        ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_entered[22]                                                      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_entered[16]                                                      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_entered[14]                                                      ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |WhackAMole|GameController:game_inst|ScoreTracker:ScoreTracker1|PersonalBest[1]                                                        ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_to_RAM[22]                                                       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |WhackAMole|GameController:game_inst|ScoreTracker:ScoreTracker1|GlobalWinner[0]                                                        ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_entered[23]                                                      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_entered[19]                                                      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_entered[15]                                                      ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_entered[11]                                                      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_entered[6]                                                       ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_entered[1]                                                       ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |WhackAMole|GameController:game_inst|ScoreCounter:ScoreCounter1|Score[6]                                                               ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_from_mem[8]                                                      ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |WhackAMole|GameController:game_inst|Levels:Levels1|OneSecond_Timer:timer|countTo10:u_10|Count[3]                                      ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |WhackAMole|GameController:game_inst|Levels:Levels1|OneSecond_Timer:timer|countTo10:u_10|countTo100:u_100|Count[5]                     ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |WhackAMole|GameController:game_inst|Levels:Levels1|OneSecond_Timer:timer|countTo10:u_10|countTo100:u_100|One_ms_counter:u_ms|Count[6] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |WhackAMole|DisplayController:display_inst|flashCounter[1]                                                                             ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|playerID_to_GC[0]                                                     ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify|memoryID[10]                                                            ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |WhackAMole|GameController:game_inst|gameLevel[0]                                                                                      ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify|candidateID[11]                                                         ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify|candidateID[4]                                                          ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify|candidateID[0]                                                          ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify|candidateID[12]                                                         ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_entered[7]                                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_entered[3]                                                       ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |WhackAMole|GameController:game_inst|ScoreCounter:ScoreCounter1|Score[2]                                                               ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|pswd_from_mem[14]                                                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |WhackAMole|GameController:game_inst|Levels:Levels1|OneSecond_Timer:timer|countTo10:u_10|Count[0]                                      ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |WhackAMole|GameController:game_inst|Levels:Levels1|OneSecond_Timer:timer|countTo10:u_10|countTo100:u_100|Count[2]                     ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |WhackAMole|GameController:game_inst|Levels:Levels1|OneSecond_Timer:timer|countTo10:u_10|countTo100:u_100|One_ms_counter:u_ms|Count[9] ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |WhackAMole|DisplayController:display_inst|flashCounter[12]                                                                            ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|playerID_to_GC[2]                                                     ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify|memoryID[1]                                                             ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |WhackAMole|GameController:game_inst|gameLevel[1]                                                                                      ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify|candidateID[8]                                                          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify|candidateID[7]                                                          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify|candidateID[3]                                                          ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify|candidateID[15]                                                         ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |WhackAMole|GameController:game_inst|ScoreCounter:ScoreCounter1|Score[0]                                                               ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify|idInternal[0]                                                           ;
-; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|State                                                                 ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify|idInternal[2]                                                           ;
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |WhackAMole|Authentication:auth_inst|id_verification:id_verify|State                                                                   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|logout_start_to_ID                                                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |WhackAMole|DisplayController:display_inst|displayState                                                                                ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |WhackAMole|GameController:game_inst|ScoreCounter:ScoreCounter1|Mux4                                                                   ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |WhackAMole|GameController:game_inst|ScoreCounter:ScoreCounter1|Mux2                                                                   ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |WhackAMole|GameController:game_inst|Levels:Levels1|seconds_counter                                                                    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |WhackAMole|GameController:game_inst|Levels:Levels1|state                                                                              ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |WhackAMole|DisplayController:display_inst|Selector40                                                                                  ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |WhackAMole|DisplayController:display_inst|Selector35                                                                                  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |WhackAMole|DisplayController:display_inst|Selector6                                                                                   ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |WhackAMole|DisplayController:display_inst|Selector32                                                                                  ;
 ; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |WhackAMole|DisplayController:display_inst|Selector29                                                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------+
@@ -1243,29 +1248,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DisplayController:display_inst|lpm_divide:Div0 ;
-+------------------------+----------------+-------------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                                  ;
-+------------------------+----------------+-------------------------------------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                                               ;
-; LPM_WIDTHD             ; 25             ; Untyped                                               ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
-; LPM_PIPELINE           ; 0              ; Untyped                                               ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
-; CBXI_PARAMETER         ; lpm_divide_5dm ; Untyped                                               ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
-+------------------------+----------------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +---------------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: DisplayController:display_inst|ScoreDisplay:scoreDisplay|lpm_divide:Div0 ;
 +------------------------+----------------+---------------------------------------------------------------------------------+
@@ -1309,6 +1291,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                    ;
 ; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                  ;
 +------------------------+----------------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: DisplayController:display_inst|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                  ;
++------------------------+----------------+-------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                               ;
+; LPM_WIDTHD             ; 25             ; Untyped                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                               ;
+; CBXI_PARAMETER         ; lpm_divide_5dm ; Untyped                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                        ;
++------------------------+----------------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1543,18 +1548,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+-------+----------+----------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "GameController:game_inst"                                                                 ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; logOut     ; Output ; Info     ; Explicitly unconnected                                                              ;
-; scoreValid ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "GameController:game_inst"                                                                  ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; timerLength ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; scoreValid  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "digitTimer:tens_timer"                                                                      ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; BorrowUp     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; NoBorrowUp   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; NoBorrowDown ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "TimerController:timer_inst|OneSecTimer:ost|countTo10:CountTo10_1"                            ;
+; Port Connectivity Checks: "OneSecTimer:timer_tick|countTo10:CountTo10_1"                                                ;
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port          ; Type   ; Severity ; Details                                                                             ;
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1562,14 +1578,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------+
-; Port Connectivity Checks: "Authentication:auth_inst"              ;
-+----------------------+--------+----------+------------------------+
-; Port                 ; Type   ; Severity ; Details                ;
-+----------------------+--------+----------+------------------------+
-; logout_start_from_GC ; Input  ; Info     ; Explicitly unconnected ;
-; reset_done           ; Output ; Info     ; Explicitly unconnected ;
-+----------------------+--------+----------+------------------------+
++---------------------------------------------------------+
+; Port Connectivity Checks: "Authentication:auth_inst"    ;
++------------+--------+----------+------------------------+
+; Port       ; Type   ; Severity ; Details                ;
++------------+--------+----------+------------------------+
+; reset_done ; Output ; Info     ; Explicitly unconnected ;
++------------+--------+----------+------------------------+
 
 
 +-----------------------------------------------------+
@@ -1577,37 +1592,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 254                         ;
-;     ENA               ; 64                          ;
+; arriav_ff             ; 257                         ;
+;     ENA               ; 63                          ;
 ;     ENA SCLR          ; 63                          ;
-;     SCLR              ; 71                          ;
-;     SLD               ; 2                           ;
+;     SCLR              ; 74                          ;
+;     SLD               ; 3                           ;
 ;     plain             ; 54                          ;
-; arriav_lcell_comb     ; 1003                        ;
+; arriav_lcell_comb     ; 1018                        ;
 ;     arith             ; 380                         ;
 ;         0 data inputs ; 54                          ;
 ;         1 data inputs ; 89                          ;
 ;         2 data inputs ; 32                          ;
 ;         3 data inputs ; 125                         ;
 ;         4 data inputs ; 80                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 566                         ;
+;     normal            ; 582                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 254                         ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 256                         ;
 ;         3 data inputs ; 85                          ;
-;         4 data inputs ; 93                          ;
-;         5 data inputs ; 59                          ;
-;         6 data inputs ; 68                          ;
+;         4 data inputs ; 112                         ;
+;         5 data inputs ; 56                          ;
+;         6 data inputs ; 65                          ;
 ;     shared            ; 56                          ;
 ;         0 data inputs ; 19                          ;
 ;         1 data inputs ; 37                          ;
 ; boundary_port         ; 54                          ;
 ; stratixv_ram_block    ; 40                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 29.90                       ;
-; Average LUT depth     ; 14.46                       ;
+; Max LUT depth         ; 30.90                       ;
+; Average LUT depth     ; 14.85                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1616,7 +1629,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1626,7 +1639,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon May 11 13:49:45 2026
+    Info: Processing started: Mon May 11 17:44:59 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off WhackAMole -c WhackAMole
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1695,8 +1708,8 @@ Info (12021): Found 0 design units, including 0 entities, in source file rom_psw
 Info (15248): File "C:/ADD/AdvancedDigitalDesignFinal/syn/RAM_PSWD.v" is a duplicate of already analyzed file "C:/ADD/AdvancedDigitalDesignFinal/src/RAM_PSWD.v" (same filename, same library name and same md5 digest). Skipping analysis of this file.
 Info (12021): Found 0 design units, including 0 entities, in source file ram_pswd.v
 Info (12127): Elaborating entity "WhackAMole" for the top level hierarchy
-Info (12128): Elaborating entity "ButtonShaper" for hierarchy "ButtonShaper:bs0" File: C:/ADD/AdvancedDigitalDesignFinal/src/WhackAMole.v Line: 38
-Info (12128): Elaborating entity "Authentication" for hierarchy "Authentication:auth_inst" File: C:/ADD/AdvancedDigitalDesignFinal/src/WhackAMole.v Line: 56
+Info (12128): Elaborating entity "ButtonShaper" for hierarchy "ButtonShaper:bs0" File: C:/ADD/AdvancedDigitalDesignFinal/src/WhackAMole.v Line: 46
+Info (12128): Elaborating entity "Authentication" for hierarchy "Authentication:auth_inst" File: C:/ADD/AdvancedDigitalDesignFinal/src/WhackAMole.v Line: 64
 Info (12128): Elaborating entity "id_verification" for hierarchy "Authentication:auth_inst|id_verification:id_verify" File: C:/ADD/AdvancedDigitalDesignFinal/src/Authentication.v Line: 27
 Info (12128): Elaborating entity "pswd_verification" for hierarchy "Authentication:auth_inst|pswd_verification:pw_verify" File: C:/ADD/AdvancedDigitalDesignFinal/src/Authentication.v Line: 30
 Info (12128): Elaborating entity "PLAYER_ID_ROM" for hierarchy "Authentication:auth_inst|PLAYER_ID_ROM:pid_ROM" File: C:/ADD/AdvancedDigitalDesignFinal/src/Authentication.v Line: 32
@@ -1762,17 +1775,15 @@ Info (12133): Instantiated megafunction "Authentication:auth_inst|ROM_PSWD:pswd_
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_nlf1.tdf
     Info (12023): Found entity 1: altsyncram_nlf1 File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/altsyncram_nlf1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_nlf1" for hierarchy "Authentication:auth_inst|ROM_PSWD:pswd_ROM|altsyncram:altsyncram_component|altsyncram_nlf1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "TimerController" for hierarchy "TimerController:timer_inst" File: C:/ADD/AdvancedDigitalDesignFinal/src/WhackAMole.v Line: 68
-Warning (10036): Verilog HDL or VHDL warning at TimerController.v(15): object "secondsLoad" assigned a value but never read File: C:/ADD/AdvancedDigitalDesignFinal/src/TimerController.v Line: 15
-Warning (10230): Verilog HDL assignment warning at TimerController.v(39): truncated value with size 32 to match size of target (12) File: C:/ADD/AdvancedDigitalDesignFinal/src/TimerController.v Line: 39
-Info (12128): Elaborating entity "OneSecTimer" for hierarchy "TimerController:timer_inst|OneSecTimer:ost" File: C:/ADD/AdvancedDigitalDesignFinal/src/TimerController.v Line: 12
-Info (12128): Elaborating entity "countTo10" for hierarchy "TimerController:timer_inst|OneSecTimer:ost|countTo10:CountTo10_1" File: C:/ADD/AdvancedDigitalDesignFinal/src/OneSecTimer.v Line: 13
+Info (12128): Elaborating entity "OneSecTimer" for hierarchy "OneSecTimer:timer_tick" File: C:/ADD/AdvancedDigitalDesignFinal/src/WhackAMole.v Line: 74
+Info (12128): Elaborating entity "countTo10" for hierarchy "OneSecTimer:timer_tick|countTo10:CountTo10_1" File: C:/ADD/AdvancedDigitalDesignFinal/src/OneSecTimer.v Line: 13
 Warning (10230): Verilog HDL assignment warning at countTo10.v(22): truncated value with size 32 to match size of target (4) File: C:/ADD/AdvancedDigitalDesignFinal/src/countTo10.v Line: 22
-Info (12128): Elaborating entity "countTo100" for hierarchy "TimerController:timer_inst|OneSecTimer:ost|countTo10:CountTo10_1|countTo100:u_100" File: C:/ADD/AdvancedDigitalDesignFinal/src/countTo10.v Line: 12
+Info (12128): Elaborating entity "countTo100" for hierarchy "OneSecTimer:timer_tick|countTo10:CountTo10_1|countTo100:u_100" File: C:/ADD/AdvancedDigitalDesignFinal/src/countTo10.v Line: 12
 Warning (10230): Verilog HDL assignment warning at countTo100.v(22): truncated value with size 32 to match size of target (7) File: C:/ADD/AdvancedDigitalDesignFinal/src/countTo100.v Line: 22
-Info (12128): Elaborating entity "One_ms_counter" for hierarchy "TimerController:timer_inst|OneSecTimer:ost|countTo10:CountTo10_1|countTo100:u_100|One_ms_counter:u_ms" File: C:/ADD/AdvancedDigitalDesignFinal/src/countTo100.v Line: 12
+Info (12128): Elaborating entity "One_ms_counter" for hierarchy "OneSecTimer:timer_tick|countTo10:CountTo10_1|countTo100:u_100|One_ms_counter:u_ms" File: C:/ADD/AdvancedDigitalDesignFinal/src/countTo100.v Line: 12
 Warning (10230): Verilog HDL assignment warning at One_ms_counter.v(19): truncated value with size 32 to match size of target (16) File: C:/ADD/AdvancedDigitalDesignFinal/src/One_ms_counter.v Line: 19
-Info (12128): Elaborating entity "GameController" for hierarchy "GameController:game_inst" File: C:/ADD/AdvancedDigitalDesignFinal/src/WhackAMole.v Line: 97
+Info (12128): Elaborating entity "digitTimer" for hierarchy "digitTimer:ones_timer" File: C:/ADD/AdvancedDigitalDesignFinal/src/WhackAMole.v Line: 85
+Info (12128): Elaborating entity "GameController" for hierarchy "GameController:game_inst" File: C:/ADD/AdvancedDigitalDesignFinal/src/WhackAMole.v Line: 125
 Warning (10230): Verilog HDL assignment warning at GameController.v(56): truncated value with size 32 to match size of target (1) File: C:/ADD/AdvancedDigitalDesignFinal/src/GameController.v Line: 56
 Warning (10230): Verilog HDL assignment warning at GameController.v(59): truncated value with size 3 to match size of target (1) File: C:/ADD/AdvancedDigitalDesignFinal/src/GameController.v Line: 59
 Warning (10230): Verilog HDL assignment warning at GameController.v(110): truncated value with size 3 to match size of target (2) File: C:/ADD/AdvancedDigitalDesignFinal/src/GameController.v Line: 110
@@ -1822,15 +1833,15 @@ Info (12133): Instantiated megafunction "GameController:game_inst|ScoreTracker:S
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_evn1.tdf
     Info (12023): Found entity 1: altsyncram_evn1 File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/altsyncram_evn1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_evn1" for hierarchy "GameController:game_inst|ScoreTracker:ScoreTracker1|RAM_Score:ScoreRAM|altsyncram:altsyncram_component|altsyncram_evn1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "DisplayController" for hierarchy "DisplayController:display_inst" File: C:/ADD/AdvancedDigitalDesignFinal/src/WhackAMole.v Line: 117
-Warning (10230): Verilog HDL assignment warning at DisplayController.v(107): truncated value with size 32 to match size of target (1) File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 107
-Info (12128): Elaborating entity "ScoreDisplay" for hierarchy "DisplayController:display_inst|ScoreDisplay:scoreDisplay" File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 36
+Info (12128): Elaborating entity "DisplayController" for hierarchy "DisplayController:display_inst" File: C:/ADD/AdvancedDigitalDesignFinal/src/WhackAMole.v Line: 147
+Warning (10230): Verilog HDL assignment warning at DisplayController.v(112): truncated value with size 32 to match size of target (1) File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 112
+Info (12128): Elaborating entity "ScoreDisplay" for hierarchy "DisplayController:display_inst|ScoreDisplay:scoreDisplay" File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 39
 Warning (10230): Verilog HDL assignment warning at ScoreDisplay.v(10): truncated value with size 32 to match size of target (4) File: C:/ADD/AdvancedDigitalDesignFinal/src/ScoreDisplay.v Line: 10
 Warning (10230): Verilog HDL assignment warning at ScoreDisplay.v(11): truncated value with size 32 to match size of target (4) File: C:/ADD/AdvancedDigitalDesignFinal/src/ScoreDisplay.v Line: 11
 Info (12128): Elaborating entity "NumberDecoder" for hierarchy "DisplayController:display_inst|ScoreDisplay:scoreDisplay|NumberDecoder:TensDecoder" File: C:/ADD/AdvancedDigitalDesignFinal/src/ScoreDisplay.v Line: 14
-Info (12128): Elaborating entity "PlayerDisplay" for hierarchy "DisplayController:display_inst|PlayerDisplay:playerDisplay" File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 40
-Info (12128): Elaborating entity "LetterDecoder" for hierarchy "DisplayController:display_inst|LetterDecoder:winnerDecoder" File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 43
-Info (12128): Elaborating entity "DisplayManager" for hierarchy "DisplayController:display_inst|DisplayManager:dm" File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 51
+Info (12128): Elaborating entity "PlayerDisplay" for hierarchy "DisplayController:display_inst|PlayerDisplay:playerDisplay" File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 45
+Info (12128): Elaborating entity "LetterDecoder" for hierarchy "DisplayController:display_inst|LetterDecoder:winnerDecoder" File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 48
+Info (12128): Elaborating entity "DisplayManager" for hierarchy "DisplayController:display_inst|DisplayManager:dm" File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 56
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "Authentication:auth_inst|RAM_PSWD:pswd_RAM|altsyncram:altsyncram_component|altsyncram_lkl1:auto_generated|q_a[23]" File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/altsyncram_lkl1.tdf Line: 566
@@ -1858,25 +1869,13 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "Authentication:auth_inst|RAM_PSWD:pswd_RAM|altsyncram:altsyncram_component|altsyncram_lkl1:auto_generated|q_a[1]" File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/altsyncram_lkl1.tdf Line: 60
         Warning (14320): Synthesized away node "Authentication:auth_inst|RAM_PSWD:pswd_RAM|altsyncram:altsyncram_component|altsyncram_lkl1:auto_generated|q_a[0]" File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/altsyncram_lkl1.tdf Line: 37
 Info (278001): Inferred 7 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayController:display_inst|Div0" File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 107
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayController:display_inst|ScoreDisplay:scoreDisplay|Div0" File: C:/ADD/AdvancedDigitalDesignFinal/src/ScoreDisplay.v Line: 10
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayController:display_inst|ScoreDisplay:scoreDisplay|Mod0" File: C:/ADD/AdvancedDigitalDesignFinal/src/ScoreDisplay.v Line: 10
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayController:display_inst|Div0" File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 112
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayController:display_inst|ScoreDisplay:scoreDisplay|Mod1" File: C:/ADD/AdvancedDigitalDesignFinal/src/ScoreDisplay.v Line: 11
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayController:display_inst|ScoreDisplay:bestDisplay|Div0" File: C:/ADD/AdvancedDigitalDesignFinal/src/ScoreDisplay.v Line: 10
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayController:display_inst|ScoreDisplay:bestDisplay|Mod0" File: C:/ADD/AdvancedDigitalDesignFinal/src/ScoreDisplay.v Line: 10
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayController:display_inst|ScoreDisplay:bestDisplay|Mod1" File: C:/ADD/AdvancedDigitalDesignFinal/src/ScoreDisplay.v Line: 11
-Info (12130): Elaborated megafunction instantiation "DisplayController:display_inst|lpm_divide:Div0" File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 107
-Info (12133): Instantiated megafunction "DisplayController:display_inst|lpm_divide:Div0" with the following parameter: File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 107
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "25"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_5dm.tdf
-    Info (12023): Found entity 1: lpm_divide_5dm File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/lpm_divide_5dm.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bnh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_bnh File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/sign_div_unsign_bnh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_s2f.tdf
-    Info (12023): Found entity 1: alt_u_div_s2f File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/alt_u_div_s2f.tdf Line: 23
 Info (12130): Elaborated megafunction instantiation "DisplayController:display_inst|ScoreDisplay:scoreDisplay|lpm_divide:Div0" File: C:/ADD/AdvancedDigitalDesignFinal/src/ScoreDisplay.v Line: 10
 Info (12133): Instantiated megafunction "DisplayController:display_inst|ScoreDisplay:scoreDisplay|lpm_divide:Div0" with the following parameter: File: C:/ADD/AdvancedDigitalDesignFinal/src/ScoreDisplay.v Line: 10
     Info (12134): Parameter "LPM_WIDTHN" = "7"
@@ -1897,6 +1896,18 @@ Info (12133): Instantiated megafunction "DisplayController:display_inst|ScoreDis
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_72m.tdf
     Info (12023): Found entity 1: lpm_divide_72m File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/lpm_divide_72m.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "DisplayController:display_inst|lpm_divide:Div0" File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 112
+Info (12133): Instantiated megafunction "DisplayController:display_inst|lpm_divide:Div0" with the following parameter: File: C:/ADD/AdvancedDigitalDesignFinal/src/DisplayController.v Line: 112
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "25"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_5dm.tdf
+    Info (12023): Found entity 1: lpm_divide_5dm File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/lpm_divide_5dm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bnh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bnh File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/sign_div_unsign_bnh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_s2f.tdf
+    Info (12023): Found entity 1: alt_u_div_s2f File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/alt_u_div_s2f.tdf Line: 23
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
         Warning (14320): Synthesized away node "GameController:game_inst|ScoreTracker:ScoreTracker1|RAM_Score:ScoreRAM|altsyncram:altsyncram_component|altsyncram_evn1:auto_generated|q_a[0]" File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/altsyncram_evn1.tdf Line: 37
@@ -1909,22 +1920,22 @@ Warning (14284): Synthesized away the following node(s):
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Display2[3]" is stuck at VCC File: C:/ADD/AdvancedDigitalDesignFinal/src/WhackAMole.v Line: 11
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 56 registers lost all their fanouts during netlist optimizations.
+Info (17049): 38 registers lost all their fanouts during netlist optimizations.
 Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "Authentication:auth_inst|ROM_PSWD:pswd_ROM|altsyncram:altsyncram_component|altsyncram_nlf1:auto_generated|ALTSYNCRAM" File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/altsyncram_nlf1.tdf Line: 32
 Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "Authentication:auth_inst|PLAYER_ID_ROM:pid_ROM|altsyncram:altsyncram_component|altsyncram_j5g1:auto_generated|ALTSYNCRAM" File: C:/ADD/AdvancedDigitalDesignFinal/syn/db/altsyncram_j5g1.tdf Line: 32
 Info (144001): Generated suppressed messages file C:/ADD/AdvancedDigitalDesignFinal/syn/output_files/WhackAMole.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1191 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1205 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 44 output pins
-    Info (21061): Implemented 1097 logic cells
+    Info (21061): Implemented 1111 logic cells
     Info (21064): Implemented 40 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
-    Info: Peak virtual memory: 4866 megabytes
-    Info: Processing ended: Mon May 11 13:49:56 2026
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:20
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
+    Info: Peak virtual memory: 4868 megabytes
+    Info: Processing ended: Mon May 11 17:45:13 2026
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+

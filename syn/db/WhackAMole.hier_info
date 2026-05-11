@@ -3,56 +3,56 @@ PasswordDigits[0] => PasswordDigits[0].IN1
 PasswordDigits[1] => PasswordDigits[1].IN1
 PasswordDigits[2] => PasswordDigits[2].IN1
 PasswordDigits[3] => PasswordDigits[3].IN1
-ResetSwitch => reset.IN9
+ResetSwitch => reset.IN11
 Button0 => Button0.IN1
 Button1 => Button1.IN1
 Button2 => Button2.IN1
 Button3 => Button3.IN1
-clk => clk.IN8
-Display0[0] << DisplayController:display_inst.Display0
-Display0[1] << DisplayController:display_inst.Display0
-Display0[2] << DisplayController:display_inst.Display0
-Display0[3] << DisplayController:display_inst.Display0
-Display0[4] << DisplayController:display_inst.Display0
-Display0[5] << DisplayController:display_inst.Display0
-Display0[6] << DisplayController:display_inst.Display0
-Display1[0] << DisplayController:display_inst.Display1
-Display1[1] << DisplayController:display_inst.Display1
-Display1[2] << DisplayController:display_inst.Display1
-Display1[3] << DisplayController:display_inst.Display1
-Display1[4] << DisplayController:display_inst.Display1
-Display1[5] << DisplayController:display_inst.Display1
-Display1[6] << DisplayController:display_inst.Display1
-Display2[0] << DisplayController:display_inst.Display2
-Display2[1] << DisplayController:display_inst.Display2
-Display2[2] << DisplayController:display_inst.Display2
-Display2[3] << DisplayController:display_inst.Display2
-Display2[4] << DisplayController:display_inst.Display2
-Display2[5] << DisplayController:display_inst.Display2
-Display2[6] << DisplayController:display_inst.Display2
-Display3[0] << DisplayController:display_inst.Display3
-Display3[1] << DisplayController:display_inst.Display3
-Display3[2] << DisplayController:display_inst.Display3
-Display3[3] << DisplayController:display_inst.Display3
-Display3[4] << DisplayController:display_inst.Display3
-Display3[5] << DisplayController:display_inst.Display3
-Display3[6] << DisplayController:display_inst.Display3
-Display4[0] << DisplayController:display_inst.Display4
-Display4[1] << DisplayController:display_inst.Display4
-Display4[2] << DisplayController:display_inst.Display4
-Display4[3] << DisplayController:display_inst.Display4
-Display4[4] << DisplayController:display_inst.Display4
-Display4[5] << DisplayController:display_inst.Display4
-Display4[6] << DisplayController:display_inst.Display4
-Display5[0] << DisplayController:display_inst.Display5
-Display5[1] << DisplayController:display_inst.Display5
-Display5[2] << DisplayController:display_inst.Display5
-Display5[3] << DisplayController:display_inst.Display5
-Display5[4] << DisplayController:display_inst.Display5
-Display5[5] << DisplayController:display_inst.Display5
-Display5[6] << DisplayController:display_inst.Display5
-LoggedIn << LoggedIn.DB_MAX_OUTPUT_PORT_TYPE
-LoggedOut << Authentication:auth_inst.loggedOut
+clk => clk.IN10
+Display0[0] <= DisplayController:display_inst.Display0
+Display0[1] <= DisplayController:display_inst.Display0
+Display0[2] <= DisplayController:display_inst.Display0
+Display0[3] <= DisplayController:display_inst.Display0
+Display0[4] <= DisplayController:display_inst.Display0
+Display0[5] <= DisplayController:display_inst.Display0
+Display0[6] <= DisplayController:display_inst.Display0
+Display1[0] <= DisplayController:display_inst.Display1
+Display1[1] <= DisplayController:display_inst.Display1
+Display1[2] <= DisplayController:display_inst.Display1
+Display1[3] <= DisplayController:display_inst.Display1
+Display1[4] <= DisplayController:display_inst.Display1
+Display1[5] <= DisplayController:display_inst.Display1
+Display1[6] <= DisplayController:display_inst.Display1
+Display2[0] <= DisplayController:display_inst.Display2
+Display2[1] <= DisplayController:display_inst.Display2
+Display2[2] <= DisplayController:display_inst.Display2
+Display2[3] <= DisplayController:display_inst.Display2
+Display2[4] <= DisplayController:display_inst.Display2
+Display2[5] <= DisplayController:display_inst.Display2
+Display2[6] <= DisplayController:display_inst.Display2
+Display3[0] <= DisplayController:display_inst.Display3
+Display3[1] <= DisplayController:display_inst.Display3
+Display3[2] <= DisplayController:display_inst.Display3
+Display3[3] <= DisplayController:display_inst.Display3
+Display3[4] <= DisplayController:display_inst.Display3
+Display3[5] <= DisplayController:display_inst.Display3
+Display3[6] <= DisplayController:display_inst.Display3
+Display4[0] <= DisplayController:display_inst.Display4
+Display4[1] <= DisplayController:display_inst.Display4
+Display4[2] <= DisplayController:display_inst.Display4
+Display4[3] <= DisplayController:display_inst.Display4
+Display4[4] <= DisplayController:display_inst.Display4
+Display4[5] <= DisplayController:display_inst.Display4
+Display4[6] <= DisplayController:display_inst.Display4
+Display5[0] <= DisplayController:display_inst.Display5
+Display5[1] <= DisplayController:display_inst.Display5
+Display5[2] <= DisplayController:display_inst.Display5
+Display5[3] <= DisplayController:display_inst.Display5
+Display5[4] <= DisplayController:display_inst.Display5
+Display5[5] <= DisplayController:display_inst.Display5
+Display5[6] <= DisplayController:display_inst.Display5
+LoggedIn <= LoggedIn.DB_MAX_OUTPUT_PORT_TYPE
+LoggedOut <= Authentication:auth_inst.loggedOut
 
 
 |WhackAMole|ButtonShaper:bs0
@@ -1571,52 +1571,28 @@ q_a[22] <= ram_block1a22.PORTADATAOUT
 q_a[23] <= ram_block1a23.PORTADATAOUT
 
 
-|WhackAMole|TimerController:timer_inst
-TimerEnable => TimerEnable.IN1
-TimerReconfig => secondsRemaining.OUTPUTSELECT
-TimerReconfig => secondsRemaining.OUTPUTSELECT
-TimerReconfig => secondsRemaining.OUTPUTSELECT
-TimerReconfig => secondsRemaining.OUTPUTSELECT
-TimerReconfig => secondsRemaining.OUTPUTSELECT
-TimerReconfig => secondsRemaining.OUTPUTSELECT
-TimerReconfig => secondsRemaining.OUTPUTSELECT
-TimerReconfig => secondsRemaining.OUTPUTSELECT
-TimerReconfig => secondsRemaining.OUTPUTSELECT
-TimerReconfig => secondsRemaining.OUTPUTSELECT
-TimerReconfig => secondsRemaining.OUTPUTSELECT
-TimerReconfig => secondsRemaining.OUTPUTSELECT
-TimerReconfig => timerDone.OUTPUTSELECT
-timerLength[0] => Mult0.IN7
-timerLength[1] => Mult0.IN6
-timerLength[2] => Mult0.IN5
-timerLength[3] => Mult0.IN4
-timerDone <= timerDone~reg0.DB_MAX_OUTPUT_PORT_TYPE
-clk => clk.IN1
-rst => rst.IN1
-
-
-|WhackAMole|TimerController:timer_inst|OneSecTimer:ost
+|WhackAMole|OneSecTimer:timer_tick
 Enable => Enable.IN1
 OneSecTimeOut <= countTo10:CountTo10_1.port1
 clk => clk.IN1
 rst => rst.IN1
 
 
-|WhackAMole|TimerController:timer_inst|OneSecTimer:ost|countTo10:CountTo10_1
+|WhackAMole|OneSecTimer:timer_tick|countTo10:CountTo10_1
 clk => clk.IN1
 rst => rst.IN1
 Enable => Enable.IN1
 OneSecTimeOut <= OneSecTimeOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|WhackAMole|TimerController:timer_inst|OneSecTimer:ost|countTo10:CountTo10_1|countTo100:u_100
+|WhackAMole|OneSecTimer:timer_tick|countTo10:CountTo10_1|countTo100:u_100
 clk => clk.IN1
 rst => rst.IN1
 Enable => Enable.IN1
 HundredmsTimeout <= HundredmsTimeout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|WhackAMole|TimerController:timer_inst|OneSecTimer:ost|countTo10:CountTo10_1|countTo100:u_100|One_ms_counter:u_ms
+|WhackAMole|OneSecTimer:timer_tick|countTo10:CountTo10_1|countTo100:u_100|One_ms_counter:u_ms
 clk => OnemsTimeOut~reg0.CLK
 clk => Count[0].CLK
 clk => Count[1].CLK
@@ -1669,6 +1645,80 @@ Enable => Count.OUTPUTSELECT
 Enable => Count.OUTPUTSELECT
 Enable => OnemsTimeOut.OUTPUTSELECT
 OnemsTimeOut <= OnemsTimeOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|WhackAMole|digitTimer:ones_timer
+BorrowUp <= BorrowUp~reg0.DB_MAX_OUTPUT_PORT_TYPE
+BorrowDown => Num.OUTPUTSELECT
+BorrowDown => Num.OUTPUTSELECT
+BorrowDown => Num.OUTPUTSELECT
+BorrowDown => Num.OUTPUTSELECT
+BorrowDown => BorrowUp.OUTPUTSELECT
+BorrowDown => NoBorrowDown.OUTPUTSELECT
+NoBorrowUp => NoBorrowDown.DATAA
+NoBorrowUp => Num.DATAA
+NoBorrowUp => Num.DATAA
+NoBorrowUp => BorrowUp.DATAA
+NoBorrowDown <= NoBorrowDown~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Num[0] <= Num[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Num[1] <= Num[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Num[2] <= Num[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Num[3] <= Num[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ReConfig => Num.OUTPUTSELECT
+ReConfig => Num.OUTPUTSELECT
+ReConfig => Num.OUTPUTSELECT
+ReConfig => Num.OUTPUTSELECT
+ReConfig => BorrowUp.OUTPUTSELECT
+ReConfig => NoBorrowDown.OUTPUTSELECT
+clk => NoBorrowDown~reg0.CLK
+clk => BorrowUp~reg0.CLK
+clk => Num[0]~reg0.CLK
+clk => Num[1]~reg0.CLK
+clk => Num[2]~reg0.CLK
+clk => Num[3]~reg0.CLK
+rst => Num.OUTPUTSELECT
+rst => Num.OUTPUTSELECT
+rst => Num.OUTPUTSELECT
+rst => Num.OUTPUTSELECT
+rst => BorrowUp.OUTPUTSELECT
+rst => NoBorrowDown.OUTPUTSELECT
+
+
+|WhackAMole|digitTimer:tens_timer
+BorrowUp <= BorrowUp~reg0.DB_MAX_OUTPUT_PORT_TYPE
+BorrowDown => Num.OUTPUTSELECT
+BorrowDown => Num.OUTPUTSELECT
+BorrowDown => Num.OUTPUTSELECT
+BorrowDown => Num.OUTPUTSELECT
+BorrowDown => BorrowUp.OUTPUTSELECT
+BorrowDown => NoBorrowDown.OUTPUTSELECT
+NoBorrowUp => NoBorrowDown.DATAA
+NoBorrowUp => Num.DATAA
+NoBorrowUp => Num.DATAA
+NoBorrowUp => BorrowUp.DATAA
+NoBorrowDown <= NoBorrowDown~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Num[0] <= Num[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Num[1] <= Num[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Num[2] <= Num[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Num[3] <= Num[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ReConfig => Num.OUTPUTSELECT
+ReConfig => Num.OUTPUTSELECT
+ReConfig => Num.OUTPUTSELECT
+ReConfig => Num.OUTPUTSELECT
+ReConfig => BorrowUp.OUTPUTSELECT
+ReConfig => NoBorrowDown.OUTPUTSELECT
+clk => NoBorrowDown~reg0.CLK
+clk => BorrowUp~reg0.CLK
+clk => Num[0]~reg0.CLK
+clk => Num[1]~reg0.CLK
+clk => Num[2]~reg0.CLK
+clk => Num[3]~reg0.CLK
+rst => Num.OUTPUTSELECT
+rst => Num.OUTPUTSELECT
+rst => Num.OUTPUTSELECT
+rst => Num.OUTPUTSELECT
+rst => BorrowUp.OUTPUTSELECT
+rst => NoBorrowDown.OUTPUTSELECT
 
 
 |WhackAMole|GameController:game_inst
@@ -2190,6 +2240,14 @@ score[3] => score[3].IN1
 score[4] => score[4].IN1
 score[5] => score[5].IN1
 score[6] => score[6].IN1
+timerTensDigit[0] => timerTensDigit[0].IN1
+timerTensDigit[1] => timerTensDigit[1].IN1
+timerTensDigit[2] => timerTensDigit[2].IN1
+timerTensDigit[3] => timerTensDigit[3].IN1
+timerOnesDigit[0] => timerOnesDigit[0].IN1
+timerOnesDigit[1] => timerOnesDigit[1].IN1
+timerOnesDigit[2] => timerOnesDigit[2].IN1
+timerOnesDigit[3] => timerOnesDigit[3].IN1
 personalBest[0] => personalBest[0].IN1
 personalBest[1] => personalBest[1].IN1
 personalBest[2] => personalBest[2].IN1
@@ -2389,6 +2447,34 @@ DecoderOut[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |WhackAMole|DisplayController:display_inst|ScoreDisplay:scoreDisplay|NumberDecoder:OnesDecoder
+DecoderIn[0] => Decoder0.IN3
+DecoderIn[1] => Decoder0.IN2
+DecoderIn[2] => Decoder0.IN1
+DecoderIn[3] => Decoder0.IN0
+DecoderOut[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|WhackAMole|DisplayController:display_inst|NumberDecoder:timerTensDecoder
+DecoderIn[0] => Decoder0.IN3
+DecoderIn[1] => Decoder0.IN2
+DecoderIn[2] => Decoder0.IN1
+DecoderIn[3] => Decoder0.IN0
+DecoderOut[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+DecoderOut[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|WhackAMole|DisplayController:display_inst|NumberDecoder:timerOnesDecoder
 DecoderIn[0] => Decoder0.IN3
 DecoderIn[1] => Decoder0.IN2
 DecoderIn[2] => Decoder0.IN1

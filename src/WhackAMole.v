@@ -21,13 +21,21 @@ module WhackAMole(
 
     wire timerEnable, timerReconfig;
     wire [3:0] timerLength;
-    wire timerDone;  // generated internally by TimerController
+    wire timerDone;
+    wire oneSecTick;
+    wire onesBorrowUp, onesBorrowDown, onesNoBorrowUp, onesNoBorrowDown;
+    wire tensBorrowUp, tensBorrowDown, tensNoBorrowUp, tensNoBorrowDown;
+    wire [3:0] onesDigit, tensDigit;
     wire [6:0] gameScore;
     wire [2:0] gameState;
     wire [5:0] displayBus2, displayBus3, displayBus4, displayBus5;
     wire [6:0] personalBest;
     wire [2:0] globalWinner;
     wire scoreValid;
+
+    // extra signals
+    wire logout_start;
+    wire logout_start_gc;  // from GameController to Authentication for initiating logout
 
     // Merged reset signal
     wire reset = ResetSwitch;
@@ -43,7 +51,7 @@ module WhackAMole(
     // Authentication: button0 pulses are used as PasswordDigitEnter signal
     Authentication auth_inst(
         .enter_digit_b(button0_shaped),
-        .logout_start_from_GC(),
+        .logout_start_from_GC(logout_start_gc),
         .pw_reset_start_from_GC(ResetSwitch),
         .current_digit(PasswordDigits),
         .loggedIn_to_GC_and_LED(LoggedIn),
@@ -56,13 +64,33 @@ module WhackAMole(
     );
 
     // =====================================================================
-    // Timer Controller: generates timerDone internally from GameController signals
+    // Timer: use digit timers so timeout comes from the terminal borrow.
     // =====================================================================
-    TimerController timer_inst(
-        .TimerEnable(timerEnable),
-        .TimerReconfig(timerReconfig),
-        .timerLength(timerLength),
-        .timerDone(timerDone),
+    OneSecTimer timer_tick(
+        .Enable(timerEnable),
+        .OneSecTimeOut(oneSecTick),
+        .clk(clk),
+        .rst(reset)
+    );
+
+    digitTimer ones_timer(
+        .BorrowUp(onesBorrowUp),
+        .BorrowDown(onesBorrowDown),
+        .NoBorrowUp(onesNoBorrowUp),
+        .NoBorrowDown(onesNoBorrowDown),
+        .Num(onesDigit),
+        .ReConfig(timerReconfig),
+        .clk(clk),
+        .rst(reset)
+    );
+
+    digitTimer tens_timer(
+        .BorrowUp(tensBorrowUp),
+        .BorrowDown(tensBorrowDown),
+        .NoBorrowUp(tensNoBorrowUp),
+        .NoBorrowDown(tensNoBorrowDown),
+        .Num(tensDigit),
+        .ReConfig(timerReconfig),
         .clk(clk),
         .rst(reset)
     );
@@ -73,7 +101,7 @@ module WhackAMole(
     GameController game_inst(
         .playerID(playerID_auth),
         .logIn(LoggedIn),
-        .logOut(),
+        .logOut(logout_start),
         .button1(button0_shaped),
         .button2(button1_shaped),
         .button3(button2_shaped),
@@ -100,6 +128,8 @@ module WhackAMole(
     DisplayController display_inst(
         .gameState(gameState),
         .score(gameScore),
+        .timerTensDigit(tensDigit),
+        .timerOnesDigit(onesDigit),
         .personalBest(personalBest),
         .globalWinner(globalWinner),
         .displayBus2(displayBus2),
@@ -116,4 +146,11 @@ module WhackAMole(
         .Display5(Display5)
     );
 
+    assign logout_start_gc = logout_start;  
+    assign onesBorrowDown = oneSecTick;
+    assign tensBorrowDown = onesBorrowUp;
+    assign onesNoBorrowUp = (tensDigit == 4'd0);
+    assign tensNoBorrowUp = 1'b1;
+    assign timerDone = onesNoBorrowDown;
+    
 endmodule
