@@ -23,7 +23,7 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 	reg [1:0] gameLevel; //used to determine what game level should be selected
 	wire scoreUp, scoreDown;
 	reg roundRunning;
-	wire [3:0] moleOrSpikeLocation, moleOrSpike;
+	reg [3:0] moleOrSpikeLocation, moleOrSpike;
 	wire [7:0] rngOut;
 
 	parameter loggedOut = 0, preGame = 1, gameRun = 2, gameOver = 3;

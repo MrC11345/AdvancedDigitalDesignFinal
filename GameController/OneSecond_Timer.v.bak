@@ -6,7 +6,6 @@ module OneSecond_Timer(clk, rst, Enable, Timeout);
     input clk, rst;
     input Enable;
     output Timeout;
-    reg Timeout;
 
     //this is a fake version so that it only takes 10 clock cycles per second so that simulation works
     reg [3:0] test;
