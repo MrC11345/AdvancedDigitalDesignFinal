@@ -1,0 +1,29 @@
+// ECE 6370
+// Author: Alex Samano, 8729 
+// One Second Timer
+// The top module to start the counter and sends a pulse every second
+module OneSecond_Timer(clk, rst, Enable, Timeout);
+    input clk, rst;
+    input Enable;
+    output Timeout;
+
+    //this is a fake version so that it only takes 10 clock cycles per second so that simulation works
+    reg [3:0] test;
+    initial begin
+	test = 4'b0000;
+    end
+    always @(posedge clk) begin
+	if(Enable) begin
+	    test <= test + 1'b1;
+	    Timeout <= 1'b0;
+	    if(test>4'b1010) begin
+		Timeout <= 1'b1;
+		test <= 4'b0000;
+	    end
+	end
+	else begin
+	    test <= 4'b0000;
+	    Timeout <= 1'b0;
+    	end
+    end
+endmodule

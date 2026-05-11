@@ -1,0 +1,3 @@
+-DONE - just need to send if mole or spike or blank - Need to add display tech inside game controller
+-DONE-rename startRound to roundPlaying or roundRunning
+there was something else but not sure anymore

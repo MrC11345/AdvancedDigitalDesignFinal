@@ -1,0 +1,43 @@
+C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/ScoreTracker.v {1 {vlog -work work -stats=none {C:\ADD\AdvancedDigitalDesignFinal\ScoreTracker\ScoreTracker.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ScoreTracker
+
+Top level modules:
+	ScoreTracker
+
+} {} {}} C:/ADD/AdvancedDigitalDesignFinal/syn/RAM_Score_bb.v {1 {vlog -work work -stats=none C:/ADD/AdvancedDigitalDesignFinal/syn/RAM_Score_bb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RAM_Score_bb
+
+Top level modules:
+	RAM_Score_bb
+
+} {} {}} C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/ScoreCounter.v {1 {vlog -work work -stats=none {C:\ADD\AdvancedDigitalDesignFinal\ScoreTracker\ScoreCounter.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ScoreCounter
+
+Top level modules:
+	ScoreCounter
+
+} {} {}} C:/ADD/AdvancedDigitalDesignFinal/syn/RAM_Score.v {1 {vlog -work work -stats=none C:/ADD/AdvancedDigitalDesignFinal/syn/RAM_Score.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RAM_Score
+
+Top level modules:
+	RAM_Score
+
+} {} {}} C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v {1 {vlog -work work -stats=none C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_ScoreTracker
+
+Top level modules:
+	tb_ScoreTracker
+
+} {} {}} C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreCounter.v {1 {vlog -work work -stats=none C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreCounter.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_ScoreCounter
+
+Top level modules:
+	tb_ScoreCounter
+
+} {} {}}
