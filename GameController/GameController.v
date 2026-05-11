@@ -33,7 +33,7 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 
 	Levels Levels1(gameLevel, buttonReg, rngOut,scoreUp, scoreDown, moleOrSpike, moleOrSpikeLocation, roundRunning, clk, rst);
 
-	//ScoreCounter ScoreCounter1(playerID, logIn, roundRunning, gameLevel, scoreUp, scoreDown, clk, rst);
+	ScoreCounter ScoreCounter1(playerID, logIn, roundRunning, gameLevel, scoreUp, scoreDown, clk, rst);
 
 	always @(posedge clk) begin
 		if(button1==1'b1) begin
@@ -53,6 +53,7 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 			end
 		case (State)
 	            loggedOut : begin
+				logOut <= 1'b0;
 				timerReconfig <= 1'b0;
 				timerEnable <= 1'b0;
 				timerLength <= 3'b000;
@@ -69,40 +70,51 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 				displayBus5 <= 6'b000000;
         	    end
 			preGame : begin
+				logOut <= 1'b0;
 				displayBus2 <= 6'b000000;
 				displayBus3 <= 6'b000000;
 				displayBus4 <= 6'b000000;
 				displayBus5 <= 6'b000000;
 				timerEnable <= 1'b0;
 				roundRunning <= 1'b0;
-				case(buttonReg)
-					3'b001 : begin
+				if(buttonReg==3'b001) begin
+					if(gameLevel==3'b010) begin
 						timerLength <= 3'b011;//will set level 1 timer length to 33 seconds
 						gameLevel <= 3'b001; //sets game level to 1
 						timerReconfig <= 1'b1;
 					end
-					3'b010 : begin
+					else if(gameLevel==3'b011) begin
 						timerLength <= 3'b010; //set timel length to 22 seconds
 						gameLevel <= 3'b010; //sets game level to 2
 						timerReconfig <= 1'b1;
 					end
-					3'b100 : begin
-						timerLength <= 3'b001;//set timer length to 11 seconds
+				end
+				else if(buttonReg==3'b010) begin
+					if(gameLevel==3'b001) begin
+						timerLength <= 3'b010;//will set level 2 timer length to 22 seconds
+						gameLevel <= 3'b010; //sets game level to 2
+						timerReconfig <= 1'b1;
+					end
+					else if(gameLevel==3'b010) begin
+						timerLength <= 3'b001; //set timel length to 11 seconds
 						gameLevel <= 3'b011; //sets game level to 3
 						timerReconfig <= 1'b1;
 					end
-					default : begin
-						timerLength <= timerLength;
-						gameLevel <= gameLevel;
-						timerReconfig <= 1'b0;
-					end
-				endcase
-				if(buttonReg == 3'b100) // if pushing the load button will start the game 
+				end
+				else begin
+					timerReconfig <= 1'b0;
+				end
+				if(buttonReg == 3'b100) begin
+					logOut <= 1'b1;
+					State <= loggedOut;
+				end
+				if(buttonReg == 3'b011) // if pushing the load button will start the game 
 					State <= gameRun;
 				else 
 					State <= preGame;
 			end
 			gameRun : begin
+				logOut <= 1'b0;
 				timerEnable <= 1'b1;
 				timerReconfig <= 1'b0;
 				roundRunning <= 1'b1;
@@ -110,25 +122,39 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 				displayBus3 <= 6'b000000;
 				displayBus4 <= 6'b000000;
 				displayBus5 <= 6'b000000;
-//this is currently wrong because moleOrSpike location is different size - [3:2] is not correct just a placeholder
-				if(moleOrSpikeLocation==2'b00) begin
-					displayBus2[5:4] <= moleOrSpike[3:2];			
+
+				//sending the moleOrSpike data to the displays
+				if(moleOrSpikeLocation[0]==1'b1) begin
+					displayBus2[4] <= moleOrSpike[0];			
+					displayBus2[5] <= 1'b1;
 				end
-				if(moleOrSpikeLocation==2'b01) begin
-					displayBus3[5:4] <= moleOrSpike[3:2];			
+				else
+					displayBus2[5:4] <= 2'b00;
+				if(moleOrSpikeLocation[1]==1'b1) begin
+					displayBus3[4] <= moleOrSpike[1];			
+					displayBus3[5] <= 1'b1;
 				end
-				if(moleOrSpikeLocation==2'b10) begin
-					displayBus4[5:4] <= moleOrSpike[3:2];			
+				else
+					displayBus3[5:4] <= 2'b00;
+				if(moleOrSpikeLocation[2]==1'b1) begin
+					displayBus4[4] <= moleOrSpike[2];			
+					displayBus4[5] <= 1'b1;
 				end
-				if(moleOrSpikeLocation==2'b11) begin
-					displayBus5[5:4] <= moleOrSpike[3:2];			
+				else
+					displayBus4[5:4] <= 2'b00;
+				if(moleOrSpikeLocation[3]==1'b1) begin
+					displayBus5[4] <= moleOrSpike[3];			
+					displayBus5[5] <= 1'b1;
 				end
+				else
+					displayBus5[5:4] <= 2'b00;
 				if (timerDone == 1'b1)
 					State <= gameOver; //the next state for stoping the game
 				else
 					State <= gameRun; //the current state to keep clk from reseting it
 			end
 			gameOver : begin
+				logOut <= 1'b0;
 				timerEnable <= 1'b0;
 				timerReconfig <= 1'b0;
 				roundRunning <= 1'b0;
@@ -136,7 +162,11 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 				displayBus3 <= 6'b000000;
 				displayBus4 <= 6'b000000;
 				displayBus5 <= 6'b000000;
-				if (buttonReg == 3'b100) begin
+				if(buttonReg == 3'b100) begin
+					logOut <= 1'b1;
+					State <= loggedOut;
+				end
+				if (buttonReg == 3'b011) begin
 					State <= preGame; //the next state for reseting the game
 					timerReconfig <= 1'b1;
 				end
