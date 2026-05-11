@@ -1,0 +1,177 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ADD_Labs/Lab4_CHUNG_Ethan/sim_1mslfsr
+vAuthentication
+Z0 !s110 1778457588
+!i10b 1
+!s100 :A>D67B2780GCLd@OoKJk0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IeXl5L3;H8a=g:e85<_MFO0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/ADD_Labs/Authentication/sim_Authentication
+w1778446243
+8C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v
+FC:/ADD_Labs/Authentication/sim_Authentication/Authentication.v
+!i122 203
+L0 8 30
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1778457588.000000
+!s107 C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@authentication
+vid_verification
+R0
+!i10b 1
+!s100 jGDEfZSfR6SD3fOYWU^E`1
+R1
+InK7B3;XO4dMOOA^R<IMoF2
+R2
+R3
+w1778454579
+8C:/ADD_Labs/Authentication/sim_Authentication/id_verification.v
+FC:/ADD_Labs/Authentication/sim_Authentication/id_verification.v
+!i122 204
+L0 8 134
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ADD_Labs/Authentication/sim_Authentication/id_verification.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Labs/Authentication/sim_Authentication/id_verification.v|
+!i113 1
+R6
+R7
+vPLAYER_ID_ROM
+R0
+!i10b 1
+!s100 im1Yi9CBGiMN<IDLBbA0W1
+R1
+Izh[PM@h1e2lPaEXCaQG[l2
+R2
+R3
+w1778449707
+8C:/ADD_Labs/Authentication/sim_Authentication/PLAYER_ID_ROM.v
+FC:/ADD_Labs/Authentication/sim_Authentication/PLAYER_ID_ROM.v
+!i122 206
+Z8 L0 40 66
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ADD_Labs/Authentication/sim_Authentication/PLAYER_ID_ROM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Labs/Authentication/sim_Authentication/PLAYER_ID_ROM.v|
+!i113 1
+R6
+R7
+n@p@l@a@y@e@r_@i@d_@r@o@m
+vpswd_verification
+R0
+!i10b 1
+!s100 MkXUQmA2m9DJGm<ERm[gj3
+R1
+IE@kZTaA7e>27o2dK50kh31
+R2
+R3
+w1778456703
+8C:/ADD_Labs/Authentication/sim_Authentication/pswd_verification.v
+FC:/ADD_Labs/Authentication/sim_Authentication/pswd_verification.v
+!i122 205
+L0 8 288
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ADD_Labs/Authentication/sim_Authentication/pswd_verification.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Labs/Authentication/sim_Authentication/pswd_verification.v|
+!i113 1
+R6
+R7
+vRAM_PSWD
+R0
+!i10b 1
+!s100 A@BAcNO0FcC:mR:8mNzB21
+R1
+IociH5gb[5JPL5H1GYgfYz3
+R2
+R3
+w1778450311
+8C:/ADD_Labs/Authentication/sim_Authentication/RAM_PSWD.v
+FC:/ADD_Labs/Authentication/sim_Authentication/RAM_PSWD.v
+!i122 207
+L0 40 65
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ADD_Labs/Authentication/sim_Authentication/RAM_PSWD.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Labs/Authentication/sim_Authentication/RAM_PSWD.v|
+!i113 1
+R6
+R7
+n@r@a@m_@p@s@w@d
+vROM_PSWD
+R0
+!i10b 1
+!s100 ENz?hQm2GbAoQnQV<H?=m0
+R1
+I^4HhY6]G@N^_ZF@K:cjCj3
+R2
+R3
+w1778450024
+8C:/ADD_Labs/Authentication/sim_Authentication/ROM_PSWD.v
+FC:/ADD_Labs/Authentication/sim_Authentication/ROM_PSWD.v
+!i122 208
+R8
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ADD_Labs/Authentication/sim_Authentication/ROM_PSWD.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD_Labs/Authentication/sim_Authentication/ROM_PSWD.v|
+!i113 1
+R6
+R7
+n@r@o@m_@p@s@w@d
+vtestbench_Authentication
+R0
+!i10b 1
+!s100 ;8Yj]RlTX24aDG7e0I7Pb3
+R1
+ITm2[W4nPCBNBDkTXo05RJ2
+R2
+R3
+w1778457506
+8C:\ADD_Labs\Authentication\sim_Authentication\testbench_Authentication.v
+FC:\ADD_Labs\Authentication\sim_Authentication\testbench_Authentication.v
+!i122 202
+L0 4 1080
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:\ADD_Labs\Authentication\sim_Authentication\testbench_Authentication.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\ADD_Labs\Authentication\sim_Authentication\testbench_Authentication.v|
+!i113 1
+R6
+R7
+ntestbench_@authentication

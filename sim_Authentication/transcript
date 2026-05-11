@@ -1,0 +1,634 @@
+dataset reload -f
+# Dataset not found: 
+dataset reload -f
+# Dataset not found: 
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v failed with 4 errors.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v failed with 2 errors.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 2 failed with 6 errors.
+# Error opening C:/ADD_Labs/Authentication/sim_Authentication/(vlog-13069) C:/ADD_Labs/Authentication/sim_Authentication/id_verification.v
+# Path name 'C:/ADD_Labs/Authentication/sim_Authentication/(vlog-13069) C:/ADD_Labs/Authentication/sim_Authentication/id_verification.v' doesn't exist.
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v failed with 4 errors.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v failed with 2 errors.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 2 failed with 6 errors.
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v failed with 1 errors.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v failed with 2 errors.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 2 failed with 3 errors.
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v failed with 3 errors.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v failed with 2 errors.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 2 failed with 5 errors.
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v failed with 2 errors.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 1 failed with 2 errors.
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v failed with 6 errors.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 1 failed with 6 errors.
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v failed with 1 errors.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of testbench_Authentication.v failed with 2 errors.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 1 failed with 2 errors.
+# Compile of testbench_Authentication.v failed with 1 errors.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of testbench_Authentication.v failed with 1 errors.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 1 failed with 1 error.
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.testbench_Authentication
+# vsim -gui work.testbench_Authentication 
+# Start time: 15:11:33 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# ** Error: (vsim-3033) Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pid_ROM File: C:/ADD_Labs/Authentication/sim_Authentication/PLAYER_ID_ROM.v Line: 59
+#         Searched libraries:
+#             C:/ADD_Labs/Authentication/sim_Authentication/work
+# Loading work.RAM_PSWD
+# ** Error: (vsim-3033) Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pswd_RAM File: C:/ADD_Labs/Authentication/sim_Authentication/RAM_PSWD.v Line: 63
+#         Searched libraries:
+#             C:/ADD_Labs/Authentication/sim_Authentication/work
+# Loading work.ROM_PSWD
+# ** Error: (vsim-3033) Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pswd_ROM File: C:/ADD_Labs/Authentication/sim_Authentication/ROM_PSWD.v Line: 59
+#         Searched libraries:
+#             C:/ADD_Labs/Authentication/sim_Authentication/work
+# Error loading design
+# End time: 15:11:33 on May 10,2026, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 19
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# Compile of PLAYER_ID_ROM_bb.v was successful.
+# Compile of RAM_PSWD_bb.v was successful.
+# Compile of ROM_PSWD_bb.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.testbench_Authentication
+# vsim -gui work.testbench_Authentication 
+# Start time: 15:21:09 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'DUT_Auth'.  Expected 11, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth File: C:/ADD_Labs/Authentication/sim_Authentication/testbench_Authentication.v Line: 17
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'playerID_to_GC'. The port definition is at: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth File: C:/ADD_Labs/Authentication/sim_Authentication/testbench_Authentication.v Line: 17
+# ** Warning: (vsim-3722) C:/ADD_Labs/Authentication/sim_Authentication/testbench_Authentication.v(17): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) C:/ADD_Labs/Authentication/sim_Authentication/testbench_Authentication.v(17): [TFMPC] - Missing connection for port 'rst'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'idInternal'. The port definition is at: C:/ADD_Labs/Authentication/sim_Authentication/id_verification.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/id_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'idInternal'. The port definition is at: C:/ADD_Labs/Authentication/sim_Authentication/pswd_verification.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'loggedIn'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'loggedOut'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'reset_done'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'isGuest_to_GC'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'playerID_to_GC'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# Error loading design
+# End time: 15:21:09 on May 10,2026, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 9
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# Compile of PLAYER_ID_ROM_bb.v was successful.
+# Compile of RAM_PSWD_bb.v was successful.
+# Compile of ROM_PSWD_bb.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.testbench_Authentication
+# vsim -gui work.testbench_Authentication 
+# Start time: 15:22:05 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'playerID_to_GC'. The port definition is at: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth File: C:/ADD_Labs/Authentication/sim_Authentication/testbench_Authentication.v Line: 17
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'idInternal'. The port definition is at: C:/ADD_Labs/Authentication/sim_Authentication/id_verification.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/id_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'idInternal'. The port definition is at: C:/ADD_Labs/Authentication/sim_Authentication/pswd_verification.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'loggedIn'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'loggedOut'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'reset_done'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'isGuest_to_GC'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'playerID_to_GC'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# Error loading design
+# End time: 15:22:05 on May 10,2026, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 5
+# Compile of testbench_Authentication.v failed with 1 errors.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# Compile of PLAYER_ID_ROM_bb.v was successful.
+# Compile of RAM_PSWD_bb.v was successful.
+# Compile of ROM_PSWD_bb.v was successful.
+# 10 compiles, 1 failed with 1 error.
+# Compile of testbench_Authentication.v failed with 1 errors.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# Compile of PLAYER_ID_ROM_bb.v was successful.
+# Compile of RAM_PSWD_bb.v was successful.
+# Compile of ROM_PSWD_bb.v was successful.
+# 10 compiles, 1 failed with 1 error.
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# Compile of PLAYER_ID_ROM_bb.v was successful.
+# Compile of RAM_PSWD_bb.v was successful.
+# Compile of ROM_PSWD_bb.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.testbench_Authentication
+# vsim -gui work.testbench_Authentication 
+# Start time: 15:24:14 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'idInternal'. The port definition is at: C:/ADD_Labs/Authentication/sim_Authentication/id_verification.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/id_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 26
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'idInternal'. The port definition is at: C:/ADD_Labs/Authentication/sim_Authentication/pswd_verification.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'loggedIn'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'loggedOut'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'reset_done'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'isGuest_to_GC'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'playerID_to_GC'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 28
+# Error loading design
+# End time: 15:24:14 on May 10,2026, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 6
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# Compile of PLAYER_ID_ROM_bb.v was successful.
+# Compile of RAM_PSWD_bb.v was successful.
+# Compile of ROM_PSWD_bb.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.testbench_Authentication
+# vsim -gui work.testbench_Authentication 
+# Start time: 15:25:57 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'loggedIn'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 29
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'loggedOut'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 29
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'reset_done'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 29
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'isGuest_to_GC'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 29
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'playerID_to_GC'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench_Authentication/DUT_Auth/pw_verify File: C:/ADD_Labs/Authentication/sim_Authentication/Authentication.v Line: 29
+# Error loading design
+# End time: 15:25:57 on May 10,2026, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 2
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# Compile of PLAYER_ID_ROM_bb.v was successful.
+# Compile of RAM_PSWD_bb.v was successful.
+# Compile of ROM_PSWD_bb.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.testbench_Authentication
+# vsim -gui work.testbench_Authentication 
+# Start time: 15:51:32 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+add wave -r sim:/testbench_Authentication/*
+run 100000 ns
+quit -sim
+# End time: 15:56:03 on May 10,2026, Elapsed time: 0:04:31
+# Errors: 0, Warnings: 2
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# Compile of PLAYER_ID_ROM_bb.v was successful.
+# Compile of RAM_PSWD_bb.v was successful.
+# Compile of ROM_PSWD_bb.v was successful.
+# 10 compiles, 0 failed with no errors.
+vsim -gui work.testbench_Authentication
+# vsim -gui work.testbench_Authentication 
+# Start time: 15:59:27 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+add wave -r sim:/testbench_Authentication/*
+run 100000 ns
+run 100000 ns
+run 100000 ns
+quit -sim
+# End time: 16:59:17 on May 10,2026, Elapsed time: 0:59:50
+# Errors: 0, Warnings: 3
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.testbench_Authentication -L altera_mf_ver -L altera_mf
+# vsim -gui work.testbench_Authentication -L altera_mf_ver -L altera_mf 
+# Start time: 17:03:29 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave -r sim:/testbench_Authentication/*
+run 100000000 ns
+quit -sim
+# End time: 17:10:55 on May 10,2026, Elapsed time: 0:07:26
+# Errors: 0, Warnings: 6
+vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication
+# vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication 
+# Start time: 17:11:10 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave -r sim:/testbench_Authentication/*
+run 1000000 ns
+quit -sim
+# End time: 17:21:40 on May 10,2026, Elapsed time: 0:10:30
+# Errors: 0, Warnings: 1
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication
+# vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication 
+# Start time: 17:22:39 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave -r sim:/testbench_Authentication/*
+run 10000000 ns
+quit -sim
+# End time: 17:31:30 on May 10,2026, Elapsed time: 0:08:51
+# Errors: 0, Warnings: 2
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication
+# vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication 
+# Start time: 17:32:21 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave -r sim:/testbench_Authentication/*
+run 1000000000 ns
+# Break key hit
+# Break in Module altsyncram_body at $MODEL_TECH/../altera/verilog/src/altera_mf.v line 49230
+# Error opening C:/ADD_Labs/Authentication/sim_Authentication/altera/verilog/src/altera_mf.v
+# Path name 'C:/ADD_Labs/Authentication/sim_Authentication/altera/verilog/src/altera_mf.v' doesn't exist.
+run 1000000 ns
+quit -sim
+# End time: 17:41:40 on May 10,2026, Elapsed time: 0:09:19
+# Errors: 0, Warnings: 2
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication
+# vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication 
+# Start time: 17:42:18 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave -r /*
+run 1000000 ns
+quit -sim
+# End time: 17:49:44 on May 10,2026, Elapsed time: 0:07:26
+# Errors: 0, Warnings: 2
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication
+# vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication 
+# Start time: 17:50:22 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave -r sim:/testbench_Authentication/*
+RUN 100000 ns
+# invalid command name "RUN"
+run 100000 ns
+# Break key hit
+quit -sim
+# End time: 18:01:07 on May 10,2026, Elapsed time: 0:10:45
+# Errors: 0, Warnings: 2
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication
+# vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication 
+# Start time: 18:01:32 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave -r /*
+run 10000 ns
+quit -sim
+# End time: 18:28:24 on May 10,2026, Elapsed time: 0:26:52
+# Errors: 0, Warnings: 2
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication
+# vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication 
+# Start time: 18:29:22 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave -r sim:/testbench_Authentication/*
+run 100000 ns
+quit -sim
+# End time: 18:45:00 on May 10,2026, Elapsed time: 0:15:38
+# Errors: 0, Warnings: 2
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication
+# vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication 
+# Start time: 18:50:34 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave -r sim:/testbench_Authentication/*
+run 100000 ns
+quit -sim
+# End time: 18:59:41 on May 10,2026, Elapsed time: 0:09:07
+# Errors: 0, Warnings: 2
+# Compile of testbench_Authentication.v was successful.
+# Compile of Authentication.v was successful.
+# Compile of id_verification.v was successful.
+# Compile of pswd_verification.v was successful.
+# Compile of PLAYER_ID_ROM.v was successful.
+# Compile of RAM_PSWD.v was successful.
+# Compile of ROM_PSWD.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication
+# vsim -gui -L altera_mf_ver -L altera_mf work.testbench_Authentication 
+# Start time: 19:00:30 on May 10,2026
+# Loading work.testbench_Authentication
+# Loading work.Authentication
+# Loading work.id_verification
+# Loading work.pswd_verification
+# Loading work.PLAYER_ID_ROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.RAM_PSWD
+# Loading work.ROM_PSWD
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave -r sim:/testbench_Authentication/*
+run 100000 ns
