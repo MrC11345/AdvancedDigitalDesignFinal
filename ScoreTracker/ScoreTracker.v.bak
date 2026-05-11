@@ -18,7 +18,7 @@ module ScoreTracker(PlayerID, isGuest, ScoreIn, ScoreRequest, PersonalBest, Glob
     parameter RAM_INIT = 0, WAIT_FOR_SCORE = 1, FETCH_RAM = 2, RAM_CYCLE1 = 3, RAM_CYCLE2 = 4, CATCH_RAM = 5, COMPARE_SCORES = 6, UPDATE_RAM = 7, CHECK_GLOBAL = 8, UPDATE_GLOBAL = 9, DONE = 10;
 
     // ScoreRAM instance
-    RAM_Score ScoreRAM (
+    RAM_Score_bb ScoreRAM (
         .address(RAMAddress),
         .clock(clk),
         .data(RAMDataIn),

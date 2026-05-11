@@ -4,31 +4,39 @@ module ScoreCounter(LevelNum, ScoreUp, ScoreDown, clk, rst, Score);
     output reg [6:0] Score; // 7-bit score output
     input clk, rst;
 
+    reg signed [8:0] nextScore; // wider signed temp to avoid wrap before clamp
+
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             Score <= 7'd0; // reset score to 0
         end else begin
+            nextScore = $signed({1'b0, Score});
+
             case (LevelNum)
                 2'd1: begin // Level 1
-                    if (ScoreUp) Score <= Score + 1; // Increment score by 1
-                    if (ScoreDown) Score <= Score - 0; // Decrement score by 0 (no change)
+                    if (ScoreUp) nextScore = nextScore + 1;
+                    if (ScoreDown) nextScore = nextScore - 0;
                 end
                 2'd2: begin // Level 2
-                    if (ScoreUp) Score <= Score + 1; // Increment score by 1
-                    if (ScoreDown) Score <= Score - 1; // Decrement score by 1
+                    if (ScoreUp) nextScore = nextScore + 1;
+                    if (ScoreDown) nextScore = nextScore - 1;
                 end
                 2'd3: begin // Level 3
-                    if (ScoreUp) Score <= Score + 1; // Increment score by 1
-                    if (ScoreDown) Score <= Score - 3; // Decrement score by 3
+                    if (ScoreUp) nextScore = nextScore + 1;
+                    if (ScoreDown) nextScore = nextScore - 3;
                 end
-                default: begin // Default case for safety
-                    Score <= Score; // No change to score
+                default: begin
+                    nextScore = nextScore;
                 end
             endcase
-            
-            // Ensure score does not go below 0 or above 99 (7-bit limit)
-            if (Score < 0) Score <= 0;
-            if (Score > 99) Score <= 99; // Needs to stop at 99 for display purposes
+
+            // Clamp score to display range 0..99
+            if (nextScore < 0)
+                nextScore = 0;
+            else if (nextScore > 99)
+                nextScore = 99;
+
+            Score <= nextScore[6:0];
         end
     end
 
