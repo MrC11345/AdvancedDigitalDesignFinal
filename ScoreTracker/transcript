@@ -1,0 +1,1248 @@
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.tb_ScoreCounter
+# vsim -gui work.tb_ScoreCounter 
+# Start time: 18:27:27 on May 10,2026
+# Loading work.tb_ScoreCounter
+# Loading work.ScoreCounter
+add wave sim:/tb_ScoreCounter/*
+run -all
+# === ScoreCounter TB Start ===
+# T=0 | rst=1 level=0 up=0 down=0 score=0
+# T=200 | rst=0 level=0 up=0 down=0 score=0
+# T=400 | rst=1 level=0 up=0 down=0 score=0
+# T=600 | rst=0 level=1 up=0 down=0 score=0
+# T=650 | rst=0 level=1 up=1 down=0 score=0
+# T=800 | rst=0 level=1 up=1 down=0 score=1
+# T=850 | rst=0 level=1 up=0 down=0 score=1
+# T=900 | rst=0 level=1 up=0 down=1 score=1
+# T=1050 | rst=0 level=2 up=0 down=0 score=1
+# T=1100 | rst=0 level=2 up=1 down=0 score=1
+# T=1200 | rst=0 level=2 up=1 down=0 score=2
+# T=1250 | rst=0 level=2 up=0 down=0 score=2
+# T=1300 | rst=0 level=2 up=0 down=1 score=2
+# T=1400 | rst=0 level=2 up=0 down=1 score=1
+# T=1450 | rst=0 level=3 up=0 down=0 score=1
+# T=1500 | rst=0 level=3 up=1 down=0 score=1
+# T=1600 | rst=0 level=3 up=1 down=0 score=2
+# T=1650 | rst=0 level=3 up=0 down=0 score=2
+# T=1700 | rst=0 level=3 up=0 down=1 score=2
+# T=1800 | rst=0 level=3 up=0 down=1 score=127
+# T=1850 | rst=0 level=2 up=0 down=0 score=127
+# T=1900 | rst=0 level=2 up=1 down=0 score=127
+# T=2000 | rst=0 level=2 up=1 down=0 score=99
+# T=2050 | rst=0 level=2 up=0 down=0 score=99
+# T=2100 | rst=0 level=2 up=1 down=0 score=99
+# T=2200 | rst=0 level=2 up=1 down=0 score=100
+# T=2250 | rst=0 level=2 up=0 down=0 score=100
+# T=2300 | rst=0 level=2 up=1 down=0 score=100
+# T=2400 | rst=0 level=2 up=1 down=0 score=99
+# T=2450 | rst=0 level=2 up=0 down=0 score=99
+# T=2500 | rst=0 level=2 up=1 down=0 score=99
+# T=2600 | rst=0 level=2 up=1 down=0 score=100
+# T=2650 | rst=0 level=2 up=0 down=0 score=100
+# T=2700 | rst=0 level=2 up=1 down=0 score=100
+# T=2800 | rst=0 level=2 up=1 down=0 score=99
+# T=2850 | rst=0 level=2 up=0 down=0 score=99
+# T=2900 | rst=0 level=2 up=1 down=0 score=99
+# T=3000 | rst=0 level=2 up=1 down=0 score=100
+# T=3050 | rst=0 level=2 up=0 down=0 score=100
+# T=3100 | rst=0 level=2 up=1 down=0 score=100
+# T=3200 | rst=0 level=2 up=1 down=0 score=99
+# T=3250 | rst=0 level=2 up=0 down=0 score=99
+# T=3300 | rst=0 level=2 up=1 down=0 score=99
+# T=3400 | rst=0 level=2 up=1 down=0 score=100
+# T=3450 | rst=0 level=2 up=0 down=0 score=100
+# T=3500 | rst=0 level=2 up=1 down=0 score=100
+# T=3600 | rst=0 level=2 up=1 down=0 score=99
+# T=3650 | rst=0 level=2 up=0 down=0 score=99
+# T=3700 | rst=0 level=2 up=1 down=0 score=99
+# T=3800 | rst=0 level=2 up=1 down=0 score=100
+# T=3850 | rst=0 level=2 up=0 down=0 score=100
+# T=3900 | rst=0 level=2 up=1 down=0 score=100
+# T=4000 | rst=0 level=2 up=1 down=0 score=99
+# T=4050 | rst=0 level=2 up=0 down=0 score=99
+# T=4100 | rst=0 level=2 up=1 down=0 score=99
+# T=4200 | rst=0 level=2 up=1 down=0 score=100
+# T=4250 | rst=0 level=2 up=0 down=0 score=100
+# T=4300 | rst=0 level=2 up=1 down=0 score=100
+# T=4400 | rst=0 level=2 up=1 down=0 score=99
+# T=4450 | rst=0 level=2 up=0 down=0 score=99
+# T=4500 | rst=0 level=2 up=1 down=0 score=99
+# T=4600 | rst=0 level=2 up=1 down=0 score=100
+# T=4650 | rst=0 level=2 up=0 down=0 score=100
+# T=4700 | rst=0 level=2 up=1 down=0 score=100
+# T=4800 | rst=0 level=2 up=1 down=0 score=99
+# T=4850 | rst=0 level=2 up=0 down=0 score=99
+# T=4900 | rst=0 level=2 up=1 down=0 score=99
+# T=5000 | rst=0 level=2 up=1 down=0 score=100
+# T=5050 | rst=0 level=2 up=0 down=0 score=100
+# T=5100 | rst=0 level=2 up=1 down=0 score=100
+# T=5200 | rst=0 level=2 up=1 down=0 score=99
+# T=5250 | rst=0 level=2 up=0 down=0 score=99
+# T=5300 | rst=0 level=2 up=1 down=0 score=99
+# T=5400 | rst=0 level=2 up=1 down=0 score=100
+# T=5450 | rst=0 level=2 up=0 down=0 score=100
+# T=5500 | rst=0 level=2 up=1 down=0 score=100
+# T=5600 | rst=0 level=2 up=1 down=0 score=99
+# T=5650 | rst=0 level=2 up=0 down=0 score=99
+# T=5700 | rst=0 level=2 up=1 down=0 score=99
+# T=5800 | rst=0 level=2 up=1 down=0 score=100
+# T=5850 | rst=0 level=2 up=0 down=0 score=100
+# T=5900 | rst=0 level=2 up=1 down=0 score=100
+# T=6000 | rst=0 level=2 up=1 down=0 score=99
+# T=6050 | rst=0 level=2 up=0 down=0 score=99
+# T=6100 | rst=0 level=2 up=1 down=0 score=99
+# T=6200 | rst=0 level=2 up=1 down=0 score=100
+# T=6250 | rst=0 level=2 up=0 down=0 score=100
+# T=6300 | rst=0 level=2 up=1 down=0 score=100
+# T=6400 | rst=0 level=2 up=1 down=0 score=99
+# T=6450 | rst=0 level=2 up=0 down=0 score=99
+# T=6500 | rst=0 level=2 up=1 down=0 score=99
+# T=6600 | rst=0 level=2 up=1 down=0 score=100
+# T=6650 | rst=0 level=2 up=0 down=0 score=100
+# T=6700 | rst=0 level=2 up=1 down=0 score=100
+# T=6800 | rst=0 level=2 up=1 down=0 score=99
+# T=6850 | rst=0 level=2 up=0 down=0 score=99
+# T=6900 | rst=0 level=2 up=1 down=0 score=99
+# T=7000 | rst=0 level=2 up=1 down=0 score=100
+# T=7050 | rst=0 level=2 up=0 down=0 score=100
+# T=7100 | rst=0 level=2 up=1 down=0 score=100
+# T=7200 | rst=0 level=2 up=1 down=0 score=99
+# T=7250 | rst=0 level=2 up=0 down=0 score=99
+# T=7300 | rst=0 level=2 up=1 down=0 score=99
+# T=7400 | rst=0 level=2 up=1 down=0 score=100
+# T=7450 | rst=0 level=2 up=0 down=0 score=100
+# T=7500 | rst=0 level=2 up=1 down=0 score=100
+# T=7600 | rst=0 level=2 up=1 down=0 score=99
+# T=7650 | rst=0 level=2 up=0 down=0 score=99
+# T=7700 | rst=0 level=2 up=1 down=0 score=99
+# T=7800 | rst=0 level=2 up=1 down=0 score=100
+# T=7850 | rst=0 level=2 up=0 down=0 score=100
+# T=7900 | rst=0 level=2 up=1 down=0 score=100
+# T=8000 | rst=0 level=2 up=1 down=0 score=99
+# T=8050 | rst=0 level=2 up=0 down=0 score=99
+# T=8100 | rst=0 level=2 up=1 down=0 score=99
+# T=8200 | rst=0 level=2 up=1 down=0 score=100
+# T=8250 | rst=0 level=2 up=0 down=0 score=100
+# T=8300 | rst=0 level=2 up=1 down=0 score=100
+# T=8400 | rst=0 level=2 up=1 down=0 score=99
+# T=8450 | rst=0 level=2 up=0 down=0 score=99
+# T=8500 | rst=0 level=2 up=1 down=0 score=99
+# T=8600 | rst=0 level=2 up=1 down=0 score=100
+# T=8650 | rst=0 level=2 up=0 down=0 score=100
+# T=8700 | rst=0 level=2 up=1 down=0 score=100
+# T=8800 | rst=0 level=2 up=1 down=0 score=99
+# T=8850 | rst=0 level=2 up=0 down=0 score=99
+# T=8900 | rst=0 level=2 up=1 down=0 score=99
+# T=9000 | rst=0 level=2 up=1 down=0 score=100
+# T=9050 | rst=0 level=2 up=0 down=0 score=100
+# T=9100 | rst=0 level=2 up=1 down=0 score=100
+# T=9200 | rst=0 level=2 up=1 down=0 score=99
+# T=9250 | rst=0 level=2 up=0 down=0 score=99
+# T=9300 | rst=0 level=2 up=1 down=0 score=99
+# T=9400 | rst=0 level=2 up=1 down=0 score=100
+# T=9450 | rst=0 level=2 up=0 down=0 score=100
+# T=9500 | rst=0 level=2 up=1 down=0 score=100
+# T=9600 | rst=0 level=2 up=1 down=0 score=99
+# T=9650 | rst=0 level=2 up=0 down=0 score=99
+# T=9700 | rst=0 level=2 up=1 down=0 score=99
+# T=9800 | rst=0 level=2 up=1 down=0 score=100
+# T=9850 | rst=0 level=2 up=0 down=0 score=100
+# T=9900 | rst=0 level=2 up=1 down=0 score=100
+# T=10000 | rst=0 level=2 up=1 down=0 score=99
+# T=10050 | rst=0 level=2 up=0 down=0 score=99
+# T=10100 | rst=0 level=2 up=1 down=0 score=99
+# T=10200 | rst=0 level=2 up=1 down=0 score=100
+# T=10250 | rst=0 level=2 up=0 down=0 score=100
+# T=10300 | rst=0 level=2 up=1 down=0 score=100
+# T=10400 | rst=0 level=2 up=1 down=0 score=99
+# T=10450 | rst=0 level=2 up=0 down=0 score=99
+# T=10500 | rst=0 level=2 up=1 down=0 score=99
+# T=10600 | rst=0 level=2 up=1 down=0 score=100
+# T=10650 | rst=0 level=2 up=0 down=0 score=100
+# T=10700 | rst=0 level=2 up=1 down=0 score=100
+# T=10800 | rst=0 level=2 up=1 down=0 score=99
+# T=10850 | rst=0 level=2 up=0 down=0 score=99
+# T=10900 | rst=0 level=2 up=1 down=0 score=99
+# T=11000 | rst=0 level=2 up=1 down=0 score=100
+# T=11050 | rst=0 level=2 up=0 down=0 score=100
+# T=11100 | rst=0 level=2 up=1 down=0 score=100
+# T=11200 | rst=0 level=2 up=1 down=0 score=99
+# T=11250 | rst=0 level=2 up=0 down=0 score=99
+# T=11300 | rst=0 level=2 up=1 down=0 score=99
+# T=11400 | rst=0 level=2 up=1 down=0 score=100
+# T=11450 | rst=0 level=2 up=0 down=0 score=100
+# T=11500 | rst=0 level=2 up=1 down=0 score=100
+# T=11600 | rst=0 level=2 up=1 down=0 score=99
+# T=11650 | rst=0 level=2 up=0 down=0 score=99
+# T=11700 | rst=0 level=2 up=1 down=0 score=99
+# T=11800 | rst=0 level=2 up=1 down=0 score=100
+# T=11850 | rst=0 level=2 up=0 down=0 score=100
+# T=11900 | rst=0 level=2 up=1 down=0 score=100
+# T=12000 | rst=0 level=2 up=1 down=0 score=99
+# T=12050 | rst=0 level=2 up=0 down=0 score=99
+# T=12100 | rst=0 level=2 up=1 down=0 score=99
+# T=12200 | rst=0 level=2 up=1 down=0 score=100
+# T=12250 | rst=0 level=2 up=0 down=0 score=100
+# T=12300 | rst=0 level=2 up=1 down=0 score=100
+# T=12400 | rst=0 level=2 up=1 down=0 score=99
+# T=12450 | rst=0 level=2 up=0 down=0 score=99
+# T=12500 | rst=0 level=2 up=1 down=0 score=99
+# T=12600 | rst=0 level=2 up=1 down=0 score=100
+# T=12650 | rst=0 level=2 up=0 down=0 score=100
+# T=12700 | rst=0 level=2 up=1 down=0 score=100
+# T=12800 | rst=0 level=2 up=1 down=0 score=99
+# T=12850 | rst=0 level=2 up=0 down=0 score=99
+# T=12900 | rst=0 level=2 up=1 down=0 score=99
+# T=13000 | rst=0 level=2 up=1 down=0 score=100
+# T=13050 | rst=0 level=2 up=0 down=0 score=100
+# T=13100 | rst=0 level=2 up=1 down=0 score=100
+# T=13200 | rst=0 level=2 up=1 down=0 score=99
+# T=13250 | rst=0 level=2 up=0 down=0 score=99
+# T=13300 | rst=0 level=2 up=1 down=0 score=99
+# T=13400 | rst=0 level=2 up=1 down=0 score=100
+# T=13450 | rst=0 level=2 up=0 down=0 score=100
+# T=13500 | rst=0 level=2 up=1 down=0 score=100
+# T=13600 | rst=0 level=2 up=1 down=0 score=99
+# T=13650 | rst=0 level=2 up=0 down=0 score=99
+# T=13700 | rst=0 level=2 up=1 down=0 score=99
+# T=13800 | rst=0 level=2 up=1 down=0 score=100
+# T=13850 | rst=0 level=2 up=0 down=0 score=100
+# T=13900 | rst=0 level=2 up=1 down=0 score=100
+# T=14000 | rst=0 level=2 up=1 down=0 score=99
+# T=14050 | rst=0 level=2 up=0 down=0 score=99
+# T=14100 | rst=0 level=2 up=1 down=0 score=99
+# T=14200 | rst=0 level=2 up=1 down=0 score=100
+# T=14250 | rst=0 level=2 up=0 down=0 score=100
+# T=14300 | rst=0 level=2 up=1 down=0 score=100
+# T=14400 | rst=0 level=2 up=1 down=0 score=99
+# T=14450 | rst=0 level=2 up=0 down=0 score=99
+# T=14500 | rst=0 level=2 up=1 down=0 score=99
+# T=14600 | rst=0 level=2 up=1 down=0 score=100
+# T=14650 | rst=0 level=2 up=0 down=0 score=100
+# T=14700 | rst=0 level=2 up=1 down=0 score=100
+# T=14800 | rst=0 level=2 up=1 down=0 score=99
+# T=14850 | rst=0 level=2 up=0 down=0 score=99
+# T=14900 | rst=0 level=2 up=1 down=0 score=99
+# T=15000 | rst=0 level=2 up=1 down=0 score=100
+# T=15050 | rst=0 level=2 up=0 down=0 score=100
+# T=15100 | rst=0 level=2 up=1 down=0 score=100
+# T=15200 | rst=0 level=2 up=1 down=0 score=99
+# T=15250 | rst=0 level=2 up=0 down=0 score=99
+# T=15300 | rst=0 level=2 up=1 down=0 score=99
+# T=15400 | rst=0 level=2 up=1 down=0 score=100
+# T=15450 | rst=0 level=2 up=0 down=0 score=100
+# T=15500 | rst=0 level=2 up=1 down=0 score=100
+# T=15600 | rst=0 level=2 up=1 down=0 score=99
+# T=15650 | rst=0 level=2 up=0 down=0 score=99
+# T=15700 | rst=0 level=2 up=1 down=0 score=99
+# T=15800 | rst=0 level=2 up=1 down=0 score=100
+# T=15850 | rst=0 level=2 up=0 down=0 score=100
+# T=15900 | rst=0 level=2 up=1 down=0 score=100
+# T=16000 | rst=0 level=2 up=1 down=0 score=99
+# T=16050 | rst=0 level=2 up=0 down=0 score=99
+# T=16100 | rst=0 level=2 up=1 down=0 score=99
+# T=16200 | rst=0 level=2 up=1 down=0 score=100
+# T=16250 | rst=0 level=2 up=0 down=0 score=100
+# T=16300 | rst=0 level=2 up=1 down=0 score=100
+# T=16400 | rst=0 level=2 up=1 down=0 score=99
+# T=16450 | rst=0 level=2 up=0 down=0 score=99
+# T=16500 | rst=0 level=2 up=1 down=0 score=99
+# T=16600 | rst=0 level=2 up=1 down=0 score=100
+# T=16650 | rst=0 level=2 up=0 down=0 score=100
+# T=16700 | rst=0 level=2 up=1 down=0 score=100
+# T=16800 | rst=0 level=2 up=1 down=0 score=99
+# T=16850 | rst=0 level=2 up=0 down=0 score=99
+# T=16900 | rst=0 level=2 up=1 down=0 score=99
+# T=17000 | rst=0 level=2 up=1 down=0 score=100
+# T=17050 | rst=0 level=2 up=0 down=0 score=100
+# T=17100 | rst=0 level=2 up=1 down=0 score=100
+# T=17200 | rst=0 level=2 up=1 down=0 score=99
+# T=17250 | rst=0 level=2 up=0 down=0 score=99
+# T=17300 | rst=0 level=2 up=1 down=0 score=99
+# T=17400 | rst=0 level=2 up=1 down=0 score=100
+# T=17450 | rst=0 level=2 up=0 down=0 score=100
+# T=17500 | rst=0 level=2 up=1 down=0 score=100
+# T=17600 | rst=0 level=2 up=1 down=0 score=99
+# T=17650 | rst=0 level=2 up=0 down=0 score=99
+# T=17700 | rst=0 level=2 up=1 down=0 score=99
+# T=17800 | rst=0 level=2 up=1 down=0 score=100
+# T=17850 | rst=0 level=2 up=0 down=0 score=100
+# T=17900 | rst=0 level=2 up=1 down=0 score=100
+# T=18000 | rst=0 level=2 up=1 down=0 score=99
+# T=18050 | rst=0 level=2 up=0 down=0 score=99
+# T=18100 | rst=0 level=2 up=1 down=0 score=99
+# T=18200 | rst=0 level=2 up=1 down=0 score=100
+# T=18250 | rst=0 level=2 up=0 down=0 score=100
+# T=18300 | rst=0 level=2 up=1 down=0 score=100
+# T=18400 | rst=0 level=2 up=1 down=0 score=99
+# T=18450 | rst=0 level=2 up=0 down=0 score=99
+# T=18500 | rst=0 level=2 up=1 down=0 score=99
+# T=18600 | rst=0 level=2 up=1 down=0 score=100
+# T=18650 | rst=0 level=2 up=0 down=0 score=100
+# T=18700 | rst=0 level=2 up=1 down=0 score=100
+# T=18800 | rst=0 level=2 up=1 down=0 score=99
+# T=18850 | rst=0 level=2 up=0 down=0 score=99
+# T=18900 | rst=0 level=2 up=1 down=0 score=99
+# T=19000 | rst=0 level=2 up=1 down=0 score=100
+# T=19050 | rst=0 level=2 up=0 down=0 score=100
+# T=19100 | rst=0 level=2 up=1 down=0 score=100
+# T=19200 | rst=0 level=2 up=1 down=0 score=99
+# T=19250 | rst=0 level=2 up=0 down=0 score=99
+# T=19300 | rst=0 level=2 up=1 down=0 score=99
+# T=19400 | rst=0 level=2 up=1 down=0 score=100
+# T=19450 | rst=0 level=2 up=0 down=0 score=100
+# T=19500 | rst=0 level=2 up=1 down=0 score=100
+# T=19600 | rst=0 level=2 up=1 down=0 score=99
+# T=19650 | rst=0 level=2 up=0 down=0 score=99
+# T=19700 | rst=0 level=2 up=1 down=0 score=99
+# T=19800 | rst=0 level=2 up=1 down=0 score=100
+# T=19850 | rst=0 level=2 up=0 down=0 score=100
+# T=19900 | rst=0 level=2 up=1 down=0 score=100
+# T=20000 | rst=0 level=2 up=1 down=0 score=99
+# T=20050 | rst=0 level=2 up=0 down=0 score=99
+# T=20100 | rst=0 level=2 up=1 down=0 score=99
+# T=20200 | rst=0 level=2 up=1 down=0 score=100
+# T=20250 | rst=0 level=2 up=0 down=0 score=100
+# T=20300 | rst=0 level=2 up=1 down=0 score=100
+# T=20400 | rst=0 level=2 up=1 down=0 score=99
+# T=20450 | rst=0 level=2 up=0 down=0 score=99
+# T=20500 | rst=0 level=2 up=1 down=0 score=99
+# T=20600 | rst=0 level=2 up=1 down=0 score=100
+# T=20650 | rst=0 level=2 up=0 down=0 score=100
+# T=20700 | rst=0 level=2 up=1 down=0 score=100
+# T=20800 | rst=0 level=2 up=1 down=0 score=99
+# T=20850 | rst=0 level=2 up=0 down=0 score=99
+# T=20900 | rst=0 level=2 up=1 down=0 score=99
+# T=21000 | rst=0 level=2 up=1 down=0 score=100
+# T=21050 | rst=0 level=2 up=0 down=0 score=100
+# T=21100 | rst=0 level=2 up=1 down=0 score=100
+# T=21200 | rst=0 level=2 up=1 down=0 score=99
+# T=21250 | rst=0 level=2 up=0 down=0 score=99
+# T=21300 | rst=0 level=2 up=1 down=0 score=99
+# T=21400 | rst=0 level=2 up=1 down=0 score=100
+# T=21450 | rst=0 level=2 up=0 down=0 score=100
+# T=21500 | rst=0 level=2 up=1 down=0 score=100
+# T=21600 | rst=0 level=2 up=1 down=0 score=99
+# T=21650 | rst=0 level=2 up=0 down=0 score=99
+# T=21700 | rst=0 level=2 up=1 down=0 score=99
+# T=21800 | rst=0 level=2 up=1 down=0 score=100
+# T=21850 | rst=0 level=2 up=0 down=0 score=100
+# T=21900 | rst=0 level=2 up=1 down=0 score=100
+# T=22000 | rst=0 level=2 up=1 down=0 score=99
+# T=22050 | rst=0 level=2 up=0 down=0 score=99
+# T=22100 | rst=0 level=2 up=1 down=0 score=99
+# T=22200 | rst=0 level=2 up=1 down=0 score=100
+# T=22250 | rst=0 level=2 up=0 down=0 score=100
+# T=22300 | rst=0 level=2 up=1 down=0 score=100
+# T=22400 | rst=0 level=2 up=1 down=0 score=99
+# T=22450 | rst=0 level=2 up=0 down=0 score=99
+# T=22500 | rst=0 level=2 up=1 down=0 score=99
+# T=22600 | rst=0 level=2 up=1 down=0 score=100
+# T=22650 | rst=0 level=2 up=0 down=0 score=100
+# T=22700 | rst=0 level=2 up=1 down=0 score=100
+# T=22800 | rst=0 level=2 up=1 down=0 score=99
+# T=22850 | rst=0 level=2 up=0 down=0 score=99
+# T=22900 | rst=0 level=2 up=1 down=0 score=99
+# T=23000 | rst=0 level=2 up=1 down=0 score=100
+# T=23050 | rst=0 level=2 up=0 down=0 score=100
+# T=23100 | rst=0 level=2 up=1 down=0 score=100
+# T=23200 | rst=0 level=2 up=1 down=0 score=99
+# T=23250 | rst=0 level=2 up=0 down=0 score=99
+# T=23300 | rst=0 level=2 up=1 down=0 score=99
+# T=23400 | rst=0 level=2 up=1 down=0 score=100
+# T=23450 | rst=0 level=2 up=0 down=0 score=100
+# T=23500 | rst=0 level=2 up=1 down=0 score=100
+# T=23600 | rst=0 level=2 up=1 down=0 score=99
+# T=23650 | rst=0 level=2 up=0 down=0 score=99
+# T=23700 | rst=0 level=2 up=1 down=0 score=99
+# T=23800 | rst=0 level=2 up=1 down=0 score=100
+# T=23850 | rst=0 level=2 up=0 down=0 score=100
+# T=24000 | rst=0 level=2 up=0 down=0 score=99
+# === ScoreCounter TB End ===
+# ** Note: $stop    : C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreCounter.v(83)
+#    Time: 2420 ns  Iteration: 1  Instance: /tb_ScoreCounter
+# Break in Module tb_ScoreCounter at C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreCounter.v line 83
+quit -sim
+# End time: 18:31:57 on May 10,2026, Elapsed time: 0:04:30
+# Errors: 0, Warnings: 5
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.tb_ScoreCounter
+# vsim -gui work.tb_ScoreCounter 
+# Start time: 18:32:57 on May 10,2026
+# Loading work.tb_ScoreCounter
+# Loading work.ScoreCounter
+add wave sim:/tb_ScoreCounter/*
+run -all
+# === ScoreCounter TB Start ===
+# T=0 | rst=1 level=0 up=0 down=0 score=0
+# T=200 | rst=0 level=0 up=0 down=0 score=0
+# T=400 | rst=1 level=0 up=0 down=0 score=0
+# T=600 | rst=0 level=1 up=0 down=0 score=0
+# T=650 | rst=0 level=1 up=1 down=0 score=0
+# T=800 | rst=0 level=1 up=1 down=0 score=1
+# T=850 | rst=0 level=1 up=0 down=0 score=1
+# T=900 | rst=0 level=1 up=0 down=1 score=1
+# T=1050 | rst=0 level=2 up=0 down=0 score=1
+# T=1100 | rst=0 level=2 up=1 down=0 score=1
+# T=1200 | rst=0 level=2 up=1 down=0 score=2
+# T=1250 | rst=0 level=2 up=0 down=0 score=2
+# T=1300 | rst=0 level=2 up=0 down=1 score=2
+# T=1400 | rst=0 level=2 up=0 down=1 score=1
+# T=1450 | rst=0 level=3 up=0 down=0 score=1
+# T=1500 | rst=0 level=3 up=1 down=0 score=1
+# T=1600 | rst=0 level=3 up=1 down=0 score=2
+# T=1650 | rst=0 level=3 up=0 down=0 score=2
+# T=1700 | rst=0 level=3 up=0 down=1 score=2
+# T=1800 | rst=0 level=3 up=0 down=1 score=0
+# T=1850 | rst=0 level=2 up=0 down=0 score=0
+# T=1900 | rst=0 level=2 up=1 down=0 score=0
+# T=2000 | rst=0 level=2 up=1 down=0 score=1
+# T=2050 | rst=0 level=2 up=0 down=0 score=1
+# T=2100 | rst=0 level=2 up=1 down=0 score=1
+# T=2200 | rst=0 level=2 up=1 down=0 score=2
+# T=2250 | rst=0 level=2 up=0 down=0 score=2
+# T=2300 | rst=0 level=2 up=1 down=0 score=2
+# T=2400 | rst=0 level=2 up=1 down=0 score=3
+# T=2450 | rst=0 level=2 up=0 down=0 score=3
+# T=2500 | rst=0 level=2 up=1 down=0 score=3
+# T=2600 | rst=0 level=2 up=1 down=0 score=4
+# T=2650 | rst=0 level=2 up=0 down=0 score=4
+# T=2700 | rst=0 level=2 up=1 down=0 score=4
+# T=2800 | rst=0 level=2 up=1 down=0 score=5
+# T=2850 | rst=0 level=2 up=0 down=0 score=5
+# T=2900 | rst=0 level=2 up=1 down=0 score=5
+# T=3000 | rst=0 level=2 up=1 down=0 score=6
+# T=3050 | rst=0 level=2 up=0 down=0 score=6
+# T=3100 | rst=0 level=2 up=1 down=0 score=6
+# T=3200 | rst=0 level=2 up=1 down=0 score=7
+# T=3250 | rst=0 level=2 up=0 down=0 score=7
+# T=3300 | rst=0 level=2 up=1 down=0 score=7
+# T=3400 | rst=0 level=2 up=1 down=0 score=8
+# T=3450 | rst=0 level=2 up=0 down=0 score=8
+# T=3500 | rst=0 level=2 up=1 down=0 score=8
+# T=3600 | rst=0 level=2 up=1 down=0 score=9
+# T=3650 | rst=0 level=2 up=0 down=0 score=9
+# T=3700 | rst=0 level=2 up=1 down=0 score=9
+# T=3800 | rst=0 level=2 up=1 down=0 score=10
+# T=3850 | rst=0 level=2 up=0 down=0 score=10
+# T=3900 | rst=0 level=2 up=1 down=0 score=10
+# T=4000 | rst=0 level=2 up=1 down=0 score=11
+# T=4050 | rst=0 level=2 up=0 down=0 score=11
+# T=4100 | rst=0 level=2 up=1 down=0 score=11
+# T=4200 | rst=0 level=2 up=1 down=0 score=12
+# T=4250 | rst=0 level=2 up=0 down=0 score=12
+# T=4300 | rst=0 level=2 up=1 down=0 score=12
+# T=4400 | rst=0 level=2 up=1 down=0 score=13
+# T=4450 | rst=0 level=2 up=0 down=0 score=13
+# T=4500 | rst=0 level=2 up=1 down=0 score=13
+# T=4600 | rst=0 level=2 up=1 down=0 score=14
+# T=4650 | rst=0 level=2 up=0 down=0 score=14
+# T=4700 | rst=0 level=2 up=1 down=0 score=14
+# T=4800 | rst=0 level=2 up=1 down=0 score=15
+# T=4850 | rst=0 level=2 up=0 down=0 score=15
+# T=4900 | rst=0 level=2 up=1 down=0 score=15
+# T=5000 | rst=0 level=2 up=1 down=0 score=16
+# T=5050 | rst=0 level=2 up=0 down=0 score=16
+# T=5100 | rst=0 level=2 up=1 down=0 score=16
+# T=5200 | rst=0 level=2 up=1 down=0 score=17
+# T=5250 | rst=0 level=2 up=0 down=0 score=17
+# T=5300 | rst=0 level=2 up=1 down=0 score=17
+# T=5400 | rst=0 level=2 up=1 down=0 score=18
+# T=5450 | rst=0 level=2 up=0 down=0 score=18
+# T=5500 | rst=0 level=2 up=1 down=0 score=18
+# T=5600 | rst=0 level=2 up=1 down=0 score=19
+# T=5650 | rst=0 level=2 up=0 down=0 score=19
+# T=5700 | rst=0 level=2 up=1 down=0 score=19
+# T=5800 | rst=0 level=2 up=1 down=0 score=20
+# T=5850 | rst=0 level=2 up=0 down=0 score=20
+# T=5900 | rst=0 level=2 up=1 down=0 score=20
+# T=6000 | rst=0 level=2 up=1 down=0 score=21
+# T=6050 | rst=0 level=2 up=0 down=0 score=21
+# T=6100 | rst=0 level=2 up=1 down=0 score=21
+# T=6200 | rst=0 level=2 up=1 down=0 score=22
+# T=6250 | rst=0 level=2 up=0 down=0 score=22
+# T=6300 | rst=0 level=2 up=1 down=0 score=22
+# T=6400 | rst=0 level=2 up=1 down=0 score=23
+# T=6450 | rst=0 level=2 up=0 down=0 score=23
+# T=6500 | rst=0 level=2 up=1 down=0 score=23
+# T=6600 | rst=0 level=2 up=1 down=0 score=24
+# T=6650 | rst=0 level=2 up=0 down=0 score=24
+# T=6700 | rst=0 level=2 up=1 down=0 score=24
+# T=6800 | rst=0 level=2 up=1 down=0 score=25
+# T=6850 | rst=0 level=2 up=0 down=0 score=25
+# T=6900 | rst=0 level=2 up=1 down=0 score=25
+# T=7000 | rst=0 level=2 up=1 down=0 score=26
+# T=7050 | rst=0 level=2 up=0 down=0 score=26
+# T=7100 | rst=0 level=2 up=1 down=0 score=26
+# T=7200 | rst=0 level=2 up=1 down=0 score=27
+# T=7250 | rst=0 level=2 up=0 down=0 score=27
+# T=7300 | rst=0 level=2 up=1 down=0 score=27
+# T=7400 | rst=0 level=2 up=1 down=0 score=28
+# T=7450 | rst=0 level=2 up=0 down=0 score=28
+# T=7500 | rst=0 level=2 up=1 down=0 score=28
+# T=7600 | rst=0 level=2 up=1 down=0 score=29
+# T=7650 | rst=0 level=2 up=0 down=0 score=29
+# T=7700 | rst=0 level=2 up=1 down=0 score=29
+# T=7800 | rst=0 level=2 up=1 down=0 score=30
+# T=7850 | rst=0 level=2 up=0 down=0 score=30
+# T=7900 | rst=0 level=2 up=1 down=0 score=30
+# T=8000 | rst=0 level=2 up=1 down=0 score=31
+# T=8050 | rst=0 level=2 up=0 down=0 score=31
+# T=8100 | rst=0 level=2 up=1 down=0 score=31
+# T=8200 | rst=0 level=2 up=1 down=0 score=32
+# T=8250 | rst=0 level=2 up=0 down=0 score=32
+# T=8300 | rst=0 level=2 up=1 down=0 score=32
+# T=8400 | rst=0 level=2 up=1 down=0 score=33
+# T=8450 | rst=0 level=2 up=0 down=0 score=33
+# T=8500 | rst=0 level=2 up=1 down=0 score=33
+# T=8600 | rst=0 level=2 up=1 down=0 score=34
+# T=8650 | rst=0 level=2 up=0 down=0 score=34
+# T=8700 | rst=0 level=2 up=1 down=0 score=34
+# T=8800 | rst=0 level=2 up=1 down=0 score=35
+# T=8850 | rst=0 level=2 up=0 down=0 score=35
+# T=8900 | rst=0 level=2 up=1 down=0 score=35
+# T=9000 | rst=0 level=2 up=1 down=0 score=36
+# T=9050 | rst=0 level=2 up=0 down=0 score=36
+# T=9100 | rst=0 level=2 up=1 down=0 score=36
+# T=9200 | rst=0 level=2 up=1 down=0 score=37
+# T=9250 | rst=0 level=2 up=0 down=0 score=37
+# T=9300 | rst=0 level=2 up=1 down=0 score=37
+# T=9400 | rst=0 level=2 up=1 down=0 score=38
+# T=9450 | rst=0 level=2 up=0 down=0 score=38
+# T=9500 | rst=0 level=2 up=1 down=0 score=38
+# T=9600 | rst=0 level=2 up=1 down=0 score=39
+# T=9650 | rst=0 level=2 up=0 down=0 score=39
+# T=9700 | rst=0 level=2 up=1 down=0 score=39
+# T=9800 | rst=0 level=2 up=1 down=0 score=40
+# T=9850 | rst=0 level=2 up=0 down=0 score=40
+# T=9900 | rst=0 level=2 up=1 down=0 score=40
+# T=10000 | rst=0 level=2 up=1 down=0 score=41
+# T=10050 | rst=0 level=2 up=0 down=0 score=41
+# T=10100 | rst=0 level=2 up=1 down=0 score=41
+# T=10200 | rst=0 level=2 up=1 down=0 score=42
+# T=10250 | rst=0 level=2 up=0 down=0 score=42
+# T=10300 | rst=0 level=2 up=1 down=0 score=42
+# T=10400 | rst=0 level=2 up=1 down=0 score=43
+# T=10450 | rst=0 level=2 up=0 down=0 score=43
+# T=10500 | rst=0 level=2 up=1 down=0 score=43
+# T=10600 | rst=0 level=2 up=1 down=0 score=44
+# T=10650 | rst=0 level=2 up=0 down=0 score=44
+# T=10700 | rst=0 level=2 up=1 down=0 score=44
+# T=10800 | rst=0 level=2 up=1 down=0 score=45
+# T=10850 | rst=0 level=2 up=0 down=0 score=45
+# T=10900 | rst=0 level=2 up=1 down=0 score=45
+# T=11000 | rst=0 level=2 up=1 down=0 score=46
+# T=11050 | rst=0 level=2 up=0 down=0 score=46
+# T=11100 | rst=0 level=2 up=1 down=0 score=46
+# T=11200 | rst=0 level=2 up=1 down=0 score=47
+# T=11250 | rst=0 level=2 up=0 down=0 score=47
+# T=11300 | rst=0 level=2 up=1 down=0 score=47
+# T=11400 | rst=0 level=2 up=1 down=0 score=48
+# T=11450 | rst=0 level=2 up=0 down=0 score=48
+# T=11500 | rst=0 level=2 up=1 down=0 score=48
+# T=11600 | rst=0 level=2 up=1 down=0 score=49
+# T=11650 | rst=0 level=2 up=0 down=0 score=49
+# T=11700 | rst=0 level=2 up=1 down=0 score=49
+# T=11800 | rst=0 level=2 up=1 down=0 score=50
+# T=11850 | rst=0 level=2 up=0 down=0 score=50
+# T=11900 | rst=0 level=2 up=1 down=0 score=50
+# T=12000 | rst=0 level=2 up=1 down=0 score=51
+# T=12050 | rst=0 level=2 up=0 down=0 score=51
+# T=12100 | rst=0 level=2 up=1 down=0 score=51
+# T=12200 | rst=0 level=2 up=1 down=0 score=52
+# T=12250 | rst=0 level=2 up=0 down=0 score=52
+# T=12300 | rst=0 level=2 up=1 down=0 score=52
+# T=12400 | rst=0 level=2 up=1 down=0 score=53
+# T=12450 | rst=0 level=2 up=0 down=0 score=53
+# T=12500 | rst=0 level=2 up=1 down=0 score=53
+# T=12600 | rst=0 level=2 up=1 down=0 score=54
+# T=12650 | rst=0 level=2 up=0 down=0 score=54
+# T=12700 | rst=0 level=2 up=1 down=0 score=54
+# T=12800 | rst=0 level=2 up=1 down=0 score=55
+# T=12850 | rst=0 level=2 up=0 down=0 score=55
+# T=12900 | rst=0 level=2 up=1 down=0 score=55
+# T=13000 | rst=0 level=2 up=1 down=0 score=56
+# T=13050 | rst=0 level=2 up=0 down=0 score=56
+# T=13100 | rst=0 level=2 up=1 down=0 score=56
+# T=13200 | rst=0 level=2 up=1 down=0 score=57
+# T=13250 | rst=0 level=2 up=0 down=0 score=57
+# T=13300 | rst=0 level=2 up=1 down=0 score=57
+# T=13400 | rst=0 level=2 up=1 down=0 score=58
+# T=13450 | rst=0 level=2 up=0 down=0 score=58
+# T=13500 | rst=0 level=2 up=1 down=0 score=58
+# T=13600 | rst=0 level=2 up=1 down=0 score=59
+# T=13650 | rst=0 level=2 up=0 down=0 score=59
+# T=13700 | rst=0 level=2 up=1 down=0 score=59
+# T=13800 | rst=0 level=2 up=1 down=0 score=60
+# T=13850 | rst=0 level=2 up=0 down=0 score=60
+# T=13900 | rst=0 level=2 up=1 down=0 score=60
+# T=14000 | rst=0 level=2 up=1 down=0 score=61
+# T=14050 | rst=0 level=2 up=0 down=0 score=61
+# T=14100 | rst=0 level=2 up=1 down=0 score=61
+# T=14200 | rst=0 level=2 up=1 down=0 score=62
+# T=14250 | rst=0 level=2 up=0 down=0 score=62
+# T=14300 | rst=0 level=2 up=1 down=0 score=62
+# T=14400 | rst=0 level=2 up=1 down=0 score=63
+# T=14450 | rst=0 level=2 up=0 down=0 score=63
+# T=14500 | rst=0 level=2 up=1 down=0 score=63
+# T=14600 | rst=0 level=2 up=1 down=0 score=64
+# T=14650 | rst=0 level=2 up=0 down=0 score=64
+# T=14700 | rst=0 level=2 up=1 down=0 score=64
+# T=14800 | rst=0 level=2 up=1 down=0 score=65
+# T=14850 | rst=0 level=2 up=0 down=0 score=65
+# T=14900 | rst=0 level=2 up=1 down=0 score=65
+# T=15000 | rst=0 level=2 up=1 down=0 score=66
+# T=15050 | rst=0 level=2 up=0 down=0 score=66
+# T=15100 | rst=0 level=2 up=1 down=0 score=66
+# T=15200 | rst=0 level=2 up=1 down=0 score=67
+# T=15250 | rst=0 level=2 up=0 down=0 score=67
+# T=15300 | rst=0 level=2 up=1 down=0 score=67
+# T=15400 | rst=0 level=2 up=1 down=0 score=68
+# T=15450 | rst=0 level=2 up=0 down=0 score=68
+# T=15500 | rst=0 level=2 up=1 down=0 score=68
+# T=15600 | rst=0 level=2 up=1 down=0 score=69
+# T=15650 | rst=0 level=2 up=0 down=0 score=69
+# T=15700 | rst=0 level=2 up=1 down=0 score=69
+# T=15800 | rst=0 level=2 up=1 down=0 score=70
+# T=15850 | rst=0 level=2 up=0 down=0 score=70
+# T=15900 | rst=0 level=2 up=1 down=0 score=70
+# T=16000 | rst=0 level=2 up=1 down=0 score=71
+# T=16050 | rst=0 level=2 up=0 down=0 score=71
+# T=16100 | rst=0 level=2 up=1 down=0 score=71
+# T=16200 | rst=0 level=2 up=1 down=0 score=72
+# T=16250 | rst=0 level=2 up=0 down=0 score=72
+# T=16300 | rst=0 level=2 up=1 down=0 score=72
+# T=16400 | rst=0 level=2 up=1 down=0 score=73
+# T=16450 | rst=0 level=2 up=0 down=0 score=73
+# T=16500 | rst=0 level=2 up=1 down=0 score=73
+# T=16600 | rst=0 level=2 up=1 down=0 score=74
+# T=16650 | rst=0 level=2 up=0 down=0 score=74
+# T=16700 | rst=0 level=2 up=1 down=0 score=74
+# T=16800 | rst=0 level=2 up=1 down=0 score=75
+# T=16850 | rst=0 level=2 up=0 down=0 score=75
+# T=16900 | rst=0 level=2 up=1 down=0 score=75
+# T=17000 | rst=0 level=2 up=1 down=0 score=76
+# T=17050 | rst=0 level=2 up=0 down=0 score=76
+# T=17100 | rst=0 level=2 up=1 down=0 score=76
+# T=17200 | rst=0 level=2 up=1 down=0 score=77
+# T=17250 | rst=0 level=2 up=0 down=0 score=77
+# T=17300 | rst=0 level=2 up=1 down=0 score=77
+# T=17400 | rst=0 level=2 up=1 down=0 score=78
+# T=17450 | rst=0 level=2 up=0 down=0 score=78
+# T=17500 | rst=0 level=2 up=1 down=0 score=78
+# T=17600 | rst=0 level=2 up=1 down=0 score=79
+# T=17650 | rst=0 level=2 up=0 down=0 score=79
+# T=17700 | rst=0 level=2 up=1 down=0 score=79
+# T=17800 | rst=0 level=2 up=1 down=0 score=80
+# T=17850 | rst=0 level=2 up=0 down=0 score=80
+# T=17900 | rst=0 level=2 up=1 down=0 score=80
+# T=18000 | rst=0 level=2 up=1 down=0 score=81
+# T=18050 | rst=0 level=2 up=0 down=0 score=81
+# T=18100 | rst=0 level=2 up=1 down=0 score=81
+# T=18200 | rst=0 level=2 up=1 down=0 score=82
+# T=18250 | rst=0 level=2 up=0 down=0 score=82
+# T=18300 | rst=0 level=2 up=1 down=0 score=82
+# T=18400 | rst=0 level=2 up=1 down=0 score=83
+# T=18450 | rst=0 level=2 up=0 down=0 score=83
+# T=18500 | rst=0 level=2 up=1 down=0 score=83
+# T=18600 | rst=0 level=2 up=1 down=0 score=84
+# T=18650 | rst=0 level=2 up=0 down=0 score=84
+# T=18700 | rst=0 level=2 up=1 down=0 score=84
+# T=18800 | rst=0 level=2 up=1 down=0 score=85
+# T=18850 | rst=0 level=2 up=0 down=0 score=85
+# T=18900 | rst=0 level=2 up=1 down=0 score=85
+# T=19000 | rst=0 level=2 up=1 down=0 score=86
+# T=19050 | rst=0 level=2 up=0 down=0 score=86
+# T=19100 | rst=0 level=2 up=1 down=0 score=86
+# T=19200 | rst=0 level=2 up=1 down=0 score=87
+# T=19250 | rst=0 level=2 up=0 down=0 score=87
+# T=19300 | rst=0 level=2 up=1 down=0 score=87
+# T=19400 | rst=0 level=2 up=1 down=0 score=88
+# T=19450 | rst=0 level=2 up=0 down=0 score=88
+# T=19500 | rst=0 level=2 up=1 down=0 score=88
+# T=19600 | rst=0 level=2 up=1 down=0 score=89
+# T=19650 | rst=0 level=2 up=0 down=0 score=89
+# T=19700 | rst=0 level=2 up=1 down=0 score=89
+# T=19800 | rst=0 level=2 up=1 down=0 score=90
+# T=19850 | rst=0 level=2 up=0 down=0 score=90
+# T=19900 | rst=0 level=2 up=1 down=0 score=90
+# T=20000 | rst=0 level=2 up=1 down=0 score=91
+# T=20050 | rst=0 level=2 up=0 down=0 score=91
+# T=20100 | rst=0 level=2 up=1 down=0 score=91
+# T=20200 | rst=0 level=2 up=1 down=0 score=92
+# T=20250 | rst=0 level=2 up=0 down=0 score=92
+# T=20300 | rst=0 level=2 up=1 down=0 score=92
+# T=20400 | rst=0 level=2 up=1 down=0 score=93
+# T=20450 | rst=0 level=2 up=0 down=0 score=93
+# T=20500 | rst=0 level=2 up=1 down=0 score=93
+# T=20600 | rst=0 level=2 up=1 down=0 score=94
+# T=20650 | rst=0 level=2 up=0 down=0 score=94
+# T=20700 | rst=0 level=2 up=1 down=0 score=94
+# T=20800 | rst=0 level=2 up=1 down=0 score=95
+# T=20850 | rst=0 level=2 up=0 down=0 score=95
+# T=20900 | rst=0 level=2 up=1 down=0 score=95
+# T=21000 | rst=0 level=2 up=1 down=0 score=96
+# T=21050 | rst=0 level=2 up=0 down=0 score=96
+# T=21100 | rst=0 level=2 up=1 down=0 score=96
+# T=21200 | rst=0 level=2 up=1 down=0 score=97
+# T=21250 | rst=0 level=2 up=0 down=0 score=97
+# T=21300 | rst=0 level=2 up=1 down=0 score=97
+# T=21400 | rst=0 level=2 up=1 down=0 score=98
+# T=21450 | rst=0 level=2 up=0 down=0 score=98
+# T=21500 | rst=0 level=2 up=1 down=0 score=98
+# T=21600 | rst=0 level=2 up=1 down=0 score=99
+# T=21650 | rst=0 level=2 up=0 down=0 score=99
+# T=21700 | rst=0 level=2 up=1 down=0 score=99
+# T=21850 | rst=0 level=2 up=0 down=0 score=99
+# T=21900 | rst=0 level=2 up=1 down=0 score=99
+# T=22050 | rst=0 level=2 up=0 down=0 score=99
+# T=22100 | rst=0 level=2 up=1 down=0 score=99
+# T=22250 | rst=0 level=2 up=0 down=0 score=99
+# T=22300 | rst=0 level=2 up=1 down=0 score=99
+# T=22450 | rst=0 level=2 up=0 down=0 score=99
+# T=22500 | rst=0 level=2 up=1 down=0 score=99
+# T=22650 | rst=0 level=2 up=0 down=0 score=99
+# T=22700 | rst=0 level=2 up=1 down=0 score=99
+# T=22850 | rst=0 level=2 up=0 down=0 score=99
+# T=22900 | rst=0 level=2 up=1 down=0 score=99
+# T=23050 | rst=0 level=2 up=0 down=0 score=99
+# T=23100 | rst=0 level=2 up=1 down=0 score=99
+# T=23250 | rst=0 level=2 up=0 down=0 score=99
+# T=23300 | rst=0 level=2 up=1 down=0 score=99
+# T=23450 | rst=0 level=2 up=0 down=0 score=99
+# T=23500 | rst=0 level=2 up=1 down=0 score=99
+# T=23650 | rst=0 level=2 up=0 down=0 score=99
+# T=23700 | rst=0 level=2 up=1 down=0 score=99
+# T=23850 | rst=0 level=2 up=0 down=0 score=99
+# === ScoreCounter TB End ===
+# ** Note: $stop    : C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreCounter.v(83)
+#    Time: 2420 ns  Iteration: 1  Instance: /tb_ScoreCounter
+# Break in Module tb_ScoreCounter at C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreCounter.v line 83
+quit -sim
+# End time: 18:47:32 on May 10,2026, Elapsed time: 0:14:35
+# Errors: 0, Warnings: 3
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# Compile of RAM_Score_bb.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.tb_ScoreTracker
+# vsim -gui work.tb_ScoreTracker 
+# Start time: 18:52:27 on May 10,2026
+# Loading work.tb_ScoreTracker
+# Loading work.ScoreTracker
+# Loading work.RAM_Score
+add wave sim:/tb_ScoreTracker/*
+run -all
+# === ScoreTracker TB Start ===
+# T=0 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=200 | rst=0 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=400 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=600 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=650 | rst=0 req=1 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=850 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=2600 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=2650 | rst=0 req=1 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=2850 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=3600 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=z winner=0 valid=0
+# T=4000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=z winner=0 valid=1
+# T=4200 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=z winner=2 valid=1
+# T=4600 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=z winner=2 valid=1
+# T=4650 | rst=0 req=1 player=1 guest=0 scoreIn=55 pBest=z winner=2 valid=1
+# T=4850 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=z winner=2 valid=1
+# T=6200 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=z winner=1 valid=1
+# T=6600 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=z winner=1 valid=1
+# T=6650 | rst=0 req=1 player=3 guest=0 scoreIn=99 pBest=z winner=1 valid=1
+# T=6850 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=z winner=1 valid=1
+# T=8200 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=z winner=3 valid=1
+# === ScoreTracker TB End ===
+# ** Note: $stop    : C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v(96)
+#    Time: 900 ns  Iteration: 1  Instance: /tb_ScoreTracker
+# Break in Module tb_ScoreTracker at C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v line 96
+quit -sim
+# End time: 18:55:18 on May 10,2026, Elapsed time: 0:02:51
+# Errors: 0, Warnings: 3
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# Compile of RAM_Score_bb.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.tb_ScoreTracker
+# vsim -gui work.tb_ScoreTracker 
+# Start time: 18:55:35 on May 10,2026
+# Loading work.tb_ScoreTracker
+# Loading work.ScoreTracker
+# Loading work.RAM_Score
+add wave sim:/tb_ScoreTracker/*
+run -all
+# === ScoreTracker TB Start ===
+# T=0 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=200 | rst=0 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=400 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=600 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=650 | rst=0 req=1 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=850 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=2600 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=2650 | rst=0 req=1 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=2850 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=3600 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=z winner=0 valid=0
+# T=4000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=z winner=0 valid=1
+# T=4600 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=z winner=0 valid=1
+# T=4650 | rst=0 req=1 player=1 guest=0 scoreIn=55 pBest=z winner=0 valid=1
+# T=4850 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=z winner=0 valid=1
+# T=6200 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=z winner=1 valid=1
+# T=6600 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=z winner=1 valid=1
+# T=6650 | rst=0 req=1 player=3 guest=0 scoreIn=99 pBest=z winner=1 valid=1
+# T=6850 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=z winner=1 valid=1
+# T=8200 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=z winner=3 valid=1
+# === ScoreTracker TB End ===
+# ** Note: $stop    : C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v(96)
+#    Time: 900 ns  Iteration: 1  Instance: /tb_ScoreTracker
+# Break in Module tb_ScoreTracker at C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v line 96
+quit -sim
+# End time: 18:57:02 on May 10,2026, Elapsed time: 0:01:27
+# Errors: 0, Warnings: 2
+vsim -gui work.tb_ScoreTracker -L altera_mf_ver -L altera_mf
+# vsim -gui work.tb_ScoreTracker -L altera_mf_ver -L altera_mf 
+# Start time: 18:58:34 on May 10,2026
+# Loading work.tb_ScoreTracker
+# Loading work.ScoreTracker
+# Loading work.RAM_Score
+add wave sim:/tb_ScoreTracker/*
+run -all
+# === ScoreTracker TB Start ===
+# T=0 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=200 | rst=0 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=400 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=600 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=650 | rst=0 req=1 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=850 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=2600 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=2650 | rst=0 req=1 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=2850 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=3600 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=z winner=0 valid=0
+# T=4000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=z winner=0 valid=1
+# T=4600 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=z winner=0 valid=1
+# T=4650 | rst=0 req=1 player=1 guest=0 scoreIn=55 pBest=z winner=0 valid=1
+# T=4850 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=z winner=0 valid=1
+# T=6200 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=z winner=1 valid=1
+# T=6600 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=z winner=1 valid=1
+# T=6650 | rst=0 req=1 player=3 guest=0 scoreIn=99 pBest=z winner=1 valid=1
+# T=6850 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=z winner=1 valid=1
+# T=8200 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=z winner=3 valid=1
+# === ScoreTracker TB End ===
+# ** Note: $stop    : C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v(96)
+#    Time: 900 ns  Iteration: 1  Instance: /tb_ScoreTracker
+# Break in Module tb_ScoreTracker at C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v line 96
+quit -sim
+# End time: 18:59:04 on May 10,2026, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 1
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# Compile of RAM_Score_bb.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker
+# vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker 
+# Start time: 18:59:51 on May 10,2026
+# Loading work.tb_ScoreTracker
+# Loading work.ScoreTracker
+# Loading work.RAM_Score
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave sim:/tb_ScoreTracker/*
+run -all
+# === ScoreTracker TB Start ===
+# T=0 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=20000 | rst=0 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=40000 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=60000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=65000 | rst=0 req=1 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=85000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=260000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=265000 | rst=0 req=1 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=285000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=400000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=1
+# T=460000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=0 winner=0 valid=1
+# T=465000 | rst=0 req=1 player=1 guest=0 scoreIn=55 pBest=0 winner=0 valid=1
+# T=485000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=0 winner=0 valid=1
+# T=640000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=0 winner=1 valid=1
+# T=660000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=0 winner=1 valid=1
+# T=665000 | rst=0 req=1 player=3 guest=0 scoreIn=99 pBest=0 winner=1 valid=1
+# T=685000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=0 winner=1 valid=1
+# T=840000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=0 winner=3 valid=1
+# === ScoreTracker TB End ===
+# ** Note: $stop    : C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v(96)
+#    Time: 900 ns  Iteration: 1  Instance: /tb_ScoreTracker
+# Break in Module tb_ScoreTracker at C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v line 96
+quit -sim
+# End time: 19:05:27 on May 10,2026, Elapsed time: 0:05:36
+# Errors: 0, Warnings: 2
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# Compile of RAM_Score_bb.v was successful.
+# 5 compiles, 0 failed with no errors.
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# Compile of RAM_Score_bb.v was successful.
+# Compile of RAM_Score.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker
+# vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker 
+# Start time: 19:13:54 on May 10,2026
+# Loading work.tb_ScoreTracker
+# Loading work.ScoreTracker
+# Loading work.RAM_Score
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave sim:/tb_ScoreTracker/*
+run -all
+# === ScoreTracker TB Start ===
+# T=0 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=20000 | rst=0 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=40000 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=60000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=65000 | rst=0 req=1 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=85000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=260000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=265000 | rst=0 req=1 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=285000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=400000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=1
+# T=460000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=0 winner=0 valid=1
+# T=465000 | rst=0 req=1 player=1 guest=0 scoreIn=55 pBest=0 winner=0 valid=1
+# T=485000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=0 winner=0 valid=1
+# T=640000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=0 winner=1 valid=1
+# T=660000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=0 winner=1 valid=1
+# T=665000 | rst=0 req=1 player=3 guest=0 scoreIn=99 pBest=0 winner=1 valid=1
+# T=685000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=0 winner=1 valid=1
+# T=840000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=0 winner=3 valid=1
+# === ScoreTracker TB End ===
+# ** Note: $stop    : C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v(96)
+#    Time: 900 ns  Iteration: 1  Instance: /tb_ScoreTracker
+# Break in Module tb_ScoreTracker at C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v line 96
+quit -sim
+# End time: 19:15:04 on May 10,2026, Elapsed time: 0:01:10
+# Errors: 0, Warnings: 4
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# Compile of RAM_Score_bb.v was successful.
+# Compile of RAM_Score.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker
+# vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker 
+# Start time: 19:18:26 on May 10,2026
+# Loading work.tb_ScoreTracker
+# Loading work.ScoreTracker
+# Loading work.RAM_Score_bb
+add wave sim:/tb_ScoreTracker/*
+# Load canceled
+run -all
+# === ScoreTracker TB Start ===
+# T=0 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=200 | rst=0 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=400 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=600 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=650 | rst=0 req=1 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=850 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=2600 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=2650 | rst=0 req=1 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=2850 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=3600 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=z winner=0 valid=0
+# T=4000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=z winner=0 valid=1
+# T=4600 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=z winner=0 valid=1
+# T=4650 | rst=0 req=1 player=1 guest=0 scoreIn=55 pBest=z winner=0 valid=1
+# T=4850 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=z winner=0 valid=1
+# T=6200 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=z winner=1 valid=1
+# T=6600 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=z winner=1 valid=1
+# T=6650 | rst=0 req=1 player=3 guest=0 scoreIn=99 pBest=z winner=1 valid=1
+# T=6850 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=z winner=1 valid=1
+# T=8200 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=z winner=3 valid=1
+# === ScoreTracker TB End ===
+# ** Note: $stop    : C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v(96)
+#    Time: 900 ns  Iteration: 1  Instance: /tb_ScoreTracker
+# Break in Module tb_ScoreTracker at C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v line 96
+quit -sim
+# End time: 19:19:03 on May 10,2026, Elapsed time: 0:00:37
+# Errors: 0, Warnings: 2
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# Compile of RAM_Score_bb.v was successful.
+# Compile of RAM_Score.v was successful.
+# 6 compiles, 0 failed with no errors.
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# Compile of RAM_Score_bb.v was successful.
+# Compile of RAM_Score.v was successful.
+# 6 compiles, 0 failed with no errors.
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# Compile of RAM_Score_bb.v was successful.
+# Compile of RAM_Score.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker
+# vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker 
+# Start time: 19:20:52 on May 10,2026
+# Loading work.tb_ScoreTracker
+# Loading work.ScoreTracker
+# Loading work.RAM_Score
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "RAM_Score.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_ScoreTracker/DUT_ScoreTracker/ScoreRAM/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read RAM_Score.mif.
+# === ScoreTracker TB Start ===
+# T=0 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=20000 | rst=0 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=40000 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=60000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=65000 | rst=0 req=1 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=85000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=260000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=265000 | rst=0 req=1 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=285000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=400000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=1
+# T=460000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=0 winner=0 valid=1
+# T=465000 | rst=0 req=1 player=1 guest=0 scoreIn=55 pBest=0 winner=0 valid=1
+# T=485000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=0 winner=0 valid=1
+# T=640000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=0 winner=1 valid=1
+# T=660000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=0 winner=1 valid=1
+# T=665000 | rst=0 req=1 player=3 guest=0 scoreIn=99 pBest=0 winner=1 valid=1
+# T=685000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=0 winner=1 valid=1
+# T=840000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=0 winner=3 valid=1
+# === ScoreTracker TB End ===
+# ** Note: $stop    : C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v(96)
+#    Time: 900 ns  Iteration: 1  Instance: /tb_ScoreTracker
+# Break in Module tb_ScoreTracker at C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v line 96
+quit -sim
+# End time: 19:22:42 on May 10,2026, Elapsed time: 0:01:50
+# Errors: 0, Warnings: 5
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# Compile of RAM_Score_bb.v was successful.
+# Compile of RAM_Score.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker
+# vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker 
+# Start time: 19:23:45 on May 10,2026
+# Loading work.tb_ScoreTracker
+# Loading work.ScoreTracker
+# Loading work.RAM_Score
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+run -all
+# === ScoreTracker TB Start ===
+# T=0 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=20000 | rst=0 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=40000 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=60000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=65000 | rst=0 req=1 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=85000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=260000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=265000 | rst=0 req=1 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=285000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=360000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=32 winner=0 valid=0
+# T=400000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=32 winner=0 valid=1
+# T=460000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=32 winner=0 valid=1
+# T=465000 | rst=0 req=1 player=1 guest=0 scoreIn=55 pBest=32 winner=0 valid=1
+# T=485000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=32 winner=0 valid=1
+# T=560000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=21 winner=0 valid=1
+# T=640000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=21 winner=1 valid=1
+# T=660000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=21 winner=1 valid=1
+# T=665000 | rst=0 req=1 player=3 guest=0 scoreIn=99 pBest=21 winner=1 valid=1
+# T=685000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=21 winner=1 valid=1
+# T=760000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=37 winner=1 valid=1
+# T=840000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=37 winner=3 valid=1
+# === ScoreTracker TB End ===
+# ** Note: $stop    : C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v(96)
+#    Time: 900 ns  Iteration: 1  Instance: /tb_ScoreTracker
+# Break in Module tb_ScoreTracker at C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v line 96
+add wave sim:/tb_ScoreTracker/#INITIAL#37/*
+run -all
+quit -sim
+quit -sim
+# End time: 19:25:29 on May 10,2026, Elapsed time: 0:01:44
+# Errors: 0, Warnings: 2
+vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker
+# vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker 
+# Start time: 19:25:36 on May 10,2026
+# Loading work.tb_ScoreTracker
+# Loading work.ScoreTracker
+# Loading work.RAM_Score
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave sim:/tb_ScoreTracker/*
+run -all
+# === ScoreTracker TB Start ===
+# T=0 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=20000 | rst=0 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=40000 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=60000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=65000 | rst=0 req=1 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=85000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=260000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=265000 | rst=0 req=1 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=285000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=360000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=32 winner=0 valid=0
+# T=400000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=32 winner=0 valid=1
+# T=460000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=32 winner=0 valid=1
+# T=465000 | rst=0 req=1 player=1 guest=0 scoreIn=55 pBest=32 winner=0 valid=1
+# T=485000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=32 winner=0 valid=1
+# T=560000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=21 winner=0 valid=1
+# T=640000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=21 winner=1 valid=1
+# T=660000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=21 winner=1 valid=1
+# T=665000 | rst=0 req=1 player=3 guest=0 scoreIn=99 pBest=21 winner=1 valid=1
+# T=685000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=21 winner=1 valid=1
+# T=760000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=37 winner=1 valid=1
+# T=840000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=37 winner=3 valid=1
+# === ScoreTracker TB End ===
+# ** Note: $stop    : C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v(96)
+#    Time: 900 ns  Iteration: 1  Instance: /tb_ScoreTracker
+# Break in Module tb_ScoreTracker at C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v line 96
+quit -sim
+# End time: 19:26:47 on May 10,2026, Elapsed time: 0:01:11
+# Errors: 0, Warnings: 2
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# Compile of RAM_Score_bb.v was successful.
+# Compile of RAM_Score.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker
+# vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker 
+# Start time: 19:27:24 on May 10,2026
+# Loading work.tb_ScoreTracker
+# Loading work.ScoreTracker
+# Loading work.RAM_Score
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# Compile of RAM_Score_bb.v was successful.
+# Compile of RAM_Score.v was successful.
+# 6 compiles, 0 failed with no errors.
+run -all
+# === ScoreTracker TB Start ===
+# T=0 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=20000 | rst=0 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=40000 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=60000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=65000 | rst=0 req=1 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=85000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=260000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=265000 | rst=0 req=1 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=285000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=360000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=32 winner=0 valid=0
+# T=400000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=32 winner=0 valid=1
+# T=460000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=32 winner=0 valid=1
+# T=465000 | rst=0 req=1 player=1 guest=0 scoreIn=55 pBest=32 winner=0 valid=1
+# T=485000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=32 winner=0 valid=1
+# T=560000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=21 winner=0 valid=1
+# T=640000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=21 winner=1 valid=1
+# T=660000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=21 winner=1 valid=1
+# T=665000 | rst=0 req=1 player=3 guest=0 scoreIn=99 pBest=21 winner=1 valid=1
+# T=685000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=21 winner=1 valid=1
+# T=760000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=37 winner=1 valid=1
+# T=840000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=37 winner=3 valid=1
+# === ScoreTracker TB End ===
+# ** Note: $stop    : C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v(96)
+#    Time: 900 ns  Iteration: 1  Instance: /tb_ScoreTracker
+# Break in Module tb_ScoreTracker at C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v line 96
+quit -sim
+# End time: 19:28:25 on May 10,2026, Elapsed time: 0:01:01
+# Errors: 0, Warnings: 3
+# Compile of ScoreCounter.v was successful.
+# Compile of ScoreTracker.v was successful.
+# Compile of tb_ScoreCounter.v was successful.
+# Compile of tb_ScoreTracker.v was successful.
+# Compile of RAM_Score_bb.v was successful.
+# Compile of RAM_Score.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker
+# vsim -gui -L altera_mf_ver -L altera_mf work.tb_ScoreTracker 
+# Start time: 19:29:25 on May 10,2026
+# Loading work.tb_ScoreTracker
+# Loading work.ScoreTracker
+# Loading work.RAM_Score
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave sim:/tb_ScoreTracker/*
+run -all
+# === ScoreTracker TB Start ===
+# T=0 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=20000 | rst=0 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=40000 | rst=1 req=0 player=0 guest=0 scoreIn=0 pBest=0 winner=0 valid=0
+# T=60000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=65000 | rst=0 req=1 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=85000 | rst=0 req=0 player=1 guest=0 scoreIn=12 pBest=0 winner=0 valid=0
+# T=260000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=265000 | rst=0 req=1 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=285000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=0 winner=0 valid=0
+# T=360000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=32 winner=0 valid=0
+# T=400000 | rst=0 req=0 player=2 guest=1 scoreIn=40 pBest=32 winner=0 valid=1
+# T=460000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=32 winner=0 valid=1
+# T=465000 | rst=0 req=1 player=1 guest=0 scoreIn=55 pBest=32 winner=0 valid=1
+# T=485000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=32 winner=0 valid=1
+# T=560000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=21 winner=0 valid=1
+# T=640000 | rst=0 req=0 player=1 guest=0 scoreIn=55 pBest=21 winner=1 valid=1
+# T=660000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=21 winner=1 valid=1
+# T=665000 | rst=0 req=1 player=3 guest=0 scoreIn=99 pBest=21 winner=1 valid=1
+# T=685000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=21 winner=1 valid=1
+# T=760000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=37 winner=1 valid=1
+# T=840000 | rst=0 req=0 player=3 guest=0 scoreIn=99 pBest=37 winner=3 valid=1
+# === ScoreTracker TB End ===
+# ** Note: $stop    : C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v(96)
+#    Time: 900 ns  Iteration: 1  Instance: /tb_ScoreTracker
+# Break in Module tb_ScoreTracker at C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v line 96
+quit -sim
+# End time: 19:35:34 on May 10,2026, Elapsed time: 0:06:09
+# Errors: 0, Warnings: 2

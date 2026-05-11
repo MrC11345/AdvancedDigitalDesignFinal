@@ -1,0 +1,155 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/personal/EdgeReflex/fpga
+vRAM_Score
+!s110 1778459317
+!i10b 1
+!s100 ^UX;CESc0geHc`;IWmZZ10
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IcQ34Xi;hho3dlYMhZj<2Y1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/ADD/AdvancedDigitalDesignFinal/ScoreTracker
+w1778459310
+8C:/ADD/AdvancedDigitalDesignFinal/syn/RAM_Score.v
+FC:/ADD/AdvancedDigitalDesignFinal/syn/RAM_Score.v
+!i122 85
+L0 40 71
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1778459317.000000
+!s107 C:/ADD/AdvancedDigitalDesignFinal/syn/RAM_Score.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD/AdvancedDigitalDesignFinal/syn/RAM_Score.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@r@a@m_@score
+vRAM_Score_bb
+Z6 !s110 1778459316
+!i10b 1
+!s100 :b[kooaD=f_aZ^I6HjiJM3
+R0
+Ia>1zZ8m86;QQkeH^0OQ6R3
+R1
+R2
+w1778458414
+8C:/ADD/AdvancedDigitalDesignFinal/syn/RAM_Score_bb.v
+FC:/ADD/AdvancedDigitalDesignFinal/syn/RAM_Score_bb.v
+!i122 84
+L0 35 21
+R3
+r1
+!s85 0
+31
+Z7 !s108 1778459316.000000
+!s107 C:/ADD/AdvancedDigitalDesignFinal/syn/RAM_Score_bb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD/AdvancedDigitalDesignFinal/syn/RAM_Score_bb.v|
+!i113 1
+R4
+R5
+n@r@a@m_@score_bb
+vScoreCounter
+R6
+!i10b 1
+!s100 Ia`Y<89oM?V<CFT[0PRWi2
+R0
+IMcT7h1kA;VA3]Ul@8]nk?1
+R1
+R2
+w1778455903
+8C:\ADD\AdvancedDigitalDesignFinal\ScoreTracker\ScoreCounter.v
+FC:\ADD\AdvancedDigitalDesignFinal\ScoreTracker\ScoreCounter.v
+!i122 80
+L0 1 43
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:\ADD\AdvancedDigitalDesignFinal\ScoreTracker\ScoreCounter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\ADD\AdvancedDigitalDesignFinal\ScoreTracker\ScoreCounter.v|
+!i113 1
+R4
+R5
+n@score@counter
+vScoreTracker
+R6
+!i10b 1
+!s100 khh3<=K>1`PhDj19O=S6d2
+R0
+IzHgcK?Q8F>c2o;cef_XfH1
+R1
+R2
+w1778458749
+8C:\ADD\AdvancedDigitalDesignFinal\ScoreTracker\ScoreTracker.v
+FC:\ADD\AdvancedDigitalDesignFinal\ScoreTracker\ScoreTracker.v
+!i122 81
+L0 1 99
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:\ADD\AdvancedDigitalDesignFinal\ScoreTracker\ScoreTracker.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\ADD\AdvancedDigitalDesignFinal\ScoreTracker\ScoreTracker.v|
+!i113 1
+R4
+R5
+n@score@tracker
+vtb_ScoreCounter
+R6
+!i10b 1
+!s100 n?49EjgbYd^7F5]`49f;e2
+R0
+I]oMD?`W;A8:R^e1UTXL<01
+R1
+R2
+w1778455516
+8C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreCounter.v
+FC:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreCounter.v
+!i122 82
+L0 8 78
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreCounter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreCounter.v|
+!i113 1
+R4
+R5
+ntb_@score@counter
+vtb_ScoreTracker
+R6
+!i10b 1
+!s100 Olk??In_SM3IFd5VJLg=73
+R0
+IfO;]FS_kJU5J?:Mi6QojZ0
+R1
+R2
+w1778455518
+8C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v
+FC:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v
+!i122 83
+L0 8 91
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ADD/AdvancedDigitalDesignFinal/ScoreTracker/tb_ScoreTracker.v|
+!i113 1
+R4
+R5
+ntb_@score@tracker
