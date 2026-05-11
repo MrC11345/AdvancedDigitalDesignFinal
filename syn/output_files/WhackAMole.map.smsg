@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at ScoreCounter.v(10): always construct contains both blocking and non-blocking assignments File: C:/ADD/AdvancedDigitalDesignFinal/src/ScoreCounter.v Line: 10
+Warning (10268): Verilog HDL information at pswd_verification.v(41): always construct contains both blocking and non-blocking assignments File: C:/ADD/AdvancedDigitalDesignFinal/src/pswd_verification.v Line: 41
+Warning (10268): Verilog HDL information at GameController.v(54): always construct contains both blocking and non-blocking assignments File: C:/ADD/AdvancedDigitalDesignFinal/src/GameController.v Line: 54

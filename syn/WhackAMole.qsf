@@ -38,7 +38,7 @@
 
 
 set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name DEVICE 5CGXFC7C7F23C8
+set_global_assignment -name DEVICE 5CEBA4F23C7
 set_global_assignment -name TOP_LEVEL_ENTITY WhackAMole
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:38:14  MAY 10, 2026"
@@ -47,6 +47,112 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_N9 -to Display0[6]
+set_location_assignment PIN_M8 -to Display0[5]
+set_location_assignment PIN_T14 -to Display0[4]
+set_location_assignment PIN_P14 -to Display0[3]
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "ACTIVE SERIAL X1"
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name STRATIXII_CONFIGURATION_DEVICE EPCS64
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN ON
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_100MHZ
+set_location_assignment PIN_C1 -to Display0[2]
+set_location_assignment PIN_C2 -to Display0[1]
+set_location_assignment PIN_W19 -to Display0[0]
+set_location_assignment PIN_U20 -to Display1[6]
+set_location_assignment PIN_Y20 -to Display1[5]
+set_location_assignment PIN_V20 -to Display1[4]
+set_location_assignment PIN_U16 -to Display1[3]
+set_location_assignment PIN_U15 -to Display1[2]
+set_location_assignment PIN_Y15 -to Display1[1]
+set_location_assignment PIN_P9 -to Display1[0]
+set_location_assignment PIN_Y16 -to Display2[6]
+set_location_assignment PIN_W16 -to Display2[5]
+set_location_assignment PIN_Y17 -to Display2[4]
+set_location_assignment PIN_V16 -to Display2[3]
+set_location_assignment PIN_U17 -to Display2[2]
+set_location_assignment PIN_V18 -to Display2[1]
+set_location_assignment PIN_V19 -to Display2[0]
+set_location_assignment PIN_Y19 -to Display3[6]
+set_location_assignment PIN_AB17 -to Display3[5]
+set_location_assignment PIN_AA10 -to Display3[4]
+set_location_assignment PIN_Y14 -to Display3[3]
+set_location_assignment PIN_V14 -to Display3[2]
+set_location_assignment PIN_AB22 -to Display3[1]
+set_location_assignment PIN_AB21 -to Display3[0]
+set_location_assignment PIN_AA20 -to Display4[6]
+set_location_assignment PIN_AB20 -to Display4[5]
+set_location_assignment PIN_AA19 -to Display4[4]
+set_location_assignment PIN_AA18 -to Display4[3]
+set_location_assignment PIN_AB18 -to Display4[2]
+set_location_assignment PIN_AA17 -to Display4[1]
+set_location_assignment PIN_U22 -to Display4[0]
+set_location_assignment PIN_U21 -to Display5[6]
+set_location_assignment PIN_V21 -to Display5[5]
+set_location_assignment PIN_W22 -to Display5[4]
+set_location_assignment PIN_W21 -to Display5[3]
+set_location_assignment PIN_Y22 -to Display5[2]
+set_location_assignment PIN_Y21 -to Display5[1]
+set_location_assignment PIN_AA22 -to Display5[0]
+set_location_assignment PIN_M9 -to clk
+set_location_assignment PIN_AB12 -to PasswordDigits[3]
+set_location_assignment PIN_AB13 -to PasswordDigits[2]
+set_location_assignment PIN_AA13 -to PasswordDigits[1]
+set_location_assignment PIN_AA14 -to PasswordDigits[0]
+set_location_assignment PIN_U13 -to ResetSwitch
+set_global_assignment -name VERILOG_FILE ../src/One_ms_counter.v
+set_global_assignment -name VERILOG_FILE ../src/ButtonShaper.v
+set_global_assignment -name VERILOG_FILE ../src/WhackAMole.v
+set_global_assignment -name VERILOG_FILE ../src/TimerController.v
+set_global_assignment -name VERILOG_FILE ../src/ScoreTracker.v
+set_global_assignment -name VERILOG_FILE ../src/ScoreDisplay.v
+set_global_assignment -name VERILOG_FILE ../src/ScoreCounter.v
+set_global_assignment -name VERILOG_FILE ../src/ROM_PSWD.v
+set_global_assignment -name VERILOG_FILE ../src/RAM_PSWD.v
+set_global_assignment -name VERILOG_FILE ../src/pswd_verification.v
+set_global_assignment -name VERILOG_FILE ../src/PseudoRNG.v
+set_global_assignment -name VERILOG_FILE ../src/PlayerDisplay.v
+set_global_assignment -name VERILOG_FILE ../src/PLAYER_ID_ROM.v
+set_global_assignment -name VERILOG_FILE ../src/OneSecTimer.v
+set_global_assignment -name VERILOG_FILE ../src/OneSecond_Timer.v
+set_global_assignment -name VERILOG_FILE ../src/OneMillisecondTimer_LFSR.v
+set_global_assignment -name VERILOG_FILE ../src/NumberDecoder.v
+set_global_assignment -name VERILOG_FILE ../src/LoadRegister.v
+set_global_assignment -name VERILOG_FILE ../src/Levels.v
+set_global_assignment -name VERILOG_FILE ../src/LetterDecoder.v
+set_global_assignment -name VERILOG_FILE ../src/id_verification.v
+set_global_assignment -name VERILOG_FILE ../src/GameController.v
+set_global_assignment -name VERILOG_FILE ../src/DisplayManager.v
+set_global_assignment -name VERILOG_FILE ../src/DisplayController.v
+set_global_assignment -name VERILOG_FILE ../src/digitTimer.v
+set_global_assignment -name VERILOG_FILE ../src/countTo100.v
+set_global_assignment -name VERILOG_FILE ../src/countTo10.v
+set_global_assignment -name VERILOG_FILE ../src/Authentication.v
 set_global_assignment -name HEX_FILE RAM_Score.hex
 set_global_assignment -name QIP_FILE RAM_Score.qip
 set_global_assignment -name MIF_FILE RAM_Score.mif
+set_global_assignment -name HEX_FILE PLAYER_ID_ROM.hex
+set_global_assignment -name HEX_FILE PSWD_ROM.hex
+set_global_assignment -name HEX_FILE ROM_PSWD.hex
+set_global_assignment -name QIP_FILE PLAYER_ID_ROM.qip
+set_global_assignment -name QIP_FILE ROM_PSWD.qip
+set_global_assignment -name QIP_FILE RAM_PSWD.qip
+set_location_assignment PIN_M6 -to Button0
+set_location_assignment PIN_M7 -to Button1
+set_location_assignment PIN_W9 -to Button2
+set_location_assignment PIN_U7 -to Button3
+set_location_assignment PIN_AA1 -to LoggedIn
+set_location_assignment PIN_AA2 -to LoggedOut
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

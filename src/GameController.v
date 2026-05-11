@@ -1,10 +1,10 @@
 // ECE 6370 - ADD
 // Mason Sexton - 5780
 // GameController
-module GameController(playerID, logIn, logOut, button1, button2, button3, button4, timerEnable, timerReconfig, timerLength, timerDone, score, displayBus2, displayBus3, displayBus4, displayBus5, clk, rst);
+module GameController(playerID, logIn, logOut, button1, button2, button3, button4, isGuest, timerEnable, timerReconfig, timerLength, timerDone, score, gameState, personalBest, globalWinner, scoreValid, displayBus2, displayBus3, displayBus4, displayBus5, clk, rst);
 
-	input logIn, button1, button2, button3, button4, timerDone;
-	input [3:0] playerID;
+	input logIn, button1, button2, button3, button4, timerDone, isGuest;
+	input [2:0] playerID;
 	input clk, rst;
 	output logOut;
 	reg logOut;
@@ -13,7 +13,11 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 	output [3:0] timerLength;
 	reg [3:0] timerLength;
 	output [6:0] score;
-	reg [6:0] score;
+	output [2:0] gameState;
+	reg [2:0] gameState;
+	output [6:0] personalBest;
+	output [2:0] globalWinner;
+	output scoreValid;
 	output [5:0] displayBus2, displayBus3, displayBus4, displayBus5;//output to the displays 2 bits for what to display 4 bits for number
 	reg [5:0] displayBus2, displayBus3, displayBus4, displayBus5;
 
@@ -26,6 +30,13 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 	wire [3:0] moleOrSpikeLocation, moleOrSpike;
 	wire [7:0] rngOut;
 
+	// Score tracking wires
+	wire [6:0] personalBest;
+	wire [2:0] globalWinner;
+	wire scoreValid;
+	reg scoreRequest;
+	reg prevState;  // for edge detection on State change to gameOver
+
 	parameter loggedOut = 0, preGame = 1, gameRun = 2, gameOver = 3;
 	reg [2:0] State;
 
@@ -33,9 +44,23 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 
 	Levels Levels1(gameLevel, buttonReg, rngOut,scoreUp, scoreDown, moleOrSpike, moleOrSpikeLocation, roundRunning, clk, rst);
 
-	ScoreCounter ScoreCounter1(playerID, logIn, roundRunning, gameLevel, scoreUp, scoreDown, clk, rst);
+	// Score counter: use LevelNum, scoreUp/Down -> Score (7-bit)
+	ScoreCounter ScoreCounter1(gameLevel, scoreUp, scoreDown, clk, rst, score);
+
+	// ScoreTracker: keep personal/global records. Request pulses once when entering gameOver.
+	wire [2:0] isGuestExpanded = {2'b00, isGuest};  // expand 1-bit isGuest to 3-bit for ScoreTracker
+	ScoreTracker ScoreTracker1(playerID, isGuestExpanded, score, scoreRequest, personalBest, globalWinner, scoreValid, clk, rst);
 
 	always @(posedge clk) begin
+		if (rst) begin
+			prevState <= loggedOut;
+			scoreRequest <= 1'b0;
+		end else begin
+			prevState <= State;
+			// Pulse scoreRequest once on entering gameOver state
+			scoreRequest <= (State == gameOver && prevState != gameOver) ? 1'b1 : 1'b0;
+		end
+		
 		if(button1==1'b1) begin
 			buttonReg <= 3'b001;
 			end
@@ -51,6 +76,8 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 		else begin
 			buttonReg <= 3'b000;
 			end
+		gameState = State;  // Export game state for DisplayController
+		
 		case (State)
 	            loggedOut : begin
 				logOut <= 1'b0;
@@ -183,8 +210,10 @@ module GameController(playerID, logIn, logOut, button1, button2, button3, button
 				displayBus5 <= 6'b000000;
 			end
 		endcase
+		gameState <= State;  // Export current game state for DisplayController
 		if (rst == 1'b1) begin
 			State <= loggedOut;
+			gameState <= loggedOut;
 		end
 	end
 endmodule

@@ -1,0 +1,221 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Display0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Display0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Display0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Display0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Display0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Display0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Display0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Display1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Display2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Display2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Display2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Display2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Display2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Display2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Display3[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Display4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Display4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Display4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Display4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Display4[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Display4[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Display4[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Display5[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Display5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Display5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Display5[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Display5[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Display5[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Display5[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LoggedIn",
+					"strict" : false
+				},
+				{
+					"name" : "LoggedOut",
+					"strict" : false
+				},
+				{
+					"name" : "ResetSwitch",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "PasswordDigits[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PasswordDigits[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PasswordDigits[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PasswordDigits[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Button2",
+					"strict" : false
+				},
+				{
+					"name" : "Button1",
+					"strict" : false
+				},
+				{
+					"name" : "Button0",
+					"strict" : false
+				},
+				{
+					"name" : "Button3",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

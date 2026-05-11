@@ -1,0 +1,97 @@
+
+State Machine - |WhackAMole|DisplayController:display_inst|displayState
+Name displayState.FINAL displayState.FLASH displayState.GAMING displayState.IDLE 
+displayState.IDLE 0 0 0 0 
+displayState.GAMING 0 0 1 1 
+displayState.FLASH 0 1 0 1 
+displayState.FINAL 1 0 0 1 
+
+State Machine - |WhackAMole|GameController:game_inst|State
+Name State.gameOver State.gameRun State.preGame State.loggedOut 
+State.loggedOut 0 0 0 0 
+State.preGame 0 0 1 1 
+State.gameRun 0 1 0 1 
+State.gameOver 1 0 0 1 
+
+State Machine - |WhackAMole|GameController:game_inst|ScoreTracker:ScoreTracker1|State
+Name State.DONE State.UPDATE_GLOBAL State.CHECK_GLOBAL State.UPDATE_RAM State.COMPARE_SCORES State.CATCH_RAM State.RAM_CYCLE2 State.RAM_CYCLE1 State.FETCH_RAM State.WAIT_FOR_SCORE State.RAM_INIT 
+State.RAM_INIT 0 0 0 0 0 0 0 0 0 0 0 
+State.WAIT_FOR_SCORE 0 0 0 0 0 0 0 0 0 1 1 
+State.FETCH_RAM 0 0 0 0 0 0 0 0 1 0 1 
+State.RAM_CYCLE1 0 0 0 0 0 0 0 1 0 0 1 
+State.RAM_CYCLE2 0 0 0 0 0 0 1 0 0 0 1 
+State.CATCH_RAM 0 0 0 0 0 1 0 0 0 0 1 
+State.COMPARE_SCORES 0 0 0 0 1 0 0 0 0 0 1 
+State.UPDATE_RAM 0 0 0 1 0 0 0 0 0 0 1 
+State.CHECK_GLOBAL 0 0 1 0 0 0 0 0 0 0 1 
+State.UPDATE_GLOBAL 0 1 0 0 0 0 0 0 0 0 1 
+State.DONE 1 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |WhackAMole|GameController:game_inst|Levels:Levels1|state
+Name state.LEVEL3 state.LEVEL2 state.LEVEL1 state.IDLE 
+state.IDLE 0 0 0 0 
+state.LEVEL1 0 0 1 1 
+state.LEVEL2 0 1 0 1 
+state.LEVEL3 1 0 0 1 
+
+State Machine - |WhackAMole|Authentication:auth_inst|pswd_verification:pw_verify|State
+Name State.RELEASE_PW State.SEND_PW State.RESET_D6 State.RESET_D5 State.RESET_D4 State.RESET_D3 State.RESET_D2 State.RESET_D1 State.PASSED State.LOGOUT_WAIT State.CMP_PWS State.CATCH_PW State.WAIT2 State.WAIT1 State.FETCH_PW State.DIGIT6 State.DIGIT5 State.DIGIT4 State.DIGIT3 State.DIGIT2 State.DIGIT1 State.WAIT_4_ID 
+State.WAIT_4_ID 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+State.DIGIT1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+State.DIGIT2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+State.DIGIT3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+State.DIGIT4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+State.DIGIT5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+State.DIGIT6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+State.FETCH_PW 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+State.WAIT1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+State.WAIT2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+State.CATCH_PW 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+State.CMP_PWS 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+State.LOGOUT_WAIT 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+State.PASSED 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.RESET_D1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.RESET_D2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.RESET_D3 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.RESET_D4 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.RESET_D5 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.RESET_D6 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.SEND_PW 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State.RELEASE_PW 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |WhackAMole|Authentication:auth_inst|id_verification:id_verify|State
+Name State.ID_VERIFIED State.COMPARE_IDS State.CATCH_ID State.WAIT2 State.WAIT1 State.FETCH_ID State.ID_DIGIT4 State.ID_DIGIT3 State.ID_DIGIT2 State.ID_DIGIT1 
+State.ID_DIGIT1 0 0 0 0 0 0 0 0 0 0 
+State.ID_DIGIT2 0 0 0 0 0 0 0 0 1 1 
+State.ID_DIGIT3 0 0 0 0 0 0 0 1 0 1 
+State.ID_DIGIT4 0 0 0 0 0 0 1 0 0 1 
+State.FETCH_ID 0 0 0 0 0 1 0 0 0 1 
+State.WAIT1 0 0 0 0 1 0 0 0 0 1 
+State.WAIT2 0 0 0 1 0 0 0 0 0 1 
+State.CATCH_ID 0 0 1 0 0 0 0 0 0 1 
+State.COMPARE_IDS 0 1 0 0 0 0 0 0 0 1 
+State.ID_VERIFIED 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |WhackAMole|ButtonShaper:bs3|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 
+
+State Machine - |WhackAMole|ButtonShaper:bs2|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 
+
+State Machine - |WhackAMole|ButtonShaper:bs1|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 
+
+State Machine - |WhackAMole|ButtonShaper:bs0|State
+Name State.INIT State.WAIT State.PULSE 
+State.INIT 0 0 0 
+State.PULSE 1 0 1 
+State.WAIT 1 1 0 
