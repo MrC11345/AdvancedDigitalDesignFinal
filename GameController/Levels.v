@@ -41,6 +41,7 @@ module Levels(levelNum, button_inputs, rng_in, score_increase, score_decrease, o
             LEVEL1: spawn_duration <= 3'd6; 
             LEVEL2: spawn_duration <= 3'd4; 
             LEVEL3: spawn_duration <= 3'd2; 
+            default: spawn_duration <= 3'd6;
         endcase
     end
 
