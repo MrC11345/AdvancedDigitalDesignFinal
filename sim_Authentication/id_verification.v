@@ -112,7 +112,8 @@ module id_verification(enter_digit_b, logout_start, current_digit, id_from_ROM, 
 			ID_VERIFIED: begin
 			  if(logout_start == 1'b1) begin
 			    idVerified <= 1'b0;
-				idInternal <= 3'b000;
+				 isGuest <= 1'b0; //logging out resets isGuest
+				 idInternal <= 3'b000;
 			    candidateID <= 16'b0000000000000000;
 		        memoryID <= 16'b0000000000000000;
 		        State <= ID_DIGIT1;
@@ -123,7 +124,7 @@ module id_verification(enter_digit_b, logout_start, current_digit, id_from_ROM, 
 			end
 			default: begin
 		      idVerified <= 1'b0;
-		      isGuest <= 1'b0;
+		      isGuest <= 1'b0; //fixed logout 
 		      idInternal <= 3'b000;
 		      candidateID <= 16'b0000000000000000;
 		      memoryID <= 16'b0000000000000000;

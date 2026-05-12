@@ -174,27 +174,27 @@ module pswd_verification(isGuest, idVerified, idInternal, logout_start_from_GC, 
 			end
 			PASSED: begin
 			  if(logout_start_from_GC == 1'b1) begin
-		        logout_start_to_ID <= 1'b1;
-				loggedIn <= 1'b0;
-				loggedOut <= 1'b1;
+		        logout_start_to_ID <= 1'b1; //start logout star to id pulse
+				  loggedIn <= 1'b0;
+				  loggedOut <= 1'b1;
 		        isGuest_to_GC <= 1'b0;
 		        playerID_to_GC <= 3'b000;
-				State <= LOGOUT_WAIT;
+				  State <= LOGOUT_WAIT;
 			  end
 			  else if(pw_reset_start_from_GC == 1'b1) begin
-				if(isGuest == 1'b1) begin //if guest tries to reset password they are logged out
+			    if(isGuest == 1'b1) begin //if guest tries to reset password they are logged out
 				  logout_start_to_ID <= 1'b1;
-			      loggedIn <= 1'b0;
+			     loggedIn <= 1'b0;
 				  loggedOut <= 1'b1;
 				  isGuest_to_GC <= 1'b0;
 				  playerID_to_GC <= 3'b000;
 				  State <= LOGOUT_WAIT;
-				end
-				else begin
+				 end
+				 else begin
 				  loggedIn <= 1'b0; //block game control inputs
 				  State <= RESET_D1;
 			    end
-		      end
+		     end
 			  else begin
 				loggedIn <= 1'b1;
 				loggedOut <= 1'b0;
@@ -265,7 +265,7 @@ module pswd_verification(isGuest, idVerified, idInternal, logout_start_from_GC, 
 		    end
 			RELEASE_PW: begin
 			  RW = 1'b0;
-		      reset_done <= 1'b1;
+		     reset_done <= 1'b1;
 			  pswd_reset_status[idInternal] <= 1'b1;
 			  State <= PASSED;
 			end

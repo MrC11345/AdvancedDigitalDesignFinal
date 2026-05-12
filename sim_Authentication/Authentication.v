@@ -21,8 +21,13 @@ loggedIn_to_GC_and_LED, loggedOut, reset_done, isGuest_to_GC, playerID_to_GC, cl
   wire [4:0] id_addr_to_ROM, pw_addr;
   
   wire idVerified, isGuest, logout_start_from_pw, ReadWrite;
+ // wire bs_out, pwrst, logout;
   
   wire [23:0] pswd_from_ROM, pswd_from_RAM, pswd_to_RAM;
+  
+  //ButtonShaper button_shaper(enter_digit_b, bs_out, clk, rst); //keep for testing
+  //ButtonShaper button_shaperPWR(pw_reset_start_from_GC, pwrst, clk, rst);
+  //ButtonShaper button_shaperLO(logout_start_from_GC, logout, clk, rst);
   
   id_verification id_verify(enter_digit_b, logout_start_from_pw, current_digit, id_from_ROM, id_addr_to_ROM, idVerified, isGuest, idInternal, clk, rst);
   
